@@ -5,7 +5,7 @@
   box-shadow: none;
 }
 
-@import url("/home/torch/.cache/wallust/template/colors-gtk.css");
+@import url("/home/torch/.cache/matugen/colors-gtk.css");
 
 window {
   background-color: rgba(0, 0, 0, 0.5);
@@ -13,10 +13,10 @@ window {
 
 button {
   border-radius: 24;
-  border: 0.5px solid @color15;
-  text-decoration-color: @foreground;
-  color: @color1;
-  background-color: @color-alt1;
+  border: 0.5px solid @secondary;
+  text-decoration-color: @on_surface;
+  color: @surface_bright;
+  background-color: @surface;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20%;
@@ -27,10 +27,10 @@ button {
 button:focus,
 button:active,
 button:hover {
-  background-color: @color-alt5;
+  background-color: @primary_container;
   background-size: 25%;
   outline-style: none;
-  color: @foreground;
+  color: @on_surface;
   margin: 5px;
 }
 
