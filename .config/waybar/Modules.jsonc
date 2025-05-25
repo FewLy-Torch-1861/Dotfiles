@@ -1,0 +1,127 @@
+// -*- mode: jsonc -*-
+{
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九",
+      "10": "十",
+      "active": "",
+      "default": ""
+    },
+    "tooltip": false,
+    "on-scroll-up": "hyprctl -q dispatch workspace e+1",
+    "on-scroll-down": "hyprctl -q dispatch workspace e-1"
+  },
+  "hyprland/window": {
+    "format": "{title}",
+    "icon": true,
+    "tooltip": false,
+    "rewrite": {
+      "(.*) — Zen Browser": "$1",
+      "(.*) - Notes - Obsidian v1.8.10": "$1",
+      "": " Hyprland"
+    }
+  },
+  "hyprland/submap": {
+    "format": "{}",
+    "tooltip": false
+  },
+  "hyprland/language": {
+    "format": "{}",
+    "format-en": " US",
+    "format-th": " TH",
+    "tooltip": false,
+    "on-click": "$HOME/.config/hypr/scripts/kb_layout.sh",
+    "on-scroll-up": "$HOME/.config/hypr/scripts/kb_layout.sh",
+    "on-scroll-down": "$HOME/.config/hypr/scripts/kb_layout.sh"
+  },
+  "clock": {
+    "interval": 1,
+    "format": " {:%H:%M}",
+    "format-alt": " {:%d/%m/%y   %H:%M:%S}",
+    "tooltip": false
+  },
+  "tray": {
+    "show-passive-items": true,
+    "icon-size": 21,
+    "spacing": 2
+  },
+  "battery": {
+    "interval": 10,
+    "format": "{icon} {capacity}%",
+    "format-charging": "󱐋 {icon} {capacity}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "tooltip": false
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "󱡒",
+      "headset": "",
+      "default": [
+        "",
+        ""
+      ]
+    },
+    "tooltip": false,
+    "scroll-step": 5,
+    "on-click": "pavucontrol",
+    "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+  },
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal"
+  },
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "tooltip": false,
+    "format-icons": [
+      "󰃚",
+      "󰃛",
+      "󰃜",
+      "󰃝",
+      "󰃞",
+      "󰃟",
+      "󰃠"
+    ]
+  },
+  "backlight/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal"
+  },
+  "bluetooth": {
+    "tooltip": false,
+    "format": "",
+    "format-off": "",
+    "format-on": " On",
+    "format-connected": " {device_alias}",
+    "on-click": "blueman-manager"
+  },
+  "network": {
+    "interval": 30,
+    "format": "{ifname}",
+    "format-wifi": " {essid}",
+    "format-ethernet": "󰊗 {ipaddr}/{cidr}",
+    "format-disconnected": "",
+    "tooltip": false
+  }
+}
