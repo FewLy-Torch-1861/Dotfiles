@@ -31,14 +31,8 @@ palette = "dark16"
 threshold = 11
 
 [templates]
-css.template = 'colors.css'
-css.target = '~/.cache/wallust/template/colors.css'
-
 gtk.template = 'colors-gtk.css'
 gtk.target = '~/.cache/wallust/template/colors-gtk.css'
-
-rofi.template = 'colors-rofi.rasi'
-rofi.target = '~/.config/rofi/colors-wallust.rasi'
 
 mako.template = 'colors-mako'
 mako.target = '~/.config/mako/colors'
