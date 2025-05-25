@@ -1,0 +1,32 @@
+@import "~/.config/rofi/config.rasi"
+
+configuration {
+  show-icon: false;
+}
+
+/* ---- Window ---- */
+window {
+  border-radius: 100%;
+}
+
+/* ----- Main Box ----- */
+mainbox {
+  children: [ "inputbar" ];
+}
+
+/* ---- Inputbar ---- */
+inputbar {
+  children: ["entry", "prompt" ];
+}
+
+/* ---- Entry input ---- */
+entry {
+  enabled: true;
+  expand: true;
+  padding: 10px;
+  background-color: @surface-container;
+  text-color: inherit;
+  cursor: text;
+  placeholder: "  Search ";
+  placeholder-color: inherit;
+}

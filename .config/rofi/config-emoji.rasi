@@ -1,0 +1,20 @@
+@import "~/.config/rofi/config.rasi"
+
+configuration {
+  show-icon: false;
+}
+
+/* ---- Listview ---- */
+listview {
+  columns: 3;
+}
+
+/* ---- Inputbar ---- */
+inputbar {
+  children: ["entry", "dummy", "prompt" ];
+}
+
+/* ---- Icon ---- */
+element-icon {
+  size: 0px;
+}

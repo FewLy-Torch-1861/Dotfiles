@@ -1,0 +1,238 @@
+/* ---- Configuration ---- */
+
+configuration {
+  modi: "drun,run,filebrowser";
+  show-icons: true;
+  display-drun: "  Apps";
+  display-run: "  Term";
+  display-filebrowser: "  Files";
+  display-window: "  Window";
+  drun-display-format: "{name}";
+  hover-select: true;
+  me-select-entry: "MouseSecondary";
+  me-accept-entry: "MousePrimary";
+  window-format: "{w} · {c} · {t}";
+  font: "Noto Sans Thai 12";
+}
+
+/* ---- Load wallust colors ---- */
+@theme "~/.config/rofi/colors.rasi"
+// @theme "~/.config/rofi/colors-wallust.rasi"
+
+/* ---- Global Properties ---- */
+* {
+  background-alt: @surface-bright;
+  selected: @secondary;
+  active: @primary;
+  urgent: @error;
+
+  text-selected: @surface-bright;
+  text-color: @on-surface;
+  border-color: @selected;
+}
+
+/* ---- Window ---- */
+window {
+  // Default
+  enabled: true;
+  fullscreen: false;
+  transparency: "real";
+  cursor: "default";
+  spacing: 0px;
+  border-radius: 20px;
+  border: 1px;
+  location: center;
+  anchor: center;
+
+  // Style Values
+  width: 50%;
+  background-color: @surface;
+}
+
+/* ----- Main Box ----- */
+mainbox {
+  enabled: true;
+  orientation: vertical;
+  children: [ "inputbar", "listbox" ];
+  background-color: transparent;
+}
+
+
+/* ---- Inputbar ---- */
+inputbar {
+  enabled: true;
+  padding: 5px;
+  margin: 5px;
+  background-color: transparent;
+  orientation: horizontal;
+  children: ["entry", "dummy", "mode-switcher" ];
+}
+
+/* ---- Entry input ---- */
+entry {
+  enabled: true;
+  expand: false;
+  width: 320px;
+  padding: 10px;
+  border-radius: 100%;
+  background-color: @surface-container;
+  text-color: inherit;
+  cursor: text;
+  placeholder: "  Search ";
+  placeholder-color: inherit;
+}
+
+/* ---- Listbox ---- */
+listbox {
+  spacing: 5px;
+  padding: 0px 10px 10px 10px;
+  background-color: transparent;
+  orientation: vertical;
+  children: [ "message", "listview" ];
+}
+
+/* ---- Listview ---- */
+listview {
+  enabled: true;
+  columns: 2;
+  lines: 8;
+  cycle: true;
+  dynamic: true;
+  scrollbar: false;
+  layout: vertical;
+  reverse: false;
+  fixed-height: true;
+  fixed-columns: true;    
+  spacing: 5px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: @surface-container;
+}
+
+/* ---- Scrollbar ---- */
+scrollbar {
+  border: 0px;
+  border-radius: 10px;
+  background-color: transparent;
+  handle-color: @active;
+  handle-width: 2px ;
+  padding: 0;
+}
+/* ---- Dummy ---- */
+dummy {
+  expand: true;
+  background-color: transparent;
+}
+
+/* ---- Mode Switcher ---- */
+mode-switcher {
+  enabled: true;
+  spacing: 5px;
+  background-color: transparent;
+}
+button {
+  width: 105px;
+  padding: 5px;
+  border-radius: 100%;
+  background-color: @surface-container;
+  text-color: inherit;
+  cursor: pointer;
+}
+button selected {
+  background-color: @active;
+  text-color: @text-selected;
+}
+
+
+/* ---- Elements ---- */
+element {
+  enabled: true;
+  spacing: 5px;
+  padding: 5px;
+  border-radius: 100%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+element normal.normal {
+    background-color: inherit;
+    text-color: inherit;
+}
+element normal.urgent {
+  background-color: @urgent;
+}
+
+element-text selected,
+element normal.active {
+  background-color: @active;
+}
+
+element selected.normal {
+  background-color: @primary;
+  text-color: @text-selected;
+}
+element selected.urgent {
+  background-color: @urgent;
+  text-color: @text-selected;
+}
+element selected.active {
+  background-color: @urgent;
+  text-color: @text-selected;
+}
+// Adapt rofi theme
+element alternate.normal {
+  background-color: transparent;
+  text-color: inherit;
+}
+element alternate.urgent {
+  background-color: transparent;
+  text-color: inherit;
+}
+element alternate.active {
+  background-color: transparent;
+  text-color: inherit;
+}
+element-icon {
+  background-color: transparent;
+  text-color: inherit;
+  size: 36px;
+  cursor: inherit;
+}
+element-text {
+  background-color: transparent;
+  text-color: inherit;
+  cursor: inherit;
+  vertical-align: 0.5;
+  horizontal-align: 0.0;
+}
+
+/* ---- Message ---- */
+message {
+  background-color: @surface;
+  border: 0px;
+}
+textbox {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: @active;
+  text-color: @on-surface;
+  vertical-align: 0.5;
+  horizontal-align: 0.5;
+}
+error-message {
+  padding: 5px;
+  border-radius: 20px;
+  background-color: @surface;
+  text-color: @on-surface;
+}
+
+
+/* ---- Prompt ---- */
+prompt {
+  padding: 10px;
+  border-radius: 100%;
+  background-color: @surface-container;
+  text-color: inherit;
+  cursor: pointer;
+}
