@@ -8,9 +8,6 @@ restart_service() {
   "$service_name" &
 }
 
-# restart_service "mako"
-# restart_service "waybar"
-# restart_service "quickshell"
 restart_service "swww-daemon"
 restart_service "hypridle"
 

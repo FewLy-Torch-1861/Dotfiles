@@ -1,13 +1,13 @@
-background-color=#16141580
-text-color=#FFF8ED
-border-color=#B59C9E
-progress-color=over #BC6C60
+background-color=#211B2180
+text-color=#FFF8F3
+border-color=#93B3BF
+progress-color=over #6282B1
 
 [urgency=low]
-border-color=#FB9080
+border-color=#83AEEC
 
 [urgency=normal]
-border-color=#B59C9E
+border-color=#93B3BF
 
 [urgency=high]
-border-color=#F1D0D2
+border-color=#C4EEFF

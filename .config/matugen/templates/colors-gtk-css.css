@@ -1,3 +1,4 @@
 <* for name, value in colors *>
-@define-color {{name}} {{value.default.hex}};
+@define-color {{name}} {{value.default.rgb}};
+@define-color {{name}}_alt rgba({{value.default.red}}, {{value.default.green}}, {{value.default.blue}}, 0.5);
 <* endfor *>

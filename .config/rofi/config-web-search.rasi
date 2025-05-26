@@ -6,7 +6,7 @@ configuration {
 
 /* ---- Window ---- */
 window {
-  border-radius: 100%;
+  border-radius: 32px;
 }
 
 /* ----- Main Box ----- */

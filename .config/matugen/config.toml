@@ -1,13 +1,40 @@
 [config]
 version_check = false
+reload_apps = true
 
-[templates]
-hypr = { input_path = '~/.config/matugen/templates/colors-hypr.conf', output_path = '~/.config/hypr/colors.conf' }
-yazi = { input_path = '~/.config/matugen/templates/colors-yazi.toml', output_path = '~/.config/yazi/theme.toml' }
-kitty = { input_path = '~/.config/matugen/templates/colors-kitty.conf', output_path = '~/.config/kitty/current-theme.conf' }
-rofi = { input_path = '~/.config/matugen/templates/colors-rofi.rasi', output_path = '~/.config/rofi/colors.rasi' }
-gtk3 = { input_path = '~/.config/matugen/templates/colors-gtk.css', output_path = '~/.config/gtk-3.0/colors.css' }
-gtk4 = { input_path = '~/.config/matugen/templates/colors-gtk.css', output_path = '~/.config/gtk-4.0/colors.css' }
+# [config.wallpaper]
+# command = "swww"
+# arguments = [ "img", "-t", "outer", "--transition-duration", "1.5", "--transition-step", "255", "--transition-fps", "60", "-f", "Nearest",]
+# set = true
 
-css = { input_path = '~/.config/matugen/templates/colors.css', output_path = '~/.cache/matugen/colors.css' }
-gtk = { input_path = '~/.config/matugen/templates/colors-gtk-css.css', output_path = '~/.cache/matugen/colors-gtk.css' }
+[templates.hypr]
+input_path = "~/.config/matugen/templates/colors-hypr.conf"
+output_path = "~/.config/hypr/colors.conf"
+
+[templates.yazi]
+input_path = "~/.config/matugen/templates/colors-yazi.toml"
+output_path = "~/.config/yazi/theme.toml"
+
+[templates.kitty]
+input_path = "~/.config/matugen/templates/colors-kitty.conf"
+output_path = "~/.config/kitty/current-theme.conf"
+
+[templates.rofi]
+input_path = "~/.config/matugen/templates/colors-rofi.rasi"
+output_path = "~/.config/rofi/colors.rasi"
+
+[templates.gtk3]
+input_path = "~/.config/matugen/templates/colors-gtk.css"
+output_path = "~/.config/gtk-3.0/colors.css"
+
+[templates.gtk4]
+input_path = "~/.config/matugen/templates/colors-gtk.css"
+output_path = "~/.config/gtk-4.0/colors.css"
+
+[templates.css]
+input_path = "~/.config/matugen/templates/colors.css"
+output_path = "~/.cache/matugen/colors.css"
+
+[templates.gtk]
+input_path = "~/.config/matugen/templates/colors-gtk-css.css"
+output_path = "~/.cache/matugen/colors-gtk.css"

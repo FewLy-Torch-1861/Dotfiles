@@ -40,7 +40,8 @@ window {
   cursor: "default";
   spacing: 0px;
   border-radius: 20px;
-  border: 1px;
+  border: 3px;
+  border-color: @surface-dim-alt;
   location: center;
   anchor: center;
 
