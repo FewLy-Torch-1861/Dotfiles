@@ -1,0 +1,64 @@
+* {
+  all: unset;
+  min-height: 0;
+}
+
+@import url("/home/torch/.cache/matugen/colors-gtk.css");
+
+/* ---- Waybar ---- */
+window#waybar {
+  background: @background_alt;
+  color: @on_surface;
+  border-radius: 0px 0px 15px 15px;
+}
+
+/* ---- Tooltip ---- */
+tooltip {
+  background: @background;
+  border-radius: 20px;
+}
+tooltip label {
+  color: @on_surface;
+}
+
+/* ---- Module Group ---- */
+.modules-left {
+  padding: 4px;
+}
+.modules-center {
+}
+.modules-right {
+  padding: 4px;
+}
+
+/* ---- Modules ---- */
+#windows {
+  padding: 1px 8px 1px 1px;
+  border-radius: 1em;
+  background: @primary_container;
+}
+#workspaces button {
+  padding: 0px 8px 0px 8px;
+  border-radius: 1em;
+  background: @surface_tint;
+  color: @surface_bright;
+}
+#window {
+  padding-left: 5px;
+}
+#submap,
+#tray,
+#pulseaudio,
+#battery {
+  padding: 0px 8px 0px 8px;
+  border-radius: 1em;
+}
+#submap {
+}
+#tray {
+  background: @primary_container;
+}
+#pulseaudio {
+}
+#battery {
+}

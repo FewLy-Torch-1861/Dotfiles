@@ -3,26 +3,35 @@
   // "layer": "top", // Waybar at top layer
   // "position": "bottom", // Waybar position (top|bottom|left|right)
   // "height": 30, // Waybar height (to be removed for auto height)
-  // "width": 1280, // Waybar width
+  "width": 1000, // Waybar width
   // "spacing": 4, // Gaps between modules (4px)
   // Choose the order of the modules
   "modules-left": [
-    "hyprland/workspaces",
-    "hyprland/window"
+    "group/windows"
   ],
   "modules-center": [
     "clock"
   ],
   "modules-right": [
     "hyprland/submap",
+    "tray",
     "pulseaudio",
     "battery"
   ],
   // Modules configuration
+  "group/windows": {
+    "orientation": "horizontal",
+    "modules": [
+      "hyprland/workspaces",
+      "hyprland/window"
+    ]
+  },
   "hyprland/workspaces": {
     "format": "{id}",
     "active-only": true,
-    "tooltip": false
+    "tooltip": false,
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1"
   },
   "hyprland/window": {
     "format": "{}",
@@ -32,11 +41,24 @@
       "": "Hyprland"
     }
   },
+  "clock": {
+    "interval": 1,
+    "format": "   {:%H:%M}",
+    "format-alt": "   {:%H:%M:%S 󰃭  %d/%M/%Y}",
+    "tooltip-format": "   {:%H:%M:%S 󰃭  %d/%M/%Y}"
+  },
+  "tray": {
+    "tooltip": false,
+    "icon-size": 17,
+    "show-passive-items": true,
+    "spacing": 2
+  },
   "hyprland/submap": {
+    "format": "   {}",
     "tooltip": false
   },
   "pulseaudio": {
-    "format": "{icon} {volume}%",
+    "format": "{icon}   {volume}%",
     "format-bluetooth": "{icon}  {volume}%",
     "format-muted": "",
     "format-icons": {
@@ -47,8 +69,27 @@
         ""
       ]
     },
+    "tooltip-format": "{desc} Volume {volume}%",
     "on-click": "pavucontrol",
     "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+",
     "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+  },
+  "battery": {
+    "interval": 30,
+    "format": "{icon} {capacity}%",
+    "tooltip-format": "Battery {capacity}% {timeTo}",
+    "format-icons": [
+      "󰂎",
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ]
   }
 }
