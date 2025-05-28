@@ -1,6 +1,7 @@
 * {
   all: unset;
   min-height: 0;
+  font-family: monospace;
 }
 
 @import url("/home/torch/.cache/matugen/colors-gtk.css");
@@ -25,8 +26,7 @@ tooltip label {
 .modules-left {
   padding: 4px;
 }
-.modules-center {
-}
+/* .modules-center {} */
 .modules-right {
   padding: 4px;
 }
@@ -51,14 +51,22 @@ tooltip label {
 #pulseaudio,
 #battery {
   padding: 0px 8px 0px 8px;
+  margin: 0px 0px 0px 4px;
   border-radius: 1em;
 }
+#battery {
+  margin-right: 0px;
+}
 #submap {
+  background: @primary_container;
 }
 #tray {
   background: @primary_container;
 }
 #pulseaudio {
+  background: @inverse_primary;
 }
 #battery {
+  background: @surface_tint;
+  color: @surface_bright;
 }
