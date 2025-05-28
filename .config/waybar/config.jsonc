@@ -43,9 +43,9 @@
   },
   "clock": {
     "interval": 1,
-    "format": "   {:%H:%M}",
-    "format-alt": "   {:%H:%M:%S 󰃭  %d/%M/%Y}",
-    "tooltip-format": "   {:%H:%M:%S 󰃭  %d/%M/%Y}"
+    "format": " {:%H:%M}",
+    "format-alt": " {:%H:%M:%S 󰃭 %d/%M/%Y}",
+    "tooltip-format": " {:%H:%M:%S 󰃭 %d/%M/%Y}"
   },
   "tray": {
     "tooltip": false,
@@ -58,8 +58,8 @@
     "tooltip": false
   },
   "pulseaudio": {
-    "format": "{icon}   {volume}%",
-    "format-bluetooth": "{icon}  {volume}%",
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
     "format-muted": "",
     "format-icons": {
       "headphone": "",
@@ -76,8 +76,8 @@
   },
   "battery": {
     "interval": 30,
-    "format": "{icon} {capacity}%",
-    "format-charging": "{icon}󱐋 {capacity}%",
+    "format": "{icon}{capacity}%",
+    "format-charging": "{icon}󱐋{capacity}%",
     "tooltip-format": "Battery {capacity}% {timeTo}",
     "format-icons": [
       "󰂎",

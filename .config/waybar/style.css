@@ -1,7 +1,9 @@
 * {
   all: unset;
   min-height: 0;
-  font-family: monospace;
+  font-family:
+    "JetBrainsMono Nerd Font", "Iosevka Nerd Font", "Noto Sans Mono",
+    "Noto Sans Thai", "Symbols Nerd Font", monospace;
 }
 
 @import url("/home/torch/.cache/matugen/colors-gtk.css");

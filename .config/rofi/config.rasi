@@ -3,16 +3,16 @@
 configuration {
   modi: "drun,run,filebrowser";
   show-icons: true;
-  display-drun: "  Apps";
-  display-run: "  Term";
-  display-filebrowser: "  Files";
-  display-window: "  Window";
+  display-drun: " Apps";
+  display-run: "  Term";
+  display-filebrowser: " Files";
+  display-window: " Window";
   drun-display-format: "{name}";
   hover-select: true;
   me-select-entry: "MouseSecondary";
   me-accept-entry: "MousePrimary";
   window-format: "{w} · {c} · {t}";
-  font: "Noto Sans Thai 12";
+  font: "JetBrainsMono Nerd Font 12";
 }
 
 /* ---- Load wallust colors ---- */
@@ -79,7 +79,7 @@ entry {
   background-color: @surface-container;
   text-color: inherit;
   cursor: text;
-  placeholder: "  Search ";
+  placeholder: " Search ";
   placeholder-color: inherit;
 }
 
