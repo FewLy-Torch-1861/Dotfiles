@@ -17,7 +17,7 @@ window#waybar {
 
 /* ---- Tooltip ---- */
 tooltip {
-  background: @background;
+  background: @surface_bright;
   border-radius: 20px;
 }
 tooltip label {
@@ -48,6 +48,7 @@ tooltip label {
 #window {
   padding-left: 5px;
 }
+
 #submap,
 #tray,
 #pulseaudio,
@@ -64,6 +65,12 @@ tooltip label {
 }
 #tray {
   background: @primary_container;
+}
+#tray menu {
+  background: @surface_bright;
+  border-radius: 20px;
+  padding: 10px;
+  color: @on_surface;
 }
 #pulseaudio {
   background: @inverse_primary;
