@@ -11,6 +11,10 @@ reload_apps = true
 input_path = "~/.config/matugen/templates/colors-hypr.conf"
 output_path = "~/.config/hypr/colors.conf"
 
+[templates.rofi]
+input_path = "~/.config/matugen/templates/colors-rofi.rasi"
+output_path = "~/.config/rofi/colors.rasi"
+
 [templates.yazi]
 input_path = "~/.config/matugen/templates/colors-yazi.toml"
 output_path = "~/.config/yazi/theme.toml"
@@ -19,9 +23,9 @@ output_path = "~/.config/yazi/theme.toml"
 input_path = "~/.config/matugen/templates/colors-kitty.conf"
 output_path = "~/.config/kitty/current-theme.conf"
 
-[templates.rofi]
-input_path = "~/.config/matugen/templates/colors-rofi.rasi"
-output_path = "~/.config/rofi/colors.rasi"
+[templates.mako]
+input_path = "~/.config/matugen/templates/colors-mako"
+output_path = "~/.config/mako/colors"
 
 [templates.gtk3]
 input_path = "~/.config/matugen/templates/colors-gtk.css"
