@@ -37,6 +37,8 @@
     "format": "{}",
     "tooltip": false,
     "rewrite": {
+      "(.*) - Notes - Obsidian v1.8.10": "$1 - Obsidian",
+      "(.*) — Zen Browser": "$1 - Zen",
       "Spotify Free": "Spotify",
       "": "Hyprland"
     }
