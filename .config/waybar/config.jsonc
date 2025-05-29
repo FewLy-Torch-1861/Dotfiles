@@ -62,7 +62,7 @@
     "spacing": 2
   },
   "hyprland/submap": {
-    "format": "   {}",
+    "format": " {}",
     "tooltip": false
   },
   "pulseaudio": {
