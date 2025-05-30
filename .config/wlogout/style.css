@@ -1,22 +1,22 @@
 * {
-  font-family: "Noto Sans", "Noto Sans Thai", "Symbols Nerd Font", monospace;
+  font-family:
+    "JetBrainsMono Nerd Font", "Iosevka Nerd Font", "Noto Sans Mono",
+    "Noto Sans Thai", "Symbols Nerd Font", monospace;
   font-weight: bold;
-  background-image: none;
-  box-shadow: none;
 }
 
 @import url("/home/torch/.cache/matugen/colors-gtk.css");
 
 window {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: @background_alt;
 }
 
 button {
-  border-radius: 24;
+  border-radius: 100px;
   border: 0.5px solid @secondary;
   text-decoration-color: @on_surface;
   color: @surface_bright;
-  background-color: @surface;
+  background-color: @surface_alt;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20%;
