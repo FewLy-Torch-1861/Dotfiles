@@ -6,12 +6,23 @@ case "$ENABLE" in
 yes)
   hyprctl keyword decoration:blur:enabled false
   hyprctl keyword decoration:shadow:enabled false
+  hyprctl keyword animations:enabled false
   hyprctl keyword decoration:active_opacity 1
   hyprctl keyword decoration:inactive_opacity 1
   hyprctl keyword decoration:fullscreen_opacity 1
+
+  pkill hypridle
+
+  powerprofilesctl set performance
+
+  notify-send -a "hyprland" "Hyprland" "Enabled gamemode"
   ;;
 no)
+  powerprofilesctl set balanced
+
   $HOME/.config/hypr/scripts/reload.sh
+
+  notify-send -a "hyprland" "Hyprland" "Disabled gamemode"
   ;;
 *)
   notify-send "gamemode.sh" "Invalid arg"
