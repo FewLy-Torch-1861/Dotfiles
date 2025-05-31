@@ -13,13 +13,9 @@ yes)
 
   pkill hypridle
 
-  powerprofilesctl set performance
-
   notify-send -a "hyprland" "Hyprland" "Enabled gamemode"
   ;;
 no)
-  powerprofilesctl set balanced
-
   $HOME/.config/hypr/scripts/reload.sh
 
   notify-send -a "hyprland" "Hyprland" "Disabled gamemode"
