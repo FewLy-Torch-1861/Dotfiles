@@ -1,5 +1,7 @@
 #!/bin/env bash
 
+set -euo pipefail
+
 replace_file="/tmp/center-notify-id"
 
 get_layout() {

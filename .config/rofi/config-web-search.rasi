@@ -21,12 +21,5 @@ inputbar {
 
 /* ---- Entry input ---- */
 entry {
-  enabled: true;
   expand: true;
-  padding: 10px;
-  background-color: @surface-container;
-  text-color: inherit;
-  cursor: text;
-  placeholder: "  Search ";
-  placeholder-color: inherit;
 }

@@ -1,5 +1,7 @@
 #!/bin/env bash
 
+set -euo pipefail
+
 OUTPUTFOLDER="$HOME/Pictures/Screenshots"
 
 case "$1" in

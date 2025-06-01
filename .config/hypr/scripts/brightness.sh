@@ -1,5 +1,7 @@
 #!/bin/env bash
 
+set -euo pipefail
+
 arg="$1"
 replace_file="/tmp/center-notify-id"
 

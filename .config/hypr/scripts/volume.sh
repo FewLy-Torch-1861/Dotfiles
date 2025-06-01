@@ -1,6 +1,7 @@
 #!/bin/env bash
 
-arg="$1"
+set -euo pipefail
+
 replace_file="/tmp/center-notify-id"
 
 get_volume() {
@@ -29,7 +30,7 @@ notify() {
   echo "$new_id" >"$replace_file"
 }
 
-case "$arg" in
+case "$1" in
 inc)
   wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+
   notify "🔊 Volume: $(get_volume)%"

@@ -1,5 +1,7 @@
 #!/bin/env bash
 
+set -euo pipefail
+
 # Set some variables
 wall_dir="${HOME}/Pictures/Wallpapers"
 cacheDir="${HOME}/.cache/wallpaper"
