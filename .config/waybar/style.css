@@ -17,7 +17,7 @@ window#waybar {
 
 /* ---- Tooltip ---- */
 tooltip {
-  background: @surface_bright;
+  background: @surface;
   border-radius: 20px;
 }
 tooltip label {
@@ -37,7 +37,7 @@ tooltip label {
 #windows {
   padding: 1px 8px 1px 1px;
   border-radius: 1em;
-  background: @primary_container;
+  background: @inverse_primary;
 }
 #workspaces button {
   padding: 0px 8px 0px 8px;
@@ -61,13 +61,13 @@ tooltip label {
   margin-right: 0px;
 }
 #submap {
-  background: @primary_container;
+  background: @on_primary;
 }
 #tray {
-  background: @primary_container;
+  background: @on_primary;
 }
 #tray menu {
-  background: @surface_bright;
+  background: @surface;
   border-radius: 20px;
   padding: 10px;
   color: @on_surface;
