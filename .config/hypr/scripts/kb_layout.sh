@@ -40,12 +40,12 @@ switch_layout
 
 case "$(get_layout)" in
 EN)
-  notify "🇺🇸 English (US)"
+  notify "English (US)"
   ;;
 TH)
-  notify "🇹🇭 Thai"
+  notify "Thai"
   ;;
 *)
-  notify "⌨️ $(get_layout)"
+  notify "$(get_layout)"
   ;;
 esac
