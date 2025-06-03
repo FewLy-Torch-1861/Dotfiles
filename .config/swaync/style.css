@@ -1,0 +1,228 @@
+* {
+  all: unset;
+  font-size: 14px;
+  font-family: "JetBrainsMono Nerd Font", "Noto Sans Thai";
+  transition: 200ms;
+}
+
+@import url("/home/torch/.cache/matugen/colors-gtk.css");
+
+scale trough {
+  margin: 0 1rem;
+  background-color: @surface_alt;
+  min-height: 8px;
+  min-width: 70px;
+}
+
+trough highlight {
+  background: @on_surface;
+}
+
+slider {
+  background-color: @primary;
+}
+
+.floating-notifications.background .notification-row .notification-background {
+  border-radius: 20px;
+  margin: 5px;
+  background-color: @surface_alt;
+  color: @on_surface;
+  padding: 0;
+}
+
+.notification {
+  padding: 7px;
+  border-radius: 20px;
+}
+
+.notification.critical {
+  box-shadow: inset 0 0 7px 0 @error;
+}
+
+.notification-content {
+  margin: 7px;
+}
+
+.summary, .body {
+  color: @on_surface;
+}
+
+.time {
+  color: @on_surface_variant;
+}
+
+.notification >*:last-child>* {
+  min-height: 3.4em;
+}
+
+.notification-action {
+  border-radius: 1em;
+  color: @on_surface;
+  background-color: @surface_alt;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  margin: 7px;
+}
+
+.notification-action:hover {
+  background-color: @surface_alt;
+}
+
+.notification-action:active {
+  background-color: @primary;
+}
+
+.close-button {
+  margin: 7px;
+  padding: 2px;
+  border-radius: 1em;
+  color: @surface_alt;
+  background-color: @error;
+}
+
+.close-button:hover,
+.close-button:active {
+  background-color: @error;
+}
+
+.control-center {
+  border-radius: 20px;
+  background-color: @surface_alt;
+  color: @on_surface;
+  padding: 10px;
+}
+
+.widget-title > label {
+  font-size: 1.4em;
+  color: @on_surface;
+}
+
+.widget-title button {
+  border-radius: 1em;
+  color: @on_surface;
+  background-color: @surface_alt;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  padding: 8px;
+}
+
+.widget-title button:hover {
+  background-color: #585b70;
+}
+
+.widget-title button:active {
+  background-color: @primary;
+  color: @surface_alt;
+}
+
+.control-center .notification-row .notification-background {
+  border-radius: 20px;
+  background-color: @surface_alt;
+  color: @on_surface;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  margin-top: 14px;
+}
+
+.control-center .notification {
+  padding: 7px;
+  border-radius: 7px;
+}
+
+.control-center .notification.critical {
+  box-shadow: inset 0 0 7px 0 @error;
+}
+
+.control-center .notification-content {
+  margin: 7px;
+}
+
+.control-center .summary,
+.control-center .body {
+  color: @on_surface;
+}
+
+.control-center .time {
+  color: @on_surface_variant;
+}
+
+.control-center .notification >*:last-child>* {
+  min-height: 3.4em;
+}
+
+.control-center .notification-action {
+  border-radius: 13px;
+  background-color: #11111b;
+}
+
+.control-center .notification-action:hover {
+  background-color: @surface_alt;
+}
+
+.control-center .notification-action:active {
+  background-color: @primary;
+  color: @surface;
+}
+
+.control-center .close-button {
+  margin: 7px;
+  padding: 2px;
+  border-radius: 1em;
+  background-color: @error;
+  color: @surface_alt;
+}
+
+.control-center .notification-background:hover {
+  background-color: #7f849c;
+}
+
+.control-center .notification-background:active {
+  background-color: @primary;
+}
+
+.notification.critical progress,
+.notification.low progress,
+.notification.normal progress {
+  border-radius: 1em;
+}
+
+.notification.critical progress {
+  background-color: @error;
+}
+
+.notification.low progress,
+.notification.normal progress {
+  background-color: @primary;
+}
+
+.control-center-dnd {
+  margin-top: 5px;
+  border-radius: 8px;
+  background: @surface_alt;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.widget-dnd {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.widget-dnd > switch slider {
+  background: @secondary;
+  border-radius: 1em;
+}
+
+.widget-mpris .widget-mpris-player {
+  background: @surface_alt;
+  border-radius: 20px;
+  padding: 7px;
+}
+
+.widget-mpris-title {
+  font-size: 1.2rem;
+}
+
+.widget-mpris-subtitle {
+  font-size: 0.8rem;
+}
+
+.image {
+  padding-right: 0.5rem;
+}

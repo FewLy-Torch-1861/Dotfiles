@@ -9,11 +9,11 @@ get_volume() {
 }
 
 get_mute() {
-  wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q MUTED && echo "🔇 Muted" || echo "🔊 Unmuted"
+  wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q MUTED && echo "Muted" || echo "Unmuted"
 }
 
 get_mic_mute() {
-  wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | grep -q MUTED && echo "🎙️❌ Muted" || echo "🎙️✅ Unmuted"
+  wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | grep -q MUTED && echo "Muted" || echo "Unmuted"
 }
 
 notify() {
@@ -33,19 +33,19 @@ notify() {
 case "$1" in
 inc)
   wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+
-  notify "🔊 Volume: $(get_volume)%"
+  notify "Volume: $(get_volume)%"
   ;;
 dec)
   wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
-  notify "🔉 Volume: $(get_volume)%"
+  notify "Volume: $(get_volume)%"
   ;;
 linc)
   wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%+
-  notify "🔊 Volume: $(get_volume)%"
+  notify "Volume: $(get_volume)%"
   ;;
 ldec)
   wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-
-  notify "🔉 Volume: $(get_volume)%"
+  notify "Volume: $(get_volume)%"
   ;;
 mute)
   wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
