@@ -52,8 +52,8 @@
   "clock": {
     "interval": 1,
     "format": " {:%H:%M}",
-    "format-alt": " {:%H:%M:%S 󰃭 %d/%M/%Y}",
-    "tooltip-format": " {:%H:%M:%S 󰃭 %d/%M/%Y}"
+    "format-alt": " {:%H:%M:%S 󰃭 %d/%m/%Y}",
+    "tooltip-format": " {:%H:%M:%S 󰃭 %d/%m/%Y}"
   },
   "tray": {
     "tooltip": false,
