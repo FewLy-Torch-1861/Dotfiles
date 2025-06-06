@@ -2,7 +2,6 @@
 
 set -euo pipefail
 
-arg="$1"
 replace_file="/tmp/center-notify-id"
 
 get_brightness() {
@@ -10,7 +9,6 @@ get_brightness() {
 }
 
 notify() {
-  local message="$1"
   local brightness=$(get_brightness)
 
   if [[ -s "$replace_file" && $(cat "$replace_file") =~ ^[0-9]+$ ]]; then
@@ -19,11 +17,11 @@ notify() {
     replace_id=0
   fi
 
-  new_id=$(notify-send -p -e -r "$replace_id" -t 1000 -a "status-notif" -h int:value:"$brightness" -u low "$message")
+  new_id=$(notify-send -p -e -r "$replace_id" -t 1000 -a "status-notif" -h int:value:"$brightness" -u low "$1")
   echo "$new_id" >"$replace_file"
 }
 
-case "$arg" in
+case "$1" in
 inc)
   brightnessctl s 10%+
   notify "🔆 Brightness: $(get_brightness)%"
@@ -39,8 +37,5 @@ linc)
 ldec)
   brightnessctl s 1%-
   notify "🔅 Brightness: $(get_brightness)%"
-  ;;
-*)
-  notify-send "volume.sh" "Invalid arg"
   ;;
 esac

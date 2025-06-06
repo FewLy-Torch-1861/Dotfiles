@@ -2,9 +2,7 @@
 
 set -euo pipefail
 
-ENABLE="$1"
-
-case "$ENABLE" in
+case "$1" in
 yes)
   hyprctl keyword decoration:blur:enabled false
   hyprctl keyword decoration:shadow:enabled false
@@ -25,8 +23,5 @@ no)
   swaync-client -df
 
   notify-send -a "hyprland" "Hyprland" "Disabled gamemode"
-  ;;
-*)
-  notify-send "gamemode.sh" "Invalid arg"
   ;;
 esac

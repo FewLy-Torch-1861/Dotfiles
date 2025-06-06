@@ -43,15 +43,21 @@ slider {
   margin: 7px;
 }
 
-.summary, .body {
+.summary,
+.body {
   color: @on_surface;
+}
+
+.summary {
+  font-size: 1.1em;
+  font-weight: bold;
 }
 
 .time {
   color: @on_surface_variant;
 }
 
-.notification >*:last-child>* {
+.notification > *:last-child > * {
   min-height: 3.4em;
 }
 
@@ -143,7 +149,7 @@ slider {
   color: @on_surface_variant;
 }
 
-.control-center .notification >*:last-child>* {
+.control-center .notification > *:last-child > * {
   min-height: 3.4em;
 }
 

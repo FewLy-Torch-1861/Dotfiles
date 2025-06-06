@@ -14,7 +14,4 @@ window)
 region)
   hyprshot -m region -o $OUTPUTFOLDER
   ;;
-*)
-  notify-send "screenshot.sh" "Invalid arg"
-  ;;
 esac

@@ -9,15 +9,14 @@ get_volume() {
 }
 
 get_mute() {
-  wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q MUTED && echo "Muted" || echo "Unmuted"
+  wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q MUTED && echo "🚫🎧 Muted" || echo "🎧 Unmuted"
 }
 
 get_mic_mute() {
-  wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | grep -q MUTED && echo "Muted" || echo "Unmuted"
+  wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | grep -q MUTED && echo "🚫🎙️ Muted" || echo "🎙️ Unmuted"
 }
 
 notify() {
-  local message="$1"
   local volume=$(get_volume)
 
   if [[ -s "$replace_file" && $(cat "$replace_file") =~ ^[0-9]+$ ]]; then
@@ -26,26 +25,26 @@ notify() {
     replace_id=0
   fi
 
-  new_id=$(notify-send -p -e -r "$replace_id" -t 1000 -a "status-notif" -h int:value:"$volume" -u low "$message")
+  new_id=$(notify-send -p -e -r "$replace_id" -t 1000 -a "status-notif" -h int:value:"$volume" -u low "$1")
   echo "$new_id" >"$replace_file"
 }
 
 case "$1" in
 inc)
   wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+
-  notify "Volume: $(get_volume)%"
+  notify "🔊 Volume: $(get_volume)%"
   ;;
 dec)
   wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
-  notify "Volume: $(get_volume)%"
+  notify "🔉 Volume: $(get_volume)%"
   ;;
 linc)
   wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%+
-  notify "Volume: $(get_volume)%"
+  notify "🔊 Volume: $(get_volume)%"
   ;;
 ldec)
   wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-
-  notify "Volume: $(get_volume)%"
+  notify "🔉 Volume: $(get_volume)%"
   ;;
 mute)
   wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
@@ -56,8 +55,5 @@ mute-mic)
   wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
   status=$(get_mic_mute)
   notify "$status"
-  ;;
-*)
-  notify-send "volume.sh" "Invalid arg"
   ;;
 esac

@@ -24,15 +24,13 @@ switch_layout() {
 }
 
 notify() {
-  local message="$1"
-
   if [[ -s "$replace_file" && $(cat "$replace_file") =~ ^[0-9]+$ ]]; then
     replace_id=$(cat "$replace_file")
   else
     replace_id=0
   fi
 
-  new_id=$(notify-send -p -e -r "$replace_id" -t 1000 -a "status-notif" -u low "$message")
+  new_id=$(notify-send -p -e -r "$replace_id" -t 1000 -u low "$1" "$2")
   echo "$new_id" >"$replace_file"
 }
 
@@ -40,12 +38,9 @@ switch_layout
 
 case "$(get_layout)" in
 EN)
-  notify "English (US)"
+  notify "⌨️ Keyboard Layout" "🇺🇸 English (US)"
   ;;
 TH)
-  notify "Thai"
-  ;;
-*)
-  notify "$(get_layout)"
+  notify "⌨️ Keyboard Layout" "🇹🇭 Thai"
   ;;
 esac

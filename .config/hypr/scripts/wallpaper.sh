@@ -36,7 +36,7 @@ for imagen in "$wall_dir"/*.{jpg,jpeg,png,webp}; do
       magick "$imagen" -strip -thumbnail 720x405^ -gravity center -extent 720x405 "${cacheDir}/${nombre_archivo}"
 
       # echo "Converting: $imagen"
-      notify "wallpaper.sh" "Converting: $imagen"
+      notify "Hyprland" "Converting: $imagen"
     fi
   fi
 done
