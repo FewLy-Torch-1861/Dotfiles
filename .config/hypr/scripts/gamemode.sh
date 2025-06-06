@@ -13,15 +13,15 @@ yes)
 
   pkill hypridle
 
-  swaync-client -dn
+  # swaync-client -dn
 
-  notify-send -a "hyprland" "Hyprland" "Enabled gamemode"
+  notify-send "Hyprland" "Enabled gamemode"
   ;;
 no)
   $HOME/.config/hypr/scripts/reload.sh
 
-  swaync-client -df
+  # swaync-client -df
 
-  notify-send -a "hyprland" "Hyprland" "Disabled gamemode"
+  notify-send "Hyprland" "Disabled gamemode"
   ;;
 esac
