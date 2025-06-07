@@ -1,6 +1,6 @@
 # : Manager [[[
 
-[manager]
+[mgr]
 cwd = { fg = "#ebe0e0" }
 
 # Tab
