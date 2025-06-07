@@ -10,7 +10,7 @@ restart_service() {
 
 restart_service "swww-daemon"
 restart_service "swaync"
-restart_service "waybar"
+# restart_service "waybar"
 restart_service "hypridle"
 
 if ! hyprctl reload; then
