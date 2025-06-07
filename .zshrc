@@ -1,3 +1,5 @@
+fastfetch -c ~/.config/fastfetch/config-hutao.jsonc
+
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.spicetify:$PATH"
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -59,8 +61,6 @@ alias dir='ll'
 alias t='tmux'
 alias z='yazi'
 alias dfs='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
-hufetch
 
 # Starship
 eval "$(starship init zsh)"
