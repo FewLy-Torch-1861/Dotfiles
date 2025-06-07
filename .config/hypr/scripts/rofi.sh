@@ -6,6 +6,8 @@ if pidof rofi >/dev/null; then
   pkill rofi
 fi
 
+MODE="${1:-}"
+SUB_CMD="${2:-}"
 SEARCH_ENGINE="https://www.google.com/search?q={}"
 
 normal() {
@@ -25,7 +27,7 @@ emoji() {
   rofi -modes "emoji" -i -show emoji -config "$HOME/.config/rofi/config-emoji.rasi"
 }
 
-case "$1" in
+case "$MODE" in
 n)
   normal
   ;;
@@ -33,7 +35,7 @@ w)
   web-search
   ;;
 c)
-  case "$2" in
+  case "$SUB_CMD" in
   wipe)
     cliphist wipe
     clipboard
@@ -45,5 +47,8 @@ c)
   ;;
 e)
   emoji
+  ;;
+*)
+  notify-send "rofi.sh" "Invalid arg"
   ;;
 esac
