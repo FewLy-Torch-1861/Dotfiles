@@ -50,6 +50,6 @@ swww img -t outer --transition-duration 1.5 --transition-step 255 --transition-f
 matugen image -t "scheme-content" "${wall_dir}/${wall_selection}"
 ln -sf "${wall_dir}/${wall_selection}" "${HOME}/.currentwall"
 sleep 1s
-~/.config/hypr/scripts/reload.sh
+bash ~/.config/hypr/scripts/reload.sh
 
-exit 0
+# exit 0
