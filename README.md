@@ -3,4 +3,4 @@
 
 ---
 
-*no preview rn.*
+<img src="./Pictures/Screenshots/2025-06-14-091529_hyprshot.png"/>
