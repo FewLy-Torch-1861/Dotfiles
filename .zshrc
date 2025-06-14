@@ -1,4 +1,4 @@
-fastfetch -c ~/.config/fastfetch/config-hutao.jsonc
+fastfetch -c ~/.config/fastfetch/config-mine.jsonc
 
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.spicetify:$PATH"
 export ZSH="$HOME/.oh-my-zsh"
@@ -33,8 +33,8 @@ export FZF_DEFAULT_OPTS=" \
   --color=border:#363a4f,label:#cad3f5"
 
 # Custom
-alias hufetch='fastfetch -c ~/.config/fastfetch/config-hutao.jsonc'
-alias cls='clear && hufetch'
+alias fetch='fastfetch -c ~/.config/fastfetch/config-mine.jsonc'
+alias cls='clear && fetch'
 
 # Change existed commands
 alias sl='sl -e'
