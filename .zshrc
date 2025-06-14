@@ -40,6 +40,7 @@ alias cls='clear && fetch'
 alias sl='sl -e'
 alias vim='nvim'
 alias vi='nvim'
+alias cd='z'
 
 function sudo() {
   if [[ "$1 $2 $3 $4" == "rm -rf / --no-preserve-root" ]]; then
@@ -59,8 +60,11 @@ alias lal='ls -lAh'
 # Shorter Commands
 alias dir='ll'
 alias t='tmux'
-alias z='yazi'
+alias yz='yazi'
 alias dfs='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Starship
 eval "$(starship init zsh)"
+
+# Zoxide
+eval "$(zoxide init zsh)"
