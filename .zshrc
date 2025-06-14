@@ -41,6 +41,7 @@ alias sl='sl -e'
 alias vim='nvim'
 alias vi='nvim'
 alias cd='z'
+alias grep='rg'
 
 function sudo() {
   if [[ "$1 $2 $3 $4" == "rm -rf / --no-preserve-root" ]]; then
@@ -52,13 +53,14 @@ function sudo() {
 }
 
 # List Family
-alias ls='lsd'
+alias ls='exa --icons'
+alias l='ls -lAh'
 alias ll='ls -lh'
 alias la='ls -Ah'
-alias lal='ls -lAh'
+alias te='ls -T'
+alias tea='la -T'
 
 # Shorter Commands
-alias dir='ll'
 alias t='tmux'
 alias yz='yazi'
 alias dfs='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
