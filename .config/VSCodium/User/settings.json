@@ -1,7 +1,7 @@
 {
     "editor.fontFamily": "'JetBrainsMono Nerd Font', 'Noto Sans Thai', 'monospace', monospace",
     "editor.tabSize": 2,
-    "editor.renderWhitespace": "none",
+    "editor.renderWhitespace": "all",
     "workbench.iconTheme": "material-icon-theme",
     "editor.cursorBlinking": "expand",
     "editor.cursorSmoothCaretAnimation": "on",
@@ -36,5 +36,9 @@
     "workbench.preferredLightColorTheme": "Catppuccin Latte",
     "window.autoDetectColorScheme": true,
     "editor.minimap.enabled": false,
+    "qt-qml.qmlls.useQmlImportPathEnvVar": true,
+    "editor.formatOnType": true,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
     "workbench.statusBar.visible": false
 }

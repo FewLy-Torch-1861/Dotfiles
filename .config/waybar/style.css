@@ -1,5 +1,5 @@
 * {
-  all: unset;
+  /* all: unset; */
   min-height: 0;
   font-family:
     "JetBrainsMono Nerd Font", "Iosevka Nerd Font", "Noto Sans Mono",
@@ -44,6 +44,7 @@ tooltip label {
   border-radius: 1em;
   background: @surface_tint;
   color: @surface_bright;
+  font-weight: bold;
 }
 #window {
   padding-left: 5px;
