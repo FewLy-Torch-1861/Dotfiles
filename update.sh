@@ -12,7 +12,7 @@ flatpak update
 
 echo "[*] Commiting dotfiles change..."
 
-/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME commit -a -m "update"
+/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME commit -a -m "update" || echo "[*] Nothing to commit\!"
 
 echo "[*] Doned exiting..."
 
