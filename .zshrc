@@ -63,6 +63,7 @@ alias tea='la -T'
 # Shorter Commands
 alias t='tmux'
 alias yz='yazi'
+alias py='python3'
 alias dfs='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Starship
