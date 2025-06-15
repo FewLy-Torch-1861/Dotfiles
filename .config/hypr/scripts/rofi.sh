@@ -37,6 +37,7 @@ w)
 c)
   case "$SUB_CMD" in
   wipe)
+    notify-send "Hyprland" "wiped clipboard histories"
     cliphist wipe
     clipboard
     ;;

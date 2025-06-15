@@ -39,6 +39,5 @@
     "qt-qml.qmlls.useQmlImportPathEnvVar": true,
     "editor.formatOnType": true,
     "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
-    "workbench.statusBar.visible": false
+    "explorer.confirmDelete": false
 }
