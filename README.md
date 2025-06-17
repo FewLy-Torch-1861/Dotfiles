@@ -22,6 +22,15 @@
 
 ---
 
+## Reference
+
+- [**Rexcrazy804**](https://github.com/Rexcrazy804/Zaphkiel)
+- [**End 4**](https://github.com/end-4/dots-hyprland)
+- **Material Design** 3
+- **Google & Modern Gnome** apps
+
+---
+
 ## My rice (*out dated!*)
 
 <img src="./Pictures/Screenshots/2025-06-14-091529_hyprshot.png"/>
