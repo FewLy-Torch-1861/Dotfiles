@@ -3,4 +3,25 @@
 
 ---
 
+## All I Use
+- WM : [Hyprland](https://hyprland.org/)
+- Color Palette : [Matugen](https://github.com/InioX/matugen) & [Catppuccin Mocha](https://catppuccin.com)
+- Custom GTK shell : [Ignis](https://ignis-sh.github.io/ignis/stable/index.html)
+- Status bar : [Waybar](https://github.com/Alexays/Waybar) *\*will replace with Ignis soon.*
+- Application launcher/Dmenu replacer: [Rofi](https://github.com/davatorium/rofi)
+- Wallpaper manager: [Swww](https://github.com/LGFae/swww)
+- Notif Daemon: [Swaync](https://github.com/ErikReider/SwayNotificationCenter) *\*will replace with Ignis soon.*
+- Power menu: [Wlogout](https://github.com/ArtsyMacaw/wlogout)
+- [Hypr Ecosystem](https://wiki.hyprland.org/Hypr-Ecosystem):
+    - [Hyprlock](https://wiki.hyprland.org/Hypr-Ecosystem/hyprlock): lock screen
+    - [Hypridle](https://wiki.hyprland.org/Hypr-Ecosystem/hypridle/): do things when you idle
+    - [Hyprpicker](https://wiki.hyprland.org/Hypr-Ecosystem/hyprpicker/): color picker
+    - [Hyprsunset](https://wiki.hyprland.org/Hypr-Ecosystem/hyprsunset/): nightlight
+- Misc:
+    - [Hyprshot](https://github.com/Gustash/Hyprshot): screenshot tool
+
+---
+
+## My rice (*out dated!*)
+
 <img src="./Pictures/Screenshots/2025-06-14-091529_hyprshot.png"/>
