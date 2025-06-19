@@ -1,8 +1,6 @@
 # My Hyprland Dots
 *you can use this dots but you have to config it to make it work with your devices.*
 
----
-
 ## All I Use
 - WM : [Hyprland](https://hyprland.org/)
 - Color Palette : [Matugen](https://github.com/InioX/matugen) & [Catppuccin Mocha](https://catppuccin.com)
@@ -20,16 +18,12 @@
 - Misc:
     - [Hyprshot](https://github.com/Gustash/Hyprshot): screenshot tool
 
----
-
 ## Reference
 
 - [**Rexcrazy804**](https://github.com/Rexcrazy804/Zaphkiel)
 - [**End 4**](https://github.com/end-4/dots-hyprland)
 - **Material Design** 3
 - **Google & Modern Gnome** apps
-
----
 
 ## My rice (*out dated!*)
 
