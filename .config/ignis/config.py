@@ -1,8 +1,6 @@
 from ignis import utils
 from ignis.app import IgnisApp
-from widgets import (
-    Notch,
-)
+from widgets import Notch
 
 app = IgnisApp.get_default()
 app.add_icons(f"{utils.get_current_dir()}/icons")
