@@ -3,6 +3,10 @@ fastfetch -c ~/.config/fastfetch/config-mine.jsonc
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.spicetify:$PATH"
 export ZSH="$HOME/.oh-my-zsh"
 
+# AI things
+export AI_PROVIDER="gemini"
+source $HOME/.config/tgpt/apikey.sh
+
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="dd/mm/yyyy"
