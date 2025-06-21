@@ -1,7 +1,12 @@
-# My Hyprland Dots
-*you can use this dots but you have to config it to make it work with your devices.*
+<div align="center">
+  <h1>【 FewlyTorch's Hyprland dotfiles 】</h1>
+</div>
+<i>you can use this dots but you have to config it to make it work with your devices.</i>
 
-## All I Use
+<div align="center">
+  <h2>⬧ All I Use ⬧</h2>
+</div>
+
 - WM : [Hyprland](https://hyprland.org/)
 - Color Palette : [Matugen](https://github.com/InioX/matugen) & [Catppuccin Mocha](https://catppuccin.com)
 - Custom GTK shell : [Ignis](https://ignis-sh.github.io/ignis/stable/index.html)
@@ -18,13 +23,17 @@
 - Misc:
     - [Hyprshot](https://github.com/Gustash/Hyprshot): screenshot tool
 
-## Reference
+<div align="center">
+  <h2>⬧ Reference ⬧</h2>
+</div>
 
 - [**Rexcrazy804**](https://github.com/Rexcrazy804/Zaphkiel)
 - [**End 4**](https://github.com/end-4/dots-hyprland)
 - **Material Design** 3
 - **Google & Modern Gnome** apps
 
-## My rice (*out dated!*)
+<div align="center">
+  <h2>⬧ My rice (*out dated!*) ⬧</h2>
+</div>
 
 <img src="./Pictures/Screenshots/2025-06-14-091529_hyprshot.png"/>
