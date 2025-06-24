@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-replace_file="/tmp/center-notify-id"
+replace_file="/tmp/kb-notify-id"
 
 get_layout() {
   hyprctl devices -j |

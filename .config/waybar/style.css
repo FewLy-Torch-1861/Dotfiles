@@ -1,5 +1,5 @@
 * {
-  /* all: unset; */
+  all: unset;
   min-height: 0;
   font-family:
     "JetBrainsMono Nerd Font", "Iosevka Nerd Font", "Noto Sans Mono",
@@ -19,9 +19,11 @@ window#waybar {
 tooltip {
   background: @surface;
   border-radius: 20px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
 }
 tooltip label {
   color: @on_surface;
+  padding: 5px;
 }
 
 /* ---- Module Group ---- */
@@ -72,6 +74,18 @@ tooltip label {
   border-radius: 20px;
   padding: 10px;
   color: @on_surface;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+}
+#tray menuitem {
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+#tray menuitem:hover {
+  background-color: @surface_bright;
+  font-weight: bold;
 }
 #pulseaudio {
   background: @inverse_primary;

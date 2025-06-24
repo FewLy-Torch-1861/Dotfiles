@@ -7,7 +7,7 @@ wall_dir="${HOME}/Pictures/Wallpapers"
 cacheDir="${HOME}/.cache/wallpaper"
 rofi_command="rofi -i -dmenu -theme ${HOME}/.config/rofi/config-wall.rasi"
 
-replace_file="/tmp/center-notify-id"
+replace_file="/tmp/wal-notify-id"
 
 notify() {
   local headler="$1"

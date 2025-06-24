@@ -1,7 +1,8 @@
 import datetime
-from ignis.variable import Variable
 from ignis import widgets
 from ignis import utils
+from ignis.variable import Variable
+from ignis.services import hyprland
 
 current_time = Variable(
     value=utils.Poll(1000, lambda x: datetime.datetime.now().strftime("%H:%M")).bind(
@@ -23,7 +24,7 @@ class Notch(widgets.Window):
             child=widgets.CenterBox(
                 start_widget=widgets.Box(
                     css_classes=["left"],
-                    child=[widgets.CheckButton(), widgets.Button()],
+                    child=[],
                 ),
                 center_widget=widgets.Box(
                     css_classes=["center"],
@@ -44,7 +45,7 @@ class Notch(widgets.Window):
                 ),
                 end_widget=widgets.Box(
                     css_classes=["right"],
-                    child=[widgets.Arrow()],
+                    child=[],
                 ),
             ),
         )

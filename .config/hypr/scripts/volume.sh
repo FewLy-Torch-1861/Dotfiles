@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-replace_file="/tmp/center-notify-id"
+replace_file="/tmp/vol-notify-id"
 
 get_volume() {
   wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{printf "%d", $2 * 100}'

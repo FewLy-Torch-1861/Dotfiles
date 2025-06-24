@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-replace_file="/tmp/center-notify-id"
+replace_file="/tmp/bl-notify-id"
 
 get_brightness() {
   brightnessctl i | grep -oP '(?<=Current brightness: ).*' | awk -F'[()%]' '{ print $2 }'
