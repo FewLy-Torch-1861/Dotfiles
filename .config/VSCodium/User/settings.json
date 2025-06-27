@@ -39,5 +39,8 @@
     "qt-qml.qmlls.useQmlImportPathEnvVar": true,
     "editor.formatOnType": true,
     "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    }
 }

@@ -1,234 +1,135 @@
+@import "/home/torch/.cache/matugen/colors-gtk.css";
+
 * {
-  all: unset;
   font-size: 14px;
   font-family: "JetBrainsMono Nerd Font", "Noto Sans Thai";
   transition: 200ms;
-}
-
-@import url("/home/torch/.cache/matugen/colors-gtk.css");
-
-scale trough {
-  margin: 0 1rem;
-  background-color: @surface_alt;
-  min-height: 8px;
-  min-width: 70px;
-}
-
-trough highlight {
-  background: @on_surface;
-}
-
-slider {
-  background-color: @primary;
-}
-
-.floating-notifications.background .notification-row .notification-background {
-  border-radius: 20px;
-  margin: 5px;
-  background-color: @surface_alt;
+  border: none;
+  box-shadow: none;
+  outline: none;
   color: @on_surface;
-  padding: 0;
-}
-
-.notification {
-  padding: 7px;
-  border-radius: 20px;
-}
-
-.notification.critical {
-  box-shadow: inset 0 0 7px 0 @error;
-}
-
-.notification-content {
-  margin: 7px;
-}
-
-.summary,
-.body {
-  color: @on_surface;
-}
-
-.summary {
-  font-size: 1.1em;
-  font-weight: bold;
-}
-
-.time {
-  color: @on_surface_variant;
-}
-
-.notification > *:last-child > * {
-  min-height: 3.4em;
-}
-
-.notification-action {
-  border-radius: 1em;
-  color: @on_surface;
-  background-color: @surface_alt;
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-  margin: 7px;
-}
-
-.notification-action:hover {
-  background-color: @surface_alt;
-}
-
-.notification-action:active {
-  background-color: @primary;
-}
-
-.close-button {
-  margin: 7px;
-  padding: 2px;
-  border-radius: 1em;
-  color: @surface_alt;
-  background-color: @error;
-}
-
-.close-button:hover,
-.close-button:active {
-  background-color: @error;
 }
 
 .control-center {
+  background: @background;
   border-radius: 20px;
-  background-color: @surface_alt;
-  color: @on_surface;
-  padding: 10px;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);
+}
+
+.widget-title {
+  margin: 10px;
 }
 
 .widget-title > label {
   font-size: 1.4em;
-  color: @on_surface;
+  font-weight: bold;
+  margin-left: 10px;
 }
 
 .widget-title button {
-  border-radius: 1em;
-  color: @on_surface;
-  background-color: @surface_alt;
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-  padding: 8px;
+  background: @surface_container;
+  border-radius: 20px;
 }
 
 .widget-title button:hover {
-  background-color: #585b70;
+  background: @surface_container_hover;
+  border-radius: 10px;
 }
 
-.widget-title button:active {
-  background-color: @primary;
-  color: @surface_alt;
+.widget-title button:active,
+.widget-title button:hover:active {
+  background: @on_primary;
+  border-radius: 10px;
 }
 
-.control-center .notification-row .notification-background {
+.widget-title button label {
+  font-weight: normal;
+}
+
+.widget-dnd {
+  margin: 0 10px 0 15px;
+}
+
+.control-center-dnd,
+.control-center .notification-row .notification-background .notification,
+.floating-notifications.background .notification-row .notification-background .notification {
+  background: @surface_container;
+}
+
+.control-center-dnd:hover,
+.control-center .notification-row .notification-background .notification-action:hover,
+.control-center .notification-row .notification-background .notification-default-action:hover,
+.floating-notifications.background .notification-default-action:hover,
+.floating-notifications.background .notification-action:hover {
+  background: @surface_container_hover;
+  border-radius: 10px;
+}
+
+.control-center-dnd > slider {
+  background: @primary;
   border-radius: 20px;
-  background-color: @surface_alt;
-  color: @on_surface;
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-  margin-top: 14px;
 }
 
-.control-center .notification {
-  padding: 7px;
-  border-radius: 7px;
+.control-center-dnd:checked > slider {
+  background: @on_primary;
 }
 
-.control-center .notification.critical {
-  box-shadow: inset 0 0 7px 0 @error;
+.control-center-dnd:checked {
+  background: @secondary;
+  border-radius: 20px;
 }
 
-.control-center .notification-content {
-  margin: 7px;
+.control-center-dnd:hover:checked {
+  border-radius: 10px;
 }
 
-.control-center .summary,
-.control-center .body {
-  color: @on_surface;
+.control-center .notification-row,
+.control-center .notification-row .notification-background,
+.control-center .notification-group {
+  margin: 0;
+  padding: 0;
 }
 
-.control-center .time {
-  color: @on_surface_variant;
+.control-center .notification-row {
+  margin: 5px 10px;
 }
 
-.control-center .notification > *:last-child > * {
-  min-height: 3.4em;
-}
-
-.control-center .notification-action {
-  border-radius: 13px;
-  background-color: #11111b;
-}
-
-.control-center .notification-action:hover {
-  background-color: @surface_alt;
-}
-
-.control-center .notification-action:active {
-  background-color: @primary;
-  color: @surface;
-}
-
-.control-center .close-button {
-  margin: 7px;
-  padding: 2px;
-  border-radius: 1em;
-  background-color: @error;
-  color: @surface_alt;
-}
-
-.control-center .notification-background:hover {
-  background-color: #7f849c;
-}
-
-.control-center .notification-background:active {
-  background-color: @primary;
-}
-
-.notification.critical progress,
-.notification.low progress,
-.notification.normal progress {
-  border-radius: 1em;
+.control-center .notification-row .notification-background .notification {
+  border-radius: 20px;
 }
 
 .notification.critical progress {
   background-color: @error;
 }
 
-.notification.low progress,
-.notification.normal progress {
-  background-color: @primary;
-}
-
-.control-center-dnd {
-  margin-top: 5px;
-  border-radius: 8px;
-  background: @surface_alt;
-  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2);
-}
-
-.widget-dnd {
-  margin: 0;
-  font-size: 1.1rem;
-}
-
-.widget-dnd > switch slider {
-  background: @secondary;
-  border-radius: 1em;
+.control-center .notification-row .notification-background .notification.critical,
+.control-center .notification-row .notification-background .notification.critical .notification-action:hover,
+.control-center .notification-row .notification-background .notification.critical .notification-default-action:hover,
+.floating-notifications.background .notification-row .notification-background .notification.critical {
+  box-shadow: inset 0 0 7px 0 @error;
 }
 
 .widget-mpris .widget-mpris-player {
-  background: @surface_alt;
+  margin: 0 10px;
   border-radius: 20px;
-  padding: 7px;
 }
 
-.widget-mpris-title {
+.widget-mpris .widget-mpris-title {
   font-size: 1.2rem;
 }
 
-.widget-mpris-subtitle {
+.widget-mpris .widget-mpris-subtitle {
   font-size: 0.8rem;
 }
 
-.image {
-  padding-right: 0.5rem;
+.floating-notifications.background .notification-row .notification-background {
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  margin: 5px 10px;
+  padding: 0;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification {
+  padding: 8px;
+  border-radius: 20px;
 }

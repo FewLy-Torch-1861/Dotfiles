@@ -1,5 +1,6 @@
 :root {
 <* for name, value in colors *>
---{{name}}: {{value.default.hex}};
+--{{name}}: {{ value.default.hex }};
+--{{name}}_alt: {{ value.default.rgba | set_alpha: 0.5 }}
 <* endfor *>
 }

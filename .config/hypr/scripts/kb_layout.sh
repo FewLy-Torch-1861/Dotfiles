@@ -30,7 +30,7 @@ notify() {
     replace_id=0
   fi
 
-  new_id=$(notify-send -p -e -r "$replace_id" -t 1000 -u low "$1" "$2")
+  new_id=$(notify-send -a "keyboard-layout" -p -e -r "$replace_id" -t 1000 -u low "$1" "$2")
   echo "$new_id" >"$replace_file"
 }
 

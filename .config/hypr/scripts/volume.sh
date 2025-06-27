@@ -25,7 +25,7 @@ notify() {
     replace_id=0
   fi
 
-  new_id=$(notify-send -p -e -r "$replace_id" -t 1000 -a "status-notif" -h int:value:"$volume" -u low "$1")
+  new_id=$(notify-send -p -e -r "$replace_id" -t 1000 -a "volume" -h int:value:"$volume" -u low "$1")
   echo "$new_id" >"$replace_file"
 }
 
