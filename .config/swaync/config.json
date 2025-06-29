@@ -2,10 +2,10 @@
   "$schema": "/etc/xdg/swaync/configSchema.json",
   "positionX": "right",
   "positionY": "top",
-  "control-center-margin-top": 9,
-  "control-center-margin-bottom": 9,
-  "control-center-margin-right": 9,
-  "control-center-margin-left": 9,
+  "control-center-margin-top": 6,
+  "control-center-margin-bottom": 6,
+  "control-center-margin-right": 6,
+  "control-center-margin-left": 6,
   "notification-icon-size": 48,
   "notification-body-image-height": 100,
   "notification-body-image-width": 200,
@@ -21,12 +21,7 @@
   "hide-on-clear": false,
   "hide-on-action": true,
   "script-fail-notify": true,
-  "widgets": [
-    "title",
-    "dnd",
-    "notifications",
-    "mpris"
-  ],
+  "widgets": ["title", "dnd", "notifications", "mpris"],
   "widget-config": {
     "title": {
       "text": "󰂚 Notifications",
@@ -42,9 +37,9 @@
     }
   },
   "scripts": {
-        "notification-controller": {
-            "exec": "zsh /home/torch/.config/swaync/notification-controller.sh",
-            "app-name": ".*"
-        }
+    "notification-controller": {
+      "exec": "zsh /home/torch/.config/swaync/notification-controller.sh",
+      "app-name": ".*"
     }
+  }
 }

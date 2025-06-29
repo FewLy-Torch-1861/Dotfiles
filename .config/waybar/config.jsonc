@@ -3,7 +3,7 @@
   "layer": "top",
   "output": ["eDP-1"],
   "reload_style_on_change": true,
-  "margin": "6 6 0 6",
+  "margin": "3 3 0 3",
   "modules-left": ["group/windows", "tray", "custom/notification"],
   "modules-center": ["clock"],
   "modules-right": ["hyprland/submap", "group/media", "battery"],
