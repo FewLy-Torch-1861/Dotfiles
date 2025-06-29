@@ -96,8 +96,12 @@ tooltip label {
   padding: 0 10px;
 }
 
+#submap {
+  margin: 0 2px 0 3px;
+}
+
 #media {
-  margin-right: 2px;
+  margin: 0 2px 0 3px;
 }
 
 #mpris {
