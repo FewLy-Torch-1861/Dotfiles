@@ -98,6 +98,10 @@
   border-radius: 20px;
 }
 
+.control-center .notification-row .notification-background .notification-content {
+  margin-left: 5px;
+}
+
 .notification.critical progress {
   background-color: @error;
 }

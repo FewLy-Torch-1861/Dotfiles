@@ -22,6 +22,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# Change default editor on ssh_connection
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
@@ -34,27 +35,20 @@ export FZF_DEFAULT_OPTS=" \
   --color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6 \
   --color=marker:#b7bdf8,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796 \
   --color=selected-bg:#494d64 \
-  --color=border:#363a4f,label:#cad3f5"
+  --color=border:#363a4f,label:#cad3f5 \
+  --border=rounded"
 
 # Custom
 alias fetch='fastfetch -c ~/.config/fastfetch/config-mine.jsonc'
 alias cls='clear && fetch'
 
 # Change existed commands
+alias rm='rm --preserve-root'
 alias sl='sl -e'
 alias vim='nvim'
 alias vi='nvim'
 alias cd='z'
 alias grep='rg'
-
-function sudo() {
-  if [[ "$1 $2 $3 $4" == "rm -rf / --no-preserve-root" ]]; then
-    echo "nice try"
-
-    return 1
-  fi
-  command sudo "$@"
-}
 
 # List Family
 alias ls='exa --icons'
@@ -69,6 +63,9 @@ alias t='tmux'
 alias yz='yazi'
 alias py='python3'
 alias dfs='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# Config files
+alias zshrc="nvim ~/.zshrc"
 
 # Starship
 eval "$(starship init zsh)"

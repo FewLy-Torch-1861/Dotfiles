@@ -42,5 +42,6 @@
     "explorer.confirmDelete": false,
     "[css]": {
         "editor.defaultFormatter": "vscode.css-language-features"
-    }
+    },
+    "workbench.statusBar.visible": false
 }
