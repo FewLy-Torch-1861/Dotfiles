@@ -9,11 +9,10 @@
 
 - WM : [Hyprland](https://hyprland.org/)
 - Color Palette : [Matugen](https://github.com/InioX/matugen) & [Catppuccin Mocha](https://catppuccin.com)
-- Custom GTK shell : [Ignis](https://ignis-sh.github.io/ignis/stable/index.html)
-- Status bar : [Waybar](https://github.com/Alexays/Waybar) *\*will replace with Ignis soon.*
+- Status bar : [Waybar](https://github.com/Alexays/Waybar)
 - Application launcher/Dmenu replacer: [Rofi](https://github.com/davatorium/rofi)
 - Wallpaper manager: [Swww](https://github.com/LGFae/swww)
-- Notif Daemon: [Swaync](https://github.com/ErikReider/SwayNotificationCenter) *\*will replace with Ignis soon.*
+- Notif Daemon: [Swaync](https://github.com/ErikReider/SwayNotificationCenter)
 - Power menu: [Wlogout](https://github.com/ArtsyMacaw/wlogout)
 - [Hypr Ecosystem](https://wiki.hyprland.org/Hypr-Ecosystem):
     - [Hyprlock](https://wiki.hyprland.org/Hypr-Ecosystem/hyprlock): lock screen
