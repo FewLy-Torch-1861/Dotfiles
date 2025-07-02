@@ -35,4 +35,4 @@
   <h2>⬧ My rice (*out dated!*) ⬧</h2>
 </div>
 
-<img src="./Pictures/Screenshots/2025-06-14-091529_hyprshot.png"/>
+<img src="./Assets/Preview.png"/>
