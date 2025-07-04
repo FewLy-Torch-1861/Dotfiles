@@ -27,7 +27,8 @@
 </div>
 
 - [**Rexcrazy804**](https://github.com/Rexcrazy804/Zaphkiel)
-- [**End 4**](https://github.com/end-4/dots-hyprland)
+- [**end 4**](https://github.com/end-4/dots-hyprland)
+- [**linkfrg**](https://github.com/linkfrg/dotfiles)
 - **Material Design** 3
 - **Libawaita** apps
 
