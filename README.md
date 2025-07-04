@@ -29,7 +29,7 @@
 - [**Rexcrazy804**](https://github.com/Rexcrazy804/Zaphkiel)
 - [**End 4**](https://github.com/end-4/dots-hyprland)
 - **Material Design** 3
-- **Google & Modern Gnome** apps
+- **Libawaita** apps
 
 <div align="center">
   <h2>⬧ My rice (*out dated!*) ⬧</h2>
