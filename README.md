@@ -29,6 +29,7 @@
 - [**Rexcrazy804**](https://github.com/Rexcrazy804/Zaphkiel)
 - [**end 4**](https://github.com/end-4/dots-hyprland)
 - [**linkfrg**](https://github.com/linkfrg/dotfiles)
+- [**Reyshyram**](https://github.com/Reyshyram/Dotfiles/brance/old-arch)
 - **Material Design** 3
 - **Libawaita** apps
 
