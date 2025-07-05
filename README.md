@@ -14,11 +14,11 @@
 - Wallpaper manager: [Swww](https://github.com/LGFae/swww)
 - Notif Daemon: [Swaync](https://github.com/ErikReider/SwayNotificationCenter)
 - Power menu: [Wlogout](https://github.com/ArtsyMacaw/wlogout)
-- [Hypr Ecosystem](https://wiki.hyprland.org/Hypr-Ecosystem):
-    - [Hyprlock](https://wiki.hyprland.org/Hypr-Ecosystem/hyprlock): lock screen
-    - [Hypridle](https://wiki.hyprland.org/Hypr-Ecosystem/hypridle/): do things when you idle
-    - [Hyprpicker](https://wiki.hyprland.org/Hypr-Ecosystem/hyprpicker/): color picker
-    - [Hyprsunset](https://wiki.hyprland.org/Hypr-Ecosystem/hyprsunset/): nightlight
+- [Hypr Ecosystem](https://wiki.hypr.land/Hypr-Ecosystem):
+    - [Hyprlock](https://wiki.hypr.land/Hypr-Ecosystem/hyprlock): lock screen
+    - [Hypridle](https://wiki.hypr.land/Hypr-Ecosystem/hypridle/): do things when you idle
+    - [Hyprpicker](https://wiki.hypr.land/Hypr-Ecosystem/hyprpicker/): color picker
+    - [Hyprsunset](https://wiki.hypr.land/Hypr-Ecosystem/hyprsunset/): nightlight
 - Misc:
     - [Hyprshot](https://github.com/Gustash/Hyprshot): screenshot tool
 
