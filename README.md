@@ -34,7 +34,7 @@
 - **Libawaita** apps
 
 <div align="center">
-  <h2>⬧ My rice (*out dated!*) ⬧</h2>
+  <h2>⬧ Preview (*out dated!*) ⬧</h2>
 </div>
 
 <img src="./Assets/Preview.png"/>
