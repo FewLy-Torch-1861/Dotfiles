@@ -42,6 +42,13 @@ export FZF_DEFAULT_OPTS=" \
 alias fetch='fastfetch -c ~/.config/fastfetch/config-mine.jsonc'
 alias cls='clear && fetch'
 
+function reload_gtk_theme() {
+  theme=$(gsettings get org.gnome.desktop.interface gtk-theme)
+  gsettings set org.gnome.desktop.interface gtk-theme ''
+  sleep 1
+  gsettings set org.gnome.desktop.interface gtk-theme $theme
+}
+
 # Change existed commands
 alias rm='rm --preserve-root'
 alias sl='sl -e'
