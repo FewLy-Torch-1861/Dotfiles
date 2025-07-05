@@ -7,7 +7,7 @@
   <h2>⬧ All I Use ⬧</h2>
 </div>
 
-- WM : [Hyprland](https://hyprland.org/)
+- WM : [Hyprland](https://hypr.land/)
 - Color Palette : [Matugen](https://github.com/InioX/matugen) & [Catppuccin Mocha](https://catppuccin.com)
 - Status bar : [Waybar](https://github.com/Alexays/Waybar)
 - Application launcher/Dmenu replacer: [Rofi](https://github.com/davatorium/rofi)
