@@ -1,7 +1,7 @@
 // -*- mode: jsonc -*-
 {
   "layer": "top",
-  // "output": ["eDP-1", ""],
+  "output": ["eDP-1"],
   "reload_style_on_change": true,
   "margin": "3 3 0 3",
   "modules-left": ["group/windows", "tray", "custom/notification"],
@@ -22,10 +22,16 @@
     "format": "{}",
     "max-length": 40,
     "rewrite": {
-      "(.*) - Notes - Obsidian v1.8.10": "$1 - Obsidian",
-      "(.*) — Mozilla Firefox": "$1 - Firefox",
-      "Spotify Free": "Spotify",
-      "": "Hyprland"
+      "(.*) - Notes - Obsidian v1.8.10": " $1",
+      "(.*) — Mozilla Firefox": "󰈹 $1",
+      "Spotify Free": " Spotify",
+      "(.*) - Discord": " $1",
+      "(.*) - Brave": " $1",
+      "nvim(.*)": "$1",
+      "vim(.*)": "$1",
+      "vi(.*)": "$1",
+      "sh(.*)": " $1",
+      "": "󰣇 "
     },
     "separate-outputs": true,
     "on-scroll-down": "hyprctl dispatch workspace e-1",
