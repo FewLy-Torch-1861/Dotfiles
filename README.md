@@ -38,3 +38,10 @@
 </div>
 
 <img src="./Assets/Preview.png"/>
+
+<div align="center">
+  <h2>⬧ Todo ⬧</h2>
+</div>
+
+- [ ] Setting using `rofi`
+- [ ] Better start up workflow
