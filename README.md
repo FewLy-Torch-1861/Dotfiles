@@ -45,4 +45,4 @@
 
 - [ ] Setting using `rofi`
 - [ ] Better start up workflow
-- [ ] Workspaces overview using [hyperspace](https://github.com/KZDKM/Hyprspace) plugin
+- [ ] Workspaces overview using [hyprspace](https://github.com/KZDKM/Hyprspace) plugin
