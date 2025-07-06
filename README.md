@@ -1,13 +1,13 @@
 <div align="center">
-  <h1>【 FewlyTorch's Hyprland dotfiles 】</h1>
+  <h1>【 FewlyTorch's Archlinux configuration 】</h1>
 </div>
-<i>you can use this dots but you have to config it to make it work with your devices.</i>
+<i>you can use the config but you have to config it to make it work with your devices.</i>
 
 <div align="center">
   <h2>⬧ All I Use ⬧</h2>
 </div>
 
-- WM : [Hyprland](https://hypr.land/)
+- Compositor: [Hyprland](https://hypr.land/)
 - Color Palette : [Matugen](https://github.com/InioX/matugen) & [Catppuccin Mocha](https://catppuccin.com)
 - Status bar : [Waybar](https://github.com/Alexays/Waybar)
 - Application launcher/Dmenu replacer: [Rofi](https://github.com/davatorium/rofi)
