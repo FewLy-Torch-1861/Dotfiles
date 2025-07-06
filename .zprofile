@@ -1,4 +1,6 @@
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-  ~/.local/bin/unlock-keyring
+  eval $(gnome-keyring-daemon --start)
+  export SSH_AUTH_SOCK
   exec Hyprland
 fi
+

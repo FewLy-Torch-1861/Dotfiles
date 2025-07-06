@@ -23,4 +23,6 @@ if ! hyprctl reload; then
   exit 1
 fi
 
+hyprpm reload -n
+
 notify-send "Hyprland" "All services restarted and Hyprland reloaded successfully."
