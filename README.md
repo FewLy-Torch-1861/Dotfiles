@@ -46,4 +46,4 @@
 - [ ] Setting using `rofi`
 - [ ] Better start up workflow
 - [ ] Workspaces overview using [hyprspace](https://github.com/KZDKM/Hyprspace) plugin
-- [ ] Cursor effect using [hypr-dynamic-cursors](https://github.com/VirtCode/hypr-dynamic-cursors) plugin
+- [x] Cursor effect using [hypr-dynamic-cursors](https://github.com/VirtCode/hypr-dynamic-cursors) plugin
