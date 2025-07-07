@@ -11,7 +11,7 @@ if command -v flatpak &>/dev/null; then
   flatpak update
 else
   echo "[*] Flatpak not installed, installing flatpak..."
-  yay -S --noconfirm flatpak
+  yay -S --needed --noconfirm flatpak
 
   echo "[*] Updating flatpak..."
   flatpak update
