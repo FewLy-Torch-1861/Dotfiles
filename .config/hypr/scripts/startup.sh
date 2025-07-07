@@ -15,7 +15,7 @@ wl-paste --type image --watch cliphist store &
 brightnessctl -q s 100% &
 nwg-look -a &
 
-syncthing & # To yeah syncthing
+syncthing & # To... Yeah syncthing
 hypridle & # Just do things when you idle
 swww-daemon & # WALLPAPER!
 swaync & # The Notification daemon
