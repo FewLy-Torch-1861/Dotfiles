@@ -24,8 +24,8 @@
 - [Hyprpicker](https://wiki.hypr.land/Hypr-Ecosystem/hyprpicker/): color picker
 - [Hyprsunset](https://wiki.hypr.land/Hypr-Ecosystem/hyprsunset/): nightlight
 - Plugins:
- - [hypr-dynamic-cursors](https://github.com/VirtCode/hypr-dynamic-cursors): Cursor effects
- - [hyprspace](https://github.com/KZDKM/Hyprspace): Desktop overview
+  - [hypr-dynamic-cursors](https://github.com/VirtCode/hypr-dynamic-cursors): Cursor effects
+  - [hyprspace](https://github.com/KZDKM/Hyprspace): Desktop overview
 
 
 <div align="center">
