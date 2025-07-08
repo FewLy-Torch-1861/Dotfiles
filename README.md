@@ -19,11 +19,10 @@
 - [Swaync](https://github.com/ErikReider/SwayNotificationCenter): Notification daemon
 - [Wlogout](https://github.com/ArtsyMacaw/wlogout): Power Menu
 - [Hyprshot](https://github.com/Gustash/Hyprshot): screenshot tool
-- [Hypr Ecosystem](https://wiki.hypr.land/Hypr-Ecosystem):
-    - [Hyprlock](https://wiki.hypr.land/Hypr-Ecosystem/hyprlock): lock screen
-    - [Hypridle](https://wiki.hypr.land/Hypr-Ecosystem/hypridle/): do things when you idle
-    - [Hyprpicker](https://wiki.hypr.land/Hypr-Ecosystem/hyprpicker/): color picker
-    - [Hyprsunset](https://wiki.hypr.land/Hypr-Ecosystem/hyprsunset/): nightlight
+- [Hyprlock](https://wiki.hypr.land/Hypr-Ecosystem/hyprlock): lock screen
+- [Hypridle](https://wiki.hypr.land/Hypr-Ecosystem/hypridle/): do things when you idle
+- [Hyprpicker](https://wiki.hypr.land/Hypr-Ecosystem/hyprpicker/): color picker
+- [Hyprsunset](https://wiki.hypr.land/Hypr-Ecosystem/hyprsunset/): nightlight
 - Plugins:
     - [hypr-dynamic-cursors](https://github.com/VirtCode/hypr-dynamic-cursors): Cursor effects
     - [hyprspace](https://github.com/KZDKM/Hyprspace): Desktop overview
