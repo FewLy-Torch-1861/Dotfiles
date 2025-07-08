@@ -13,18 +13,21 @@
 
 - Compositor: [Hyprland](https://hypr.land/)
 - Color Palette : [Matugen](https://github.com/InioX/matugen) & [Catppuccin Mocha](https://catppuccin.com)
-- Status bar : [Waybar](https://github.com/Alexays/Waybar)
-- Application launcher/Dmenu replacer: [Rofi](https://github.com/davatorium/rofi)
-- Wallpaper manager: [Swww](https://github.com/LGFae/swww)
-- Notif Daemon: [Swaync](https://github.com/ErikReider/SwayNotificationCenter)
-- Power menu: [Wlogout](https://github.com/ArtsyMacaw/wlogout)
+- [Waybar](https://github.com/Alexays/Waybar): Status bar
+- [Rofi](https://github.com/davatorium/rofi): Application launcher/Dmenu
+- [Swww](https://github.com/LGFae/swww): Wallpaper daemon
+- [Swaync](https://github.com/ErikReider/SwayNotificationCenter): Notification daemon
+- [Wlogout](https://github.com/ArtsyMacaw/wlogout): Power Menu
+- [Hyprshot](https://github.com/Gustash/Hyprshot): screenshot tool
 - [Hypr Ecosystem](https://wiki.hypr.land/Hypr-Ecosystem):
     - [Hyprlock](https://wiki.hypr.land/Hypr-Ecosystem/hyprlock): lock screen
     - [Hypridle](https://wiki.hypr.land/Hypr-Ecosystem/hypridle/): do things when you idle
     - [Hyprpicker](https://wiki.hypr.land/Hypr-Ecosystem/hyprpicker/): color picker
     - [Hyprsunset](https://wiki.hypr.land/Hypr-Ecosystem/hyprsunset/): nightlight
-- Misc:
-    - [Hyprshot](https://github.com/Gustash/Hyprshot): screenshot tool
+- Plugins:
+    - [hypr-dynamic-cursors](https://github.com/VirtCode/hypr-dynamic-cursors): Cursor effects
+    - [hyprspace](https://github.com/KZDKM/Hyprspace): Desktop overview
+
 
 <div align="center">
   <h2>⬧ Reference ⬧</h2>
