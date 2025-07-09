@@ -49,5 +49,3 @@ wall_selection=$(find "${wall_dir}" -maxdepth 1 -type f \( -iname "*.jpg" -o -in
 swww img -t outer --transition-duration 1.5 --transition-step 255 --transition-fps 60 -f Nearest "${wall_dir}/${wall_selection}"
 matugen image -t "scheme-content" "${wall_dir}/${wall_selection}"
 ln -sf "${wall_dir}/${wall_selection}" "${HOME}/.currentwall"
-
-# exit 0

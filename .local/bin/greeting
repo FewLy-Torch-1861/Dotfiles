@@ -9,7 +9,7 @@ clear
 rows=$(tput lines)
 cols=$(tput cols)
 
-msg="WELCOME BACK"
+msg="WELCOME BACK $(whoami)"
 
 # Calulate centered pos
 msg_len=${#msg}
