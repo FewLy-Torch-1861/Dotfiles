@@ -13,8 +13,3 @@ listview {
 inputbar {
   children: ["entry", "dummy", "prompt" ];
 }
-
-/* ---- Icon ---- */
-element-icon {
-  size: 0px;
-}

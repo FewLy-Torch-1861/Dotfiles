@@ -1,11 +1,11 @@
 #!/bin/bash
 
-set -euo pipefail
+pkill rofi || true
 
 ARGS={1:-}
 
 clipboard() {
-  cliphist list | rofi -config "$HOME/.config/rofi/config-clip.rasi" -i -dmenu -p " Clipboard" -display-columns 2 | cliphist decode | wl-copy
+  cliphist list | rofi -config "$HOME/.config/rofi/config-normal.rasi" -i -dmenu -no-show-icons -p " Clipboard" -display-columns 2 | cliphist decode | wl-copy
 }
 
 case "$ARGS" in

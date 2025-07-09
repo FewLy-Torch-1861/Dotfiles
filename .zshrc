@@ -55,7 +55,6 @@ alias sl='sl -e'
 alias vim='nvim'
 alias vi='nvim'
 alias cd='z'
-alias grep='rg'
 
 # List Family
 alias ls='exa --icons'

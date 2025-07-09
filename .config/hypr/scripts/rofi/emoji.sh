@@ -1,5 +1,5 @@
 #!/bin/bash
 
-set -euo pipefail
+pkill rofi || true
 
-rofi -modes "emoji" -i -show emoji -config "$HOME/.config/rofi/config-emoji.rasi"
+rofi -modes "emoji" -i -show emoji -config "$HOME/.config/rofi/config-emoji.rasi" -no-show-icons

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -euo pipefail
+pkill rofi || true
 
 # Set some variables
 wall_dir="${HOME}/Pictures/Wallpapers"
@@ -42,7 +42,7 @@ for imagen in "$wall_dir"/*.{jpg,jpeg,png,webp}; do
 done
 
 # Select a picture with rofi
-wall_selection=$(find "${wall_dir}" -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" \) -exec basename {} \; | sort | while read -r A; do echo -en "$A\x00icon\x1f""${cacheDir}"/"$A\n"; done | $rofi_command)
+wall_selection=$(find "${wall_dir}" -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" \) -exec basename {} \; | sort | while read -r A; do echo -en "$A\x00icon\x1f""${cacheDir}"/"$A\n"; done | $rofi_command -p " Wallpaper")
 
 # Set the wallpaper
 [[ -n "$wall_selection" ]] || exit 1

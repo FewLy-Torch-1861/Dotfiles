@@ -6,6 +6,11 @@ window {
   height: inherit;
 }
 
+/* ---- Inputbar ---- */
+inputbar {
+  children: ["entry", "dummy", "prompt" ];
+}
+
 /* ---- Listview ---- */
 listview {
   columns: 5;

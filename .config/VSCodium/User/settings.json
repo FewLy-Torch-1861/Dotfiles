@@ -1,5 +1,5 @@
 {
-  "editor.fontFamily": "'JetBrainsMono Nerd Font', 'Noto Sans Thai', 'monospace', monospace",
+  "editor.fontFamily": "'JetBrainsMono Nerd Font Mono', 'Noto Sans Thai', 'monospace', monospace",
   "editor.tabSize": 2,
   "editor.renderWhitespace": "all",
   "workbench.iconTheme": "material-icon-theme",
@@ -48,5 +48,6 @@
   },
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
-  }
+  },
+  "workbench.statusBar.visible": false
 }
