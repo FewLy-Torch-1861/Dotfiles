@@ -2,7 +2,7 @@
 
 * {
   font-size: 14px;
-  font-family: "JetBrainsMono Nerd Font", "Noto Sans Thai";
+  font-family: "IBM Plex Sans Thai", "JetBrainsMono Nerd Font Propo";
   transition: 200ms;
   border: none;
   box-shadow: none;
@@ -43,7 +43,7 @@
 }
 
 .widget-title button label {
-  font-weight: normal;
+  font-weight: bold;
 }
 
 .widget-dnd {

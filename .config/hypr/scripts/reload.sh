@@ -13,8 +13,13 @@ restart_service "swww-daemon"
 restart_service "waybar"
 restart_service "hypridle"
 
-if ! swaync-client -R && swaync-client -rs; then
-  notify-send "Failed to reload Hyprland configuration"
+if ! swaync-client -R; then
+  notify-send "Failed to reload Swaync configuration"
+  exit 1
+fi
+
+if ! swaync-client -rs; then
+  notify-send "Failed to reload Swaync Style"
   exit 1
 fi
 

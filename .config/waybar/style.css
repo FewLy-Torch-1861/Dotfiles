@@ -3,7 +3,8 @@
 * {
   all: unset;
   color: @on_surface;
-  font-family: "JetBrainsMono Nerd Font", "Noto Sans Thai", monospace;
+  font-family: "IBM Plex Sans Thai", "JetBrainsMono Nerd Font Propo";
+  font-weight: bold;
   min-height: 0;
   transition: 200ms;
 }
@@ -86,14 +87,13 @@ tooltip label {
 
 #tray menuitem:hover {
   background: @background_hover;
-  font-weight: bold;
 }
 
 #custom-notification {
   margin-left: 3px;
   margin-right: 2px;
-  padding-left: 12px;
-  padding-right: 15px;
+  padding-left: 11px;
+  padding-right: 11px;
 }
 
 #clock {
