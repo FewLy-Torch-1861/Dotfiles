@@ -1,9 +1,9 @@
 <div align="center">
   <h1>【 FewlyTorch's Archlinux configuration 】</h1>
+  
+  ![](https://img.shields.io/github/last-commit/FewLy-Torch-1861/dotfiles?&style=for-the-badge&color=FFB1C8&logoColor=D9E0EE&labelColor=292324)
+  ![](https://img.shields.io/github/repo-size/FewLy-Torch-1861/dotfiles?color=CAC992&label=SIZE&logo=googledrive&style=for-the-badge&logoColor=D9E0EE&labelColor=292324)
 </div>
-
-![](https://img.shields.io/github/last-commit/FewLy-Torch-1861/dotfiles?&style=for-the-badge&color=FFB1C8&logoColor=D9E0EE&labelColor=292324)
-![](https://img.shields.io/github/repo-size/FewLy-Torch-1861/dotfiles?color=CAC992&label=SIZE&logo=googledrive&style=for-the-badge&logoColor=D9E0EE&labelColor=292324)
 
 <i>you can use the config but you have to modify it to make it work with your devices.</i>
 
