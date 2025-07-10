@@ -5,7 +5,7 @@
   ![](https://img.shields.io/github/repo-size/FewLy-Torch-1861/dotfiles?color=CAC992&label=SIZE&logo=googledrive&style=for-the-badge&logoColor=D9E0EE&labelColor=292324)
 </div>
 
-<i>you can use the config but you have to modify it to make it work with your devices.</i>
+<i>You can use the config but you have to modify it to make it work with your devices.</i>
 
 <div align="center">
   <h2>⬧ All I Use ⬧</h2>
@@ -17,12 +17,12 @@
 - [Rofi](https://github.com/davatorium/rofi): Application launcher/Dmenu
 - [Swww](https://github.com/LGFae/swww): Wallpaper daemon
 - [Swaync](https://github.com/ErikReider/SwayNotificationCenter): Notification daemon
-- [Wlogout](https://github.com/ArtsyMacaw/wlogout): Power Menu
-- [Hyprshot](https://github.com/Gustash/Hyprshot): screenshot tool
-- [Hyprlock](https://wiki.hypr.land/Hypr-Ecosystem/hyprlock): lock screen
-- [Hypridle](https://wiki.hypr.land/Hypr-Ecosystem/hypridle/): do things when you idle
-- [Hyprpicker](https://wiki.hypr.land/Hypr-Ecosystem/hyprpicker/): color picker
-- [Hyprsunset](https://wiki.hypr.land/Hypr-Ecosystem/hyprsunset/): nightlight
+- [Wlogout](https://github.com/ArtsyMacaw/wlogout): Power menu
+- [Hyprshot](https://github.com/Gustash/Hyprshot): Screenshot tool
+- [Hyprlock](https://wiki.hypr.land/Hypr-Ecosystem/hyprlock): Lock screen
+- [Hypridle](https://wiki.hypr.land/Hypr-Ecosystem/hypridle/): Idle daemon
+- [Hyprpicker](https://wiki.hypr.land/Hypr-Ecosystem/hyprpicker/): Color picker
+- [Hyprsunset](https://wiki.hypr.land/Hypr-Ecosystem/hyprsunset/): Nightlight
 - Plugins:
   - [hypr-dynamic-cursors](https://github.com/VirtCode/hypr-dynamic-cursors): Cursor effects
   - [hyprspace](https://github.com/KZDKM/Hyprspace): Desktop overview
