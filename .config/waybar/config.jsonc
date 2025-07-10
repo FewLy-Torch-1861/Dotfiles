@@ -80,7 +80,7 @@
   },
   "mpris": {
     "interval": 1,
-    "max-length": 32,
+    "max-length": 40,
     "format": "󰐊 {artist} - {title}",
     "format-paused": "󰏤 {artist} - {title}"
   },
