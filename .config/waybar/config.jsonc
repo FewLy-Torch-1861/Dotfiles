@@ -1,15 +1,30 @@
 // -*- mode: jsonc -*-
 {
   "layer": "top",
-  "output": ["eDP-1"],
+  "output": [
+    "eDP-1"
+  ],
   "reload_style_on_change": true,
   "margin": "3 3 0 3",
-  "modules-left": ["group/windows", "tray", "custom/notification"],
-  "modules-center": ["clock"],
-  "modules-right": ["hyprland/submap", "group/media", "battery"],
+  "modules-left": [
+    "group/windows",
+    "tray",
+    "custom/notification"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "hyprland/submap",
+    "group/media",
+    "battery"
+  ],
   "group/windows": {
     "orientation": "horizontal",
-    "modules": ["hyprland/workspaces", "hyprland/window"]
+    "modules": [
+      "hyprland/workspaces",
+      "hyprland/window"
+    ]
   },
   "hyprland/workspaces": {
     "format": "{id}",
@@ -76,13 +91,21 @@
   },
   "group/media": {
     "orientation": "horizontal",
-    "modules": ["mpris", "pulseaudio"]
+    "modules": [
+      "mpris",
+      "pulseaudio"
+    ]
   },
   "mpris": {
     "interval": 1,
     "max-length": 40,
     "format": "󰐊 {artist} - {title}",
-    "format-paused": "󰏤 {artist} - {title}"
+    "format-paused": "󰏤 {artist} - {title}",
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "on-click-middle": "playerctl previous",
+    "on-scroll-up": "~/.config/hypr/scripts/volume.sh inc",
+    "on-scroll-down": "~/.config/hypr/scripts/volume.sh dec"
   },
   "pulseaudio": {
     "scroll-step": 5,
@@ -99,7 +122,11 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", ""]
+      "default": [
+        "",
+        "",
+        ""
+      ]
     },
     "on-click": "pavucontrol -t 3"
   },
@@ -107,7 +134,19 @@
     "interval": 1,
     "format": "{icon} {capacity}%",
     "format-charging": "{icon}󱐋 {capacity}%",
-    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "format-icons": [
+      "󰂎",
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ],
     "tooltip-format": "Battery {capacity}% {timeTo}"
   }
 }
