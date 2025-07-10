@@ -76,10 +76,7 @@
   },
   "group/media": {
     "orientation": "horizontal",
-    "modules": [
-      "mpris",
-      "pulseaudio"
-    ]
+    "modules": ["mpris", "pulseaudio"]
   },
   "mpris": {
     "interval": 1,
