@@ -5,6 +5,7 @@ pkill rofi || true
 scriptDir="${HOME}/.config/hypr/scripts"
 rofi_command="rofi -i -dmenu -no-show-icons -config "$HOME/.config/rofi/config-normal.rasi""
 settings=(
+  " Config"
   " Game mode"
   "󱩌 Night light"
   "󰑓 Reload"
@@ -17,6 +18,9 @@ setting_selection=$(for i in "${settings[@]}"; do echo $i; done | sort | $rofi_c
 actual_selection=$(echo "$setting_selection" | sed 's/^[^ ]* //')
 
 case "$actual_selection" in
+"Config")
+  kitty --hold nvim ~/.config/hypr/hyprland.conf &
+  ;;
 "Game mode")
   "${scriptDir}/rofi/gamemode.sh"
   ;;

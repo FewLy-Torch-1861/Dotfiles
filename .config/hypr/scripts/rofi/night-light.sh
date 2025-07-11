@@ -1,5 +1,7 @@
 #!/bin/bash
 
+pkill rofi || true
+
 rofi_command="rofi -i -dmenu -no-show-icons -config ${HOME}/.config/rofi/config-toggle.rasi"
 toggle=(
   " Enabled"
