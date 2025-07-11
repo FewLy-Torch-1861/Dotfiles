@@ -21,7 +21,7 @@ swww-daemon & # WALLPAPER!
 swaync &      # The Notification daemon
 waybar &      # The Status bar
 
-discord &                                                                           # !TRASH-APP
+discord --ozone-platform-hint=auto &                                                # DISCORD!!
 $BROWSER || notify-send -a "Hyprland" "startup.sh" "Startup Browser is not set\!" & # I'm just to lazy to press SUPER + B
 
 sleep 7.5
