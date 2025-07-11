@@ -21,7 +21,7 @@ case "$actual_selection" in
   "${scriptDir}/rofi/gamemode.sh"
   ;;
 "Night light")
-  hyprsunset -t 5000 || pkill hyprsunset
+  "${scriptDir}/rofi/night-light.sh"
   ;;
 "Reload")
   "${scriptDir}/reload.sh"

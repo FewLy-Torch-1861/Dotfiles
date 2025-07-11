@@ -28,4 +28,8 @@ Disabled)
 
   notify-send "Hyprland" "Disabled gamemode"
   ;;
+*)
+  echo "No match for: $actual_selection" >&2
+  exit 1
+  ;;
 esac
