@@ -5,7 +5,7 @@ pkill rofi || true
 # Set some variables
 wall_dir="${HOME}/Pictures/Wallpapers"
 cacheDir="${HOME}/.cache/wallpaper"
-rofi_command="rofi -i -dmenu -theme ${HOME}/.config/rofi/config-wall.rasi"
+rofi_command="rofi -i -dmenu -config ${HOME}/.config/rofi/config-wall.rasi"
 
 replace_file="/tmp/wal-notify-id"
 

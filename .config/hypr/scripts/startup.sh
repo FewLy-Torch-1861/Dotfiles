@@ -15,16 +15,16 @@ wl-paste --type image --watch cliphist store &
 brightnessctl -q s 100% &
 nwg-look -a &
 
-syncthing & # To... Yeah syncthing
-hypridle & # Just do things when you idle
+syncthing &   # To... Yeah syncthing
+hypridle &    # Just do things when you idle
 swww-daemon & # WALLPAPER!
-swaync & # The Notification daemon
-waybar & # The Status bar
+swaync &      # The Notification daemon
+waybar &      # The Status bar
 
-discord & # !TRASH-APP
+discord &                                                                           # !TRASH-APP
 $BROWSER || notify-send -a "Hyprland" "startup.sh" "Startup Browser is not set\!" & # I'm just to lazy to press SUPER + B
 
-sleep 5
+sleep 7.5
 
 hyprctl -q dispatch workspace 2 # Go to my most used workspace
 

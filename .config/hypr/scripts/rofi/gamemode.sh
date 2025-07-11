@@ -1,9 +1,16 @@
 #!/bin/bash
 
-set -euo pipefail
+rofi_command="rofi -i -dmenu -no-show-icons -config ${HOME}/.config/rofi/config-toggle.rasi"
+toggle=(
+  " Enabled"
+  " Disabled"
+)
 
-case "$1" in
-yes)
+selection=$(for i in "${toggle[@]}"; do echo "$i"; done | ${rofi_command} -p " Gamemode")
+actual_selection=$(echo "$selection" | sed 's/^[^ ]* //')
+
+case "$actual_selection" in
+Enabled)
   hyprctl keyword decoration:blur:enabled false
   hyprctl keyword decoration:shadow:enabled false
   hyprctl keyword animations:enabled false
@@ -14,14 +21,10 @@ yes)
 
   pkill hypridle
 
-  # swaync-client -dn
-
   notify-send "Hyprland" "Enabled gamemode"
   ;;
-no)
-  $HOME/.config/hypr/scripts/reload.sh
-
-  # swaync-client -df
+Disabled)
+  "$HOME/.config/hypr/scripts/reload.sh"
 
   notify-send "Hyprland" "Disabled gamemode"
   ;;
