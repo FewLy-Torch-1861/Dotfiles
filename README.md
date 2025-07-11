@@ -5,7 +5,7 @@
   ![](https://img.shields.io/github/repo-size/FewLy-Torch-1861/dotfiles?color=E0E0E0&label=SIZE&logo=googledrive&style=for-the-badge&logoColor=D9E0EE&labelColor=141B23)
 </div>
 
-<i>You can use the config but you have to modify it to make it work with your devices.</i>
+_You can use the config but you have to modify it to make it work with your devices._
 
 <div align="center">
   <h2>⬧ All I Use ⬧</h2>
@@ -27,7 +27,6 @@
   - [hypr-dynamic-cursors](https://github.com/VirtCode/hypr-dynamic-cursors): Cursor effects
   - [hyprspace](https://github.com/KZDKM/Hyprspace): Desktop overview
 
-
 <div align="center">
   <h2>⬧ Reference ⬧</h2>
 </div>
@@ -45,13 +44,10 @@
 
 <img src="./Assets/Preview.png"/>
 
-<i>[wallpaper source](https://wallhere.com/th/wallpaper/1686311)</i>
+_[wallpaper source](https://wallhere.com/th/wallpaper/1686311)_
 
 <div align="center">
   <h2>⬧ Todo ⬧</h2>
 </div>
 
-- [x] Setting using `rofi`
-- [x] Better start up workflow
-- [x] Workspaces overview using [hyprspace](https://github.com/KZDKM/Hyprspace) plugin
-- [x] Cursor effect using [hypr-dynamic-cursors](https://github.com/VirtCode/hypr-dynamic-cursors) plugin
+- [ ] Better `rofi` look
