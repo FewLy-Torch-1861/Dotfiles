@@ -16,7 +16,7 @@ brightnessctl -q s 100% &
 nwg-look -a &
 
 syncthing &   # To... Yeah syncthing
-hypridle &    # Just do things when you idle
+hypridle &    # Idle daemon
 swww-daemon & # WALLPAPER!
 swaync &      # The Notification daemon
 waybar &      # The Status bar
@@ -24,7 +24,7 @@ waybar &      # The Status bar
 discord --ozone-platform-hint=auto &                                                # DISCORD!!
 $BROWSER || notify-send -a "Hyprland" "startup.sh" "Startup Browser is not set\!" & # I'm just to lazy to press SUPER + B
 
-sleep 7.5
+sleep 10
 
 hyprctl -q dispatch workspace 2 # Go to my most used workspace
 
