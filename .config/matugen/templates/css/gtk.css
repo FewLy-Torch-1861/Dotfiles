@@ -1,5 +1,0 @@
-<* for name, value in colors *>
-@define-color {{name}} {{ value.default.rgb }};
-@define-color {{name}}_alt {{ value.default.rgba | set_alpha: 0.5 }};
-@define-color {{name}}_hover {{ value.default.rgb | set_lightness: 10.0 }};
-<* endfor *>
