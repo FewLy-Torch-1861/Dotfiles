@@ -9,7 +9,8 @@ function ai
     tgpt --key (cat $HOME/.config/geminiapikey) --provider gemini -w $argv | glow
 end
 
-# PATH
+# ENVs
+set -x EDITOR nvim
 set -x PATH "$PATH:$HOME/.local/bin"
 
 # Custom
@@ -17,6 +18,9 @@ alias fetch='fastfetch -c ~/.config/fastfetch/config-default.jsonc'
 alias af='hyfetch --ascii-file ~/.config/fastfetch/logo.txt'
 alias cls='clear && af'
 abbr --add cavabg 'kitty -o background_opacity=0 --class=cava "cava"'
+
+# Shorter commands
+abbr --add y yazi
 
 # Change existed commands
 alias rm='rm --preserve-root'
