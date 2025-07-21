@@ -1,34 +1,111 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "file",
+    "source": "~/.config/fastfetch/logo.txt",
+    "padding": {
+      "left": 1,
+      "top": 1
+    },
+    "color": {
+      "1": "blue",
+      "2": "red",
+      "3": "white",
+      "4": "red",
+      "5": "blue"
+    }
+  },
+  "general": {},
+  "display": {
+    "separator": " ",
+    "color": "magenta",
+    "bar": {
+      "borderLeft": "[",
+      "borderRight": "]",
+      "charElapsed": "■",
+      "charTotal": "-",
+      "width": 27
+    },
+    "percent": {
+      "type": 3,
+      "color": {
+        "green": "green",
+        "yellow": "yellow",
+        "red": "red"
+      }
+    }
+  },
   "modules": [
-    "title",
-    "separator",
-    "os",
-    "host",
-    "kernel",
-    "uptime",
-    "packages",
-    "shell",
-    "display",
-    "de",
-    "wm",
-    "wmtheme",
-    "theme",
-    "icons",
-    "font",
-    "cursor",
-    "terminal",
-    "terminalfont",
-    "cpu",
-    "gpu",
-    "memory",
-    "swap",
-    "disk",
-    "localip",
-    "battery",
-    "poweradapter",
-    "locale",
     "break",
-    "colors"
+    {
+      "type": "title",
+      "key": "  ",
+      "format": "{6}{7}{8}"
+    },
+    {
+      "type": "separator",
+      "length": 40
+    },
+    {
+      "type": "os",
+      "key": "      OS",
+      "format": "{3}"
+    },
+    {
+      "type": "kernel",
+      "key": "  KERNEL",
+      "format": "{2}"
+    },
+    {
+      "type": "host",
+      "key": "    HOST",
+      "format": "{2}"
+    },
+    {
+      "type": "packages",
+      "key": "PACKAGES",
+      "format": "{1}"
+    },
+    {
+      "type": "uptime",
+      "key": "  UPTIME"
+    },
+    "separator",
+    {
+      "type": "cpu",
+      "key": "     CPU",
+      "format": "{1}"
+    },
+    {
+      "type": "gpu",
+      "key": "     GPU",
+      "format": "{1} {2}"
+    },
+    {
+      "type": "memory",
+      "key": "  MEMORY",
+      "format": "{4}"
+    },
+    {
+      "type": "swap",
+      "key": "    SWAP",
+      "format": "{4}"
+    },
+    {
+      "type": "disk",
+      "key": " DISK({1})",
+      "format": "{13}"
+    },
+    {
+      "type": "display",
+      "key": " DISPLAY",
+      "format": "{1}x{2}@{3} {6}[{7}]"
+    },
+    "separator",
+    {
+      "type": "colors",
+      "key": "  COLORS",
+      "symbol": "circle"
+    }
   ]
 }

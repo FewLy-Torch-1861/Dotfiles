@@ -1,6 +1,5 @@
 if status is-interactive
-    # Commands to run in interactive sessions can go here
-    fastfetch -c ~/.config/fastfetch/config-mine.jsonc
+    hyfetch --ascii-file ~/.config/fastfetch/logo.txt
 end
 
 set -g fish_greeting
@@ -14,8 +13,9 @@ end
 set -x PATH "$PATH:$HOME/.local/bin"
 
 # Custom
-alias fetch='fastfetch -c ~/.config/fastfetch/config-mine.jsonc'
-alias cls='clear && fetch'
+alias fetch='fastfetch -c ~/.config/fastfetch/config-default.jsonc'
+alias af='hyfetch --ascii-file ~/.config/fastfetch/logo.txt'
+alias cls='clear && af'
 abbr --add cavabg 'kitty -o background_opacity=0 --class=cava "cava"'
 
 # Change existed commands
@@ -36,7 +36,10 @@ abbr --add tea 'la -T'
 # Git
 alias df='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias g='git'
-abbr --add gc 'git commit'
+abbr --add gc 'git commit -m'
+abbr --add ga 'git add'
+abbr --add gp 'git push'
+abbr --add gst 'git status'
 
 # Starship
 source (/usr/bin/starship init fish --print-full-init | psub)

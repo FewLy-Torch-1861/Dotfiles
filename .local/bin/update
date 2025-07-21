@@ -12,7 +12,7 @@ flatpak update
 echo "[*] Commiting dotfiles change..."
 
 date_string=$(date +%Y-%m-%d_%H-%M-%S)
-# /usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" commit -a -m "update: $date_string" || echo "[*] Nothing to commit!"
+/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" commit -a -m "update: $date_string" || echo "[*] Nothing to commit!"
 
 echo "[*] Doned exiting..."
 
