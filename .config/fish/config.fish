@@ -18,6 +18,7 @@ alias fetch='fastfetch -c ~/.config/fastfetch/config-default.jsonc'
 alias af='hyfetch --ascii-file ~/.config/fastfetch/logo.txt'
 alias cls='clear && af'
 abbr --add cavabg 'kitty -o background_opacity=0 --class=cava "cava"'
+abbr --add reload 'source ~/.config/fish/config.fish'
 
 # Shorter commands
 abbr --add y yazi
