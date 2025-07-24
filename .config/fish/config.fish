@@ -39,8 +39,9 @@ abbr --add te 'ls -T'
 abbr --add tea 'la -T'
 
 # Git
-alias df='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias df='/usr/bin/lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias g='git'
+alias lg='lazygit'
 abbr --add gc 'git commit -m'
 abbr --add ga 'git add'
 abbr --add gp 'git push'
