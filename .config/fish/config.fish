@@ -8,22 +8,33 @@ set -g fish_greeting
 set -x EDITOR nvim
 set -x PATH "$PATH:$HOME/.local/bin"
 
-# Custom
+# Shortcut
 alias fetch='fastfetch -c ~/.config/fastfetch/config-default.jsonc'
 alias af='hyfetch --ascii-file ~/.config/fastfetch/logo.txt'
 alias cls='clear && af'
-abbr --add cavabg 'kitty -o background_opacity=0 --class=cava "cava"'
 abbr --add reload 'source ~/.config/fish/config.fish'
-
-# Shorter commands
-abbr --add y yazi
-
-# Change existed commands
-alias rm='rm --preserve-root'
-abbr --add sl 'sl -e'
 abbr --add vim nvim
 abbr --add vi nvim
+abbr --add y yazi
 abbr --add cd z
+
+# Safety
+alias rm='gio trash'
+abbr --add sl 'sl -e'
+
+# Custom
+abbr --add cavabg 'kitty -o background_opacity=0 --class=cava "cava"'
+
+# Misc
+function md # create dir
+    mkdir -p "$argv[1]"
+    cd "$argv[1]"
+    echo "created $(pwd)"
+end
+function cfp # copy file path
+    readlink -f "$argv[1]" | wl-copy
+end
+alias cdp='pwd | wl-copy' # copy dir path
 
 # List Family
 alias ls='exa --icons'
@@ -35,13 +46,13 @@ abbr --add tea 'la -T'
 
 # Gemini
 set -x GEMINI_API_KEY "$(cat $HOME/.config/geminiapikey)"
-alias gc="gemini"
+alias gc='gemini'
 
 # Git
 alias df='/usr/bin/lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias g='git'
 alias lg='lazygit'
-abbr --add gc 'git commit -m'
+abbr --add gcm 'git commit -m'
 abbr --add ga 'git add'
 abbr --add gp 'git push'
 abbr --add gst 'git status'
