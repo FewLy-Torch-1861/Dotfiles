@@ -88,7 +88,6 @@ function update
     echo "[*] Commiting dotfiles change..."
     set date_string $(date +%Y-%m-%d_%H-%M-%S)
     /usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" commit -a -m "update: $date_string" || echo "[*] Nothing to commit!"
-    set -e date_string
 
     echo "[*] Doned exiting..."
 end
