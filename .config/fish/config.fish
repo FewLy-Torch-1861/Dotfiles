@@ -4,11 +4,6 @@ end
 
 set -g fish_greeting
 
-# AI Things
-function ai
-    tgpt --key (cat $HOME/.config/geminiapikey) --provider gemini -w $argv | glow
-end
-
 # ENVs
 set -x EDITOR nvim
 set -x PATH "$PATH:$HOME/.local/bin"
@@ -37,6 +32,10 @@ abbr --add ll 'ls -lh'
 abbr --add la 'ls -Ah'
 abbr --add te 'ls -T'
 abbr --add tea 'la -T'
+
+# Gemini
+set -x GEMINI_API_KEY "$(cat $HOME/.config/geminiapikey)"
+alias gc="gemini"
 
 # Git
 alias df='/usr/bin/lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
