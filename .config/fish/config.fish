@@ -28,9 +28,6 @@ abbr --add vi nvim
 abbr --add y yazi
 abbr --add cd z
 
-# Custom
-abbr --add cavabg 'kitty -o background_opacity=0 --class=cava "cava"'
-
 # Misc
 function md # create dir
     mkdir -p "$argv[1]"
@@ -115,6 +112,8 @@ function update
 
     echo "[*] Doned exiting..."
 end
+
+abbr --add listpkg 'yay -Q | fzf -e --no-preview'
 
 # Starship
 source (/usr/bin/starship init fish --print-full-init | psub)
