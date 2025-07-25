@@ -53,7 +53,8 @@ set -x GEMINI_API_KEY "$(cat $HOME/.config/geminiapikey)"
 alias gem='gemini'
 
 # Git
-alias df='/usr/bin/lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias df='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias ldf='/usr/bin/lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias g='git'
 alias lg='lazygit'
 abbr --add gcm 'git commit -m'
