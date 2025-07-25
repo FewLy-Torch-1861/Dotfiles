@@ -1,0 +1,5 @@
+mouse-cursor-icon = "i-beam"
+
+[font]
+normal = ["JetBrainsMono Nerd Font", "IBM Plex Sans Thai", "monospace"]
+size = 12.0
