@@ -41,7 +41,7 @@
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "workbench.externalBrowser": "brave",
-  "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
+  "workbench.preferredDarkColorTheme": "Wal Bordered",
   "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.preferredLightColorTheme": "Catppuccin Latte",
   "window.dialogStyle": "custom",
