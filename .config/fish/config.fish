@@ -13,6 +13,7 @@ alias fetch='fastfetch -c ~/.config/fastfetch/config-default.jsonc'
 alias af='hyfetch --ascii-file ~/.config/fastfetch/logo.txt'
 alias cls='clear && af'
 abbr --add reload 'source ~/.config/fish/config.fish'
+abbr --add nv neovide
 abbr --add vim nvim
 abbr --add vi nvim
 abbr --add y yazi
@@ -36,7 +37,7 @@ alias cdp='pwd | wl-copy' # copy dir path
 
 # Gemini
 set -x GEMINI_API_KEY "$(cat $HOME/.config/geminiapikey)"
-alias gc='gemini'
+alias gem='gemini'
 
 # Git
 alias df='/usr/bin/lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
