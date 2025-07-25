@@ -29,6 +29,19 @@ function md # create dir
     echo "created $(pwd)"
 end
 
+function tf # touch file with mkdir -p
+    set file $argv[1]
+    if test -z "$file"
+        echo "Usage: tf <path/to/file>"
+        return 1
+    end
+
+    set dir (dirname "$file")
+    mkdir -p "$dir"
+    touch "$file"
+    echo "touched $file"
+end
+
 function cfp # copy file path
     readlink -f "$argv[1]" | wl-copy
 end
