@@ -42,10 +42,11 @@
   },
   "workbench.externalBrowser": "brave",
   "workbench.preferredDarkColorTheme": "Wal Bordered",
-  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.colorTheme": "Wal Bordered",
   "workbench.preferredLightColorTheme": "Catppuccin Latte",
   "window.dialogStyle": "custom",
   "window.autoDetectColorScheme": true,
   "workbench.activityBar.location": "bottom",
-  "editor.tabCompletion": "on"
+  "editor.tabCompletion": "on",
+  "git.autofetch": true
 }
