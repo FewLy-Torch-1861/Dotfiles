@@ -30,9 +30,8 @@ abbr --add cd z
 
 # Misc
 function md # create dir
-    mkdir -p "$argv[1]"
+    mkdir -pv "$argv[1]"
     cd "$argv[1]"
-    echo "created $(pwd)"
 end
 
 function tf # touch file with mkdir -p
@@ -43,9 +42,9 @@ function tf # touch file with mkdir -p
     end
 
     set dir (dirname "$file")
-    mkdir -p "$dir"
+    mkdir -pv "$dir"
     touch "$file"
-    echo "touched $file"
+    echo "touch: created file '$file'"
 end
 
 function cfp # copy file path
@@ -53,6 +52,11 @@ function cfp # copy file path
 end
 
 alias cdp='pwd | wl-copy' # copy dir path
+alias grep='grep --color=auto'
+alias reboot='sudo /sbin/reboot'
+alias poweroff='sudo /sbin/poweroff'
+alias halt='sudo /sbin/halt'
+alias shutdown='sudo /sbin/shutdown'
 
 # Gemini
 set -x GEMINI_API_KEY "$(cat $HOME/.config/geminiapikey)"
