@@ -2,7 +2,6 @@
   "editor.fontFamily": "'JetBrainsMono Nerd Font Mono', 'IBM Plex Sans Thai', 'monospace', monospace",
   "editor.tabSize": 2,
   "editor.renderWhitespace": "all",
-  "workbench.iconTheme": "material-icon-theme",
   "editor.cursorBlinking": "expand",
   "editor.cursorSmoothCaretAnimation": "on",
   "css.format.spaceAroundSelectorSeparator": true,
@@ -41,12 +40,13 @@
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "workbench.externalBrowser": "brave",
-  "workbench.preferredDarkColorTheme": "Wal Bordered",
-  "workbench.colorTheme": "Wal Bordered",
   "workbench.preferredLightColorTheme": "Catppuccin Latte",
   "window.dialogStyle": "custom",
   "window.autoDetectColorScheme": true,
   "workbench.activityBar.location": "bottom",
   "editor.tabCompletion": "on",
-  "git.autofetch": true
+  "git.autofetch": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
+  "workbench.secondarySideBar.defaultVisibility": "hidden"
 }
