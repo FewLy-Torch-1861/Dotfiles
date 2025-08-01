@@ -6,9 +6,11 @@ set -g fish_greeting
 
 # ENVs
 set -Ux PATH "$PATH:$HOME/.local/bin"
+set -Ux EDITOR nvim
+
 set -Ux XDG_SESSION_TYPE wayland
 set -Ux RTC_USE_PIPEWIRE true
-set -Ux EDITOR nvim
+
 set -Ux FZF_DEFAULT_OPTS "\
 --color=bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8 \
 --color=fg:#CDD6F4,header:#F38BA8,info:#CBA6F7,pointer:#F5E0DC \
@@ -20,10 +22,11 @@ set -Ux FZF_DEFAULT_OPTS "\
 --preview 'bat --style=numbers --color=always {}'"
 
 # Shortcut
+alias deskreen='~/Documents/Deskreen-2.0.4.appimage --enable-features=WebRTCPipeWireCapturer'
 alias fetch='fastfetch -c ~/.config/fastfetch/config-default.jsonc'
 alias af='hyfetch --ascii-file ~/.config/fastfetch/logo.txt'
 alias cls='clear && af'
-abbr --add reload 'source ~/.config/fish/config.fish'
+alias reload 'source ~/.config/fish/config.fish'
 abbr --add nv neovide
 abbr --add vim nvim
 abbr --add vi nvim
@@ -72,6 +75,7 @@ alias lg='lazygit'
 abbr --add gcm 'git commit -m'
 abbr --add ga 'git add'
 abbr --add gp 'git push'
+abbr --add gl 'git pull'
 abbr --add gst 'git status'
 
 # List Family
@@ -101,10 +105,6 @@ alias rm='gio trash'
 abbr --add sl 'sl -e'
 
 # System Maintenance
-function cleanlog
-    sudo journalctl --vacuum-time=7d
-end
-
 function update
     echo "[*] Updating pacman and aur..."
     yay -Syyu
@@ -119,7 +119,9 @@ function update
     echo "[*] Doned exiting..."
 end
 
+abbr --add cleanlog 'sudo journalctl --vacuum-time=7d'
 abbr --add listpkg 'yay -Q | fzf -e --no-preview'
+abbr --add clnpkg 'yay -Rns $(yay -Qtdq)'
 
 # Starship
 source (/usr/bin/starship init fish --print-full-init | psub)
