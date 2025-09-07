@@ -75,7 +75,7 @@ Singleton {
     property var promptSubstitutions: {
         "{DISTRO}": SystemInfo.distroName,
         "{DATETIME}": `${DateTime.time}, ${DateTime.collapsedCalendarFormat}`,
-        "{WINDOWCLASS}": ToplevelManager.activeToplevel?.appId ?? "Unknown",
+        "{WINDOWCLASS}": `appId: ${ToplevelManager.activeToplevel?.appId ?? "Unknown"}, appTitle: ${ToplevelManager.activeToplevel?.title ?? "Unknown"}`,
         "{DE}": `${SystemInfo.desktopEnvironment} (${SystemInfo.windowingSystem})` 
     }
 
