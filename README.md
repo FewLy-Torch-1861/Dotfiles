@@ -75,8 +75,6 @@
 
 ### illogical-impulse<sup>Quickshell</sup>
 
-Widget system: Quickshell | Support: Yes
-
 [Showcase video](https://www.youtube.com/watch?v=RPwovTInagE)
 
 | AI, settings app | Some widgets |
@@ -85,33 +83,3 @@ Widget system: Quickshell | Support: Yes
 | Window management | Weeb power |
 | <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e77a7c96-1905-4126-a2a0-434f818825a2" /> | <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c8544e99-8881-477f-b83a-d6e35c0184a1" /> |
 
-
-<div align="center">
-    <h2>• thank you •</h2>
-    <h3></h3>
-</div>
-
- - [@clsty](https://github.com/clsty) for making the dotfiles accessible by taking care of the install script and many other things
- - [@midn8hustlr](https://github.com/midn8hustlr) for greatly improving the color generation system
- - [@outfoxxed](https://github.com/outfoxxed/) for being extremely supportive in my Quickshell journey
- - Quickshell: [Soramane](https://github.com/caelestia-dots/shell/), [FridayFaerie](https://github.com/FridayFaerie/quickshell), [nydragon](https://github.com/nydragon/nysh)
-
-
-<div align="center">
-    <h2>• stonks •</h2>
-    <h3></h3>
-</div>
-
-- If you would like to give me some milk😳 (i dont drink coffee): https://github.com/sponsors/end-4
-- Virtual tentacle cat website points chart
-
-[![Stargazers over time](https://starchart.cc/end-4/dots-hyprland.svg?variant=adaptive)](https://starchart.cc/end-4/dots-hyprland)
-
-
-<div align="center">
-    <h2>• inspirations/copying •</h2>
-    <h3></h3>
-</div>
-
- - Inspiration: osu!lazer, Windows 11, Material Design 3, AvdanOS (concept)
- - Copying: The license allows you to. Personally I have absolutely no problem with others redistributing/recreating my work. There's no "stealing" (unless you do weird stuff and violate the license). <sub>(this note is here because some people actually asked)</sub>
