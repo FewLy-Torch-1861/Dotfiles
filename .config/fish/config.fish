@@ -23,5 +23,7 @@ if status is-interactive # Commands to run in interactive sessions can go here
     alias clear "printf '\033[2J\033[3J\033[1;1H'"
     alias q 'qs -c ii'
     
-    source ~/.config/fish/config-mine.fish
+    if test -f ~/.config/fish/config-custom.fish
+        source ~/.config/fish/config-custom.fish
+    end
 end

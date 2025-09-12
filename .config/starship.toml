@@ -96,5 +96,5 @@ format = '[](bold fg:green)[󰉋 $path]($style)[](bold fg:green)'
 "GitHub" = " 󰊤 "
 
 [cmd_duration]
-min_time = 1_000
+min_time = 0
 format = '[](bold fg:yellow)[󰪢 $duration](bold bg:yellow fg:black)[](bold fg:yellow)'
