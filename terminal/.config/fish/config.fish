@@ -5,13 +5,18 @@ if status is-interactive # Commands to run in interactive sessions can go here
   zoxide init fish | source
 
   # Init Starship
-  source (/usr/bin/starship init fish --print-full-init | psub)
+  if test -d "/data/data/com.termux/files/home"
+    # Termux
+    source (/data/data/com.termux/files/usr/bin/starship init fish --print-full-init | psub)
+  else
+    # Linux
+    source (/usr/bin/starship init fish --print-full-init | psub)
+  end
 
   # Shortcut
   alias reload 'exec fish'
   alias cls='clear'
-  alias c=code
-  alias k=kate
+  alias ff='fastfetch'
   alias vi=nvim
   alias y=yazi
   alias cd=z
@@ -40,19 +45,25 @@ if status is-interactive # Commands to run in interactive sessions can go here
     readlink -f "$argv[1]" | wl-copy
   end
 
-  alias cdp='pwd | wl-copy' # copy dir path
+
+  if not test -d "/data/data/com.termux/files/home"
+    alias cdp='pwd | wl-copy' # copy dir path
+  end
   alias grep='grep --color=auto'
 
   # Pastel
-  alias p='pastel'
-  alias pf='pastel format'
-  alias pc='pastel color'
-  alias pg='pastel gradient'
+  if not test -d "/data/data/com.termux/files/home"
+    alias p='pastel'
+    alias pf='pastel format'
+    alias pc='pastel color'
+    alias pg='pastel gradient'
+  end
 
   # Development
   alias g='git'
   alias lg='lazygit'
   alias cg='cargo'
+  alias py='python'
 
   function gc
     git clone $argv[1]
@@ -71,25 +82,29 @@ if status is-interactive # Commands to run in interactive sessions can go here
   abbr --add l 'ls -lAh'
   abbr --add ll 'ls -lh'
   abbr --add la 'ls -Ah'
-  abbr --add te 'ls -T'
-  abbr --add tea 'la -T'
+  abbr --add te 'ls -T --level=2'
+  abbr --add tea 'ls -AhT --level=2'
 
   # Safety
   alias rm='gio trash'
 
   # System Maintenance
-  abbr --add cleanlog 'sudo journalctl --vacuum-time=7d'
-  abbr --add listpkg 'yay -Q | fzf -e --no-preview'
-  abbr --add clnpkg 'yay -Rns $(yay -Qtdq)'
+  if not test -d "/data/data/com.termux/files/home"
+    abbr --add cleanlog 'sudo journalctl --vacuum-time=7d'
+    abbr --add listpkg 'yay -Q | fzf -e --no-preview'
+    abbr --add clnpkg 'yay -Rns $(yay -Qtdq)'
+  end
+
+  clear
 end
 
 # ENVs
-fish_add_path /home/nutt/.spicetify
-fish_add_path /home/nutt/.local/bin
-set -Ux EDITOR nvim
-set -Ux TERMINAL "kitty -1"
-
-set -Ux FZF_DEFAULT_OPTS "\
+if not test -d "/data/data/com.termux/files/home"
+  fish_add_path $HOME/.spicetify
+  set -x FZF_DEFAULT_OPTS "\
   --layout=reverse \
-  --border \
-  --preview 'bat --style=numbers --color=always {}'"
+  --border"
+end
+
+fish_add_path $HOME/.local/bin
+set -x EDITOR nvim
