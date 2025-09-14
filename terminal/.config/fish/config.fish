@@ -51,6 +51,17 @@ if status is-interactive # Commands to run in interactive sessions can go here
   end
   alias grep='grep --color=auto'
 
+  # Search
+  abbr --add f 'fzf'
+  abbr --add ffind 'fd --type f'
+  abbr --add rg 'rg --color=always'
+
+  # Archive shortcuts
+  abbr --add untar 'tar -xvf'
+  abbr --add ungz 'gunzip'
+  abbr --add unbz2 'bunzip2'
+  abbr --add unzipr 'unzip -d'
+
   # Pastel
   if not test -d "/data/data/com.termux/files/home"
     alias p='pastel'
@@ -64,8 +75,12 @@ if status is-interactive # Commands to run in interactive sessions can go here
   alias lg='lazygit'
   alias cg='cargo'
   alias py='python'
+  abbr --add pvenv 'python3 -m venv .venv'
+  abbr --add pactv 'source .venv/bin/activate.fish'
+  abbr --add pipi 'pip install -U pip'
+  abbr --add pipr 'pip install -r requirements.txt'
 
-  function gc
+  function gc # TODO: make also work when specifying dir
     git clone $argv[1]
     set repo (basename (string replace -r '\.git$' '' $argv[1]))
     cd $repo
@@ -76,6 +91,13 @@ if status is-interactive # Commands to run in interactive sessions can go here
   abbr --add gp 'git push'
   abbr --add gl 'git pull'
   abbr --add gst 'git status'
+  abbr --add gc 'git checkout'
+  abbr --add gb 'git branch'
+  abbr --add grs 'git restore'
+  abbr --add grm 'git rm'
+  abbr --add gamend 'git commit --amend --no-edit'
+  abbr --add gundo 'git reset --soft HEAD~1'
+  abbr --add gclean 'git clean -fd'
 
   # List Family
   alias ls='eza --icons'
