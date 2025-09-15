@@ -9,7 +9,7 @@ if status is-interactive
   ## ── Aliases & Abbr ─────────────────────
   # Core shortcuts
   alias reload 'exec fish'
-  alias cls 'clear'
+  alias cls 'clear && fastfetch'
   alias ff 'fastfetch'
   alias vi 'nvim'
   alias y 'yazi'
@@ -27,7 +27,7 @@ if status is-interactive
   abbr --add gp 'git push'
   abbr --add gl 'git pull'
   abbr --add gst 'git status'
-  abbr --add gc 'git checkout'
+  abbr --add gco 'git checkout'
   abbr --add gb 'git branch'
   abbr --add grs 'git restore'
   abbr --add grm 'git rm'
@@ -104,6 +104,7 @@ if status is-interactive
   end
 
   clear
+  fastfetch
 end
 
 ## ── Global ENVs ──────────────────────────
