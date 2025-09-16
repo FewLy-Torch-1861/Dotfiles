@@ -74,13 +74,6 @@ if status is-interactive
     end
   end
 
-  function os-age
-    set birth_install (stat -c %W /)
-    set current (date +%s)
-    set time_progression (math $current - $birth_install)
-    set days_difference (math -s0 $time_progression / 86400)
-    echo "$days_difference days"
-  end
 
   function md
     # mkdir + cd
@@ -150,6 +143,27 @@ end
     function cfp
       # copy file path
       readlink -f "$argv[1]" | wl-copy
+    end
+
+    function os-age
+      set birth_install (stat -c %W /)
+      set current (date +%s)
+      set time_progression (math $current - $birth_install)
+      set days (math -s0 $time_progression / 86400)
+
+      switch $argv[1]
+      case days
+        echo "$days days"
+
+      case ymd
+        set years (math -s0 $days / 365)
+        set months (math -s0 "($days % 365) / 30")
+        set rem_days (math -s0 "($days % 365) % 30")
+        echo "$years years $months months $rem_days days"
+
+      case '*'
+        echo "usage: os-age {days|ymd}"
+      end
     end
   end
 
