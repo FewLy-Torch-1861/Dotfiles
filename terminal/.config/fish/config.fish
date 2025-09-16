@@ -87,6 +87,7 @@ if status is-interactive
   ## ── Env Specific ───────────────────────
   if set -q TERMUX_VERSION
     ### ── TERMUX ONLY ─────────────────────
+    abbr --add listpkg 'pkg list-installed | fzf -e --no-preview'
   else
     ### ── LINUX ONLY ──────────────────────
     ## ── Aliases & Abbr ───────────────────
@@ -108,14 +109,14 @@ if status is-interactive
 end
 
 ## ── Global ENVs ──────────────────────────
-set -x EDITOR nvim
+set -Ux EDITOR nvim
+set -Ux FZF_DEFAULT_OPTS "\
+  --layout=reverse \
+  --border \
+  --no-preview"
 
 fish_add_path $HOME/.local/bin
 
 if not set -q TERMUX_VERSION
   fish_add_path $HOME/.spicetify
-
-  set -x FZF_DEFAULT_OPTS "\
-  --layout=reverse \
-  --border"
 end
