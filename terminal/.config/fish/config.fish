@@ -15,8 +15,6 @@ if status is-interactive
   alias y 'yazi'
   alias cg 'cargo'
   alias py 'python'
-  alias cd 'z'
-  alias grep 'grep --color=auto'
 
   # Git
   alias g 'git'
@@ -29,22 +27,13 @@ if status is-interactive
   abbr --add gst 'git status'
   abbr --add gco 'git checkout'
   abbr --add gb 'git branch'
-  abbr --add grs 'git restore'
   abbr --add grm 'git rm'
-  abbr --add gamend 'git commit --amend --no-edit'
-  abbr --add gundo 'git reset --soft HEAD~1'
-  abbr --add gclean 'git clean -fd'
 
   # Search & Files
   abbr --add f 'fzf'
   abbr --add ffind 'fd --type f'
-  abbr --add rg 'rg --color=always'
-
-  # Archive
-  abbr --add untar 'tar -xvf'
-  abbr --add ungz 'gunzip'
-  abbr --add unbz2 'bunzip2'
-  abbr --add unzipr 'unzip -d'
+  alias rg 'rg --color=always'
+  alias grep 'grep --color=auto'
 
   # LS family (using eza)
   alias ls 'eza --icons'
@@ -58,6 +47,30 @@ if status is-interactive
   alias rm 'gio trash'
 
   ## ── Functions ──────────────────────────
+  function extract
+    # auto detect file and extract it
+    if test -z "$argv[1]"
+      echo "Usage: extract <file>"
+      return 1
+    end
+    switch $argv[1]
+    case '*.tar.gz' '*.tgz'
+      tar -xvzf $argv[1]
+    case '*.tar.bz2'
+      tar -xvjf $argv[1]
+    case '*.tar' 
+      tar -xvf $argv[1]
+    case '*.zip'
+      unzip $argv[1]
+    case '*.gz'
+      gunzip $argv[1]
+    case '*.bz2'
+      bunzip2 $argv[1]
+    case '*'
+      echo "Unknown archive: $argv[1]"
+    end
+  end
+
   function md
     # mkdir + cd
     mkdir -pv "$argv[1]"
@@ -65,7 +78,20 @@ if status is-interactive
   end
 
   function tf
-    # touch file with auto create dir ig not exsit
+    # touch file with auto create dirs
+    # if not dirs exsit
+    set file $argv[1]
+    if test -z "$file"
+      echo "Usage: tf <path/to/file>"
+      return 1
+    end
+    mkdir -pv (dirname "$file")
+    touch "$file"
+    echo "touch: created file '$file'"
+  end
+
+  function tfc
+    # same as tf but cd into it
     set file $argv[1]
     if test -z "$file"
       echo "Usage: tf <path/to/file>"
@@ -78,11 +104,21 @@ if status is-interactive
   end
 
   function gc
-    # clone repo + cd เข้า dir
-    git clone $argv[1]
-    set repo (basename (string replace -r '\.git$' '' $argv[1]))
+    # clone + cd
+    if test (count $argv) -lt 1
+        echo "Usage: gc <repo-url> [target-dir]"
+        return 1
+    end
+
+    if test (count $argv) -ge 2
+        set repo $argv[2]
+    else
+        set repo (basename (string replace -r '\.git$' '' $argv[1]))
+    end
+
+    git clone $argv[1] $repo
     cd $repo
-  end
+end
 
   ## ── Env Specific ───────────────────────
   if set -q TERMUX_VERSION
@@ -111,9 +147,9 @@ end
 ## ── Global ENVs ──────────────────────────
 set -Ux EDITOR nvim
 set -Ux FZF_DEFAULT_OPTS "\
-  --layout=reverse \
-  --border \
-  --no-preview"
+--layout=reverse \
+--border \
+--no-preview"
 
 fish_add_path $HOME/.local/bin
 
