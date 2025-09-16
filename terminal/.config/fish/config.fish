@@ -50,7 +50,7 @@ if status is-interactive
   function extract
     # auto detect file and extract it
     if test -z "$argv[1]"
-      echo "Usage: extract <file>"
+      echo "Usage: extract <pat/to/file>"
       return 1
     end
     switch $argv[1]
@@ -73,6 +73,10 @@ if status is-interactive
 
   function md
     # mkdir + cd
+    if test -z "$argv[1]"
+      echo "Usage: md <path/to/dir>"
+      return 1
+    end
     mkdir -pv "$argv[1]"
     cd "$argv[1]"
   end
@@ -80,27 +84,25 @@ if status is-interactive
   function tf
     # touch file with auto create dirs
     # if not dirs exsit
-    set file $argv[1]
-    if test -z "$file"
+    if test -z "$argv[1]"
       echo "Usage: tf <path/to/file>"
       return 1
     end
-    mkdir -pv (dirname "$file")
-    touch "$file"
-    echo "touch: created file '$file'"
+    mkdir -pv (dirname "$argv[1]")
+    touch "$argv[1]"
+    echo "touch: created file '$argv[1]'"
   end
 
   function tfc
     # same as tf but cd into it
-    set file $argv[1]
-    if test -z "$file"
+    if test -z "$argv[1]"
       echo "Usage: tf <path/to/file>"
       return 1
     end
-    mkdir -pv (dirname "$file")
-    touch "$file"
-    echo "touch: created file '$file'"
-    cd (dirname "$file")
+    mkdir -pv (dirname "$argv[1]")
+    touch "$argv[1]"
+    echo "touch: created file '$argv[1]'"
+    cd (dirname "$argv[1]")
   end
 
   function gc
