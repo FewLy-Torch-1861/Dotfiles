@@ -1,0 +1,67 @@
+ignore_list = [130]
+sweetie_list = ["love", "lovely", "cutie", "girl", "sweetie"]
+success_messages = [
+  # generic
+  "amazing work as always",
+  "you are doing amazing",
+  # good sweetie
+  "that's a good {sweetie}",
+  "who's my good {sweetie}",
+  "that's it, my {sweetie}",
+  "good job, {sweetie}",
+  "good {sweetie}",
+  # sweet praise
+  "you did so well, {sweetie}",
+  "look at my clever girl go~",
+  "you're shining today, {sweetie}",
+  "my {sweetie} is unstoppable!",
+  # teasing love
+  "my gorgeous {sweetie} always delivers",
+  "you're so cute when you focus~",
+  "mm~ look at you showing off~",
+  "you make me proud every time, {sweetie}",
+  # proud
+  "i'm very proud of you",
+  "i'm very proud of you, my {sweetie}",
+  "i'm so proud of you, {sweetie}~",
+  "i knew you could do it",
+  "i knew you could do it, {sweetie}~",
+  "look at you go, {sweetie}!",
+  # reward
+  "*pet your head~*",
+  "*kiss your cheek~*",
+  "you deserve a big kiss for that~",
+  "i think you deserve a special treat for that",
+  "come here, i owe you a cuddle~",
+  "a little reward for my {sweetie}!",
+]
+fail_messages = [
+  # trust
+  "don't worry, {sweetie}. you can do it next time!",
+  "it's okay, {sweetie}. keep trying!",
+  "i believe in you~",
+  "i believe in you, my {sweetie}~",
+  "i know you'll get there",
+  "i know my little {sweetie} can do better",
+  "you can do better, {sweetie}",
+  # fallback
+  "just know that i still love you~",
+  "i'm always here for you~",
+  "i'm always here for you if you need me",
+  "come here, sit on my lap while we figure this out together",
+  # consolation
+  "don't worry, it'll be alright",
+  "it's okay to make mistakes",
+  "it's okay to make mistakes, my {sweetie}",
+  "i know it's hard, but it will be okay",
+  "even mistakes are part of learning, {sweetie}",
+  # encouragement
+  "never give up, my love",
+  "just a little further, i know you can do it",
+  "i know you'll get there, don't worry about it",
+  "keep pushing, you're stronger than you think, {sweetie}",
+  # clean up
+  "did my {sweetie} make a big mess",
+  "we'll clean this up together, {sweetie}",
+]
+
