@@ -74,6 +74,14 @@ if status is-interactive
     end
   end
 
+  function os-age
+    set birth_install (stat -c %W /)
+    set current (date +%s)
+    set time_progression (math $current - $birth_install)
+    set days_difference (math -s0 $time_progression / 86400)
+    echo "$days_difference days"
+  end
+
   function md
     # mkdir + cd
     if test -z "$argv[1]"
