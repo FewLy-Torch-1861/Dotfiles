@@ -46,11 +46,14 @@ if status is-interactive
   # Safety
   alias rm 'gio trash'
 
+  # System maintenanc
+  alias clnt 'gio trash --empty'
+
   ## ── Functions ──────────────────────────
   function extract
     # auto detect file and extract it
     if test -z "$argv[1]"
-      echo "Usage: extract <pat/to/file>"
+      echo "Usage: extract <path/to/file>"
       return 1
     end
     switch $argv[1]
