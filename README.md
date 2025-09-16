@@ -9,9 +9,9 @@
 </div>
 
 - **terminal**: `cli`, `tui` related config
-- **neovim**: LazyVim configuration
-- **hyprland**: hyprland rice, gui related configuration
-- **termux**: my Termux configuration
+- **neovim**: [LazyVim](https://www.lazyvim.org) configuration
+- **hyprland**: [hyprland](https://hypr.land) rice, gui related configuration
+- **termux**: my [Termux](https://github.com/termux/termux-app) configuration
 
 <div align=center>
   <h2>💫 config and acknowledgement</h2>
