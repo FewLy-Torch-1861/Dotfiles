@@ -1,5 +1,15 @@
+@import "mocha.css";
+
 * {
   all: unset;
-  font-family: JetBrainsMono Nerd Font, sans-serif;
+  font-family: JetBrainsMono Nerd Font Propo, sans-serif;
   font-size: 14px;
 }
+
+window#waybar {
+  background: alpha(@base, 0.75);
+}
+
+/* module { */
+/*   background: alpha(@base, 0.5); */
+/* } */

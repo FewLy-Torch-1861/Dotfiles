@@ -15,8 +15,81 @@
     "clock"
   ],
   "modules-right": [
+    "mpris",
+    "pulseaudio",
     "battery",
     "hyprland/language"
-  ]
+  ],
   // Modules configuration
+  "hyprland/workspaces": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "active": ""
+    }
+  },
+  "hyprland/window": {
+    "tooltip": false,
+    "max-length": 45,
+    "format": "{title}",
+    "rewrite": {
+      "": ""
+    }
+  },
+  "clock": {
+    "tooltip": false,
+    "interval": 60,
+    "format": "{:%R}",
+    "format-alt": "󰃭{:%A, %B %d, %Y (%R)}"
+  },
+  "mpris": {
+    "tooltip": false,
+    "interval": 1,
+    "format": "{artist} - {title}"
+  },
+  "pulseaudio": {
+    "tooltip": false,
+    "format": "{icon}{volume}%",
+    "format-bluetooth": "{icon}{volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "phone-muted": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        ""
+      ]
+    },
+    "scroll-step": 5,
+    "on-click": "pavucontrol-qt"
+  },
+  "battery": {
+    "tooltip": false,
+    "interval": 10,
+    "bat": "BAT0",
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}{capacity}%",
+    "format-charging": "󱐋{icon}{capacity}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "hyprland/language": {
+    "tooltip": false,
+    "format": "{}",
+    "format-en": "US",
+    "format-th": "TH"
+  }
 }
