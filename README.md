@@ -11,7 +11,7 @@
 - **terminal**: `cli`, `tui` related config
 - **neovim**: [LazyVim](https://www.lazyvim.org) configuration
 - **hyprland**: [hyprland](https://hypr.land) rice, gui related configuration
-- **termux**: my [Termux](https://github.com/termux/termux-app) configuration
+- **[termux](https://github.com/FewLy-Torch-1861/Dotfiles/tree/main/termux/)**: my [Termux](https://github.com/termux/termux-app) configuration
 
 <div align=center>
   <h2>💫 config and acknowledgement</h2>
