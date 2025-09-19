@@ -5,8 +5,6 @@
   font-family:
     JetBrainsMono Nerd Font Propo,
     sans-serif;
-  font-size: 14px;
-  font-weight: bold;
 }
 
 window#waybar {
@@ -16,6 +14,8 @@ window#waybar {
 box.module,
 label.module {
   background: alpha(@base, 0.5);
+  font-weight: bold;
+  font-size: 14px;
   color: @text;
   border-radius: 10px;
   border: 1px solid @surface2;
@@ -29,10 +29,12 @@ label.module {
 
 #workspaces button {
   padding: 0 4px;
+  font-weight: normal;
 }
 
 #workspaces button.active {
   color: @mauve;
+  font-weight: bold;
 }
 
 #workspaces button:hover {
