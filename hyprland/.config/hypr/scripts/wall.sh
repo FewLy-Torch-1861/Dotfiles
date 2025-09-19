@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
+
 chooser_file=$(mktemp -t "yazi-chooser.XXXXXX")
 
-yazi --chooser-file "$chooser_file"
+yazi --chooser-file "$chooser_file" "$HOME"/Pictures/Wallpapers
 
 if [[ -s "$chooser_file" ]]; then
     selected_file=$(<"$chooser_file")

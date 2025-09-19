@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
-swww kill || true; swww-daemon
-pkill waybar || true; waybar
-hyprctl reload
+swww kill || true; swww-daemon&
+pkill waybar || true; waybar&
+makoctl reload&
+hyprctl reload&
