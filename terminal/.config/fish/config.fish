@@ -10,15 +10,14 @@ if status is-interactive
   # Core shortcuts
   alias reload 'exec fish'
   alias cls 'clear && fastfetch'
-  alias ff 'fastfetch'
-  alias vi 'nvim'
-  alias y 'yazi'
-  alias cg 'cargo'
-  alias py 'python'
+  alias ff fastfetch
+  alias vi nvim
+  alias cg cargo
+  alias py python
 
   # Git
-  alias g 'git'
-  alias lg 'lazygit'
+  alias g git
+  alias lg lazygit
 
   abbr --add gcm 'git commit -m'
   abbr --add ga 'git add'
@@ -30,7 +29,7 @@ if status is-interactive
   abbr --add grm 'git rm'
 
   # Search & Files
-  abbr --add f 'fzf'
+  abbr --add f fzf
   abbr --add ffind 'fd --type f'
   alias rg 'rg --color=always'
   alias grep 'grep --color=auto'
@@ -44,12 +43,21 @@ if status is-interactive
   abbr --add tea 'ls -AhT --level=2'
 
   # Safety
-  alias rm 'gio trash'
+  alias r 'gio trash'
 
   # System maintenanc
   alias clnt 'gio trash --empty'
 
   ## ── Functions ──────────────────────────
+  function y
+    set tmp (mktemp -t "yazi-cwd.XXXXXX")
+    yazi $argv --cwd-file="$tmp"
+    if read -z cwd <"$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+      builtin cd -- "$cwd"
+    end
+    rm -f -- "$tmp"
+  end
+
   function extract
     # auto detect file and extract it
     if test -z "$argv[1]"
@@ -61,7 +69,7 @@ if status is-interactive
       tar -xvzf $argv[1]
     case '*.tar.bz2'
       tar -xvjf $argv[1]
-    case '*.tar' 
+    case '*.tar'
       tar -xvf $argv[1]
     case '*.zip'
       unzip $argv[1]
@@ -73,7 +81,6 @@ if status is-interactive
       echo "Unknown archive: $argv[1]"
     end
   end
-
 
   function md
     # mkdir + cd
@@ -112,19 +119,19 @@ if status is-interactive
   function gc
     # clone + cd
     if test (count $argv) -lt 1
-        echo "Usage: gc <repo-url> [target-dir]"
-        return 1
+      echo "Usage: gc <repo-url> [target-dir]"
+      return 1
     end
 
     if test (count $argv) -ge 2
-        set repo $argv[2]
+      set repo $argv[2]
     else
-        set repo (basename (string replace -r '\.git$' '' $argv[1]))
+      set repo (basename (string replace -r '\.git$' '' $argv[1]))
     end
 
     git clone $argv[1] $repo
     cd $repo
-end
+  end
 
   ## ── Env Specific ───────────────────────
   if set -q TERMUX_VERSION
