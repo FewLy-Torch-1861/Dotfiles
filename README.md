@@ -19,4 +19,3 @@
 </div>
 
 - [illogical-impulse<sup>by end-4</sup></sup>](https://github.com/end-4/dots-hyprland) : `run.sh` script
-- [Omarchy](https://github.com/basecamp/omarchy): `os-age` function
