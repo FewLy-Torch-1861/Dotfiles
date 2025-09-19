@@ -9,7 +9,13 @@
   // Choose the order of the modules
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "modules-center": ["clock"],
-  "modules-right": ["mpris", "pulseaudio", "battery", "hyprland/language"],
+  "modules-right": [
+    "mpris",
+    "pulseaudio",
+    "bluetooth",
+    "battery",
+    "hyprland/language"
+  ],
   // Modules configuration
   "hyprland/workspaces": {
     "tooltip": false,
@@ -53,9 +59,17 @@
     "scroll-step": 5,
     "on-click": "pavucontrol-qt"
   },
+  "bluetooth": {
+    "tooltip": true,
+    "format": "",
+    "format-disabled": "󰂲",
+    "format-connected": "",
+    "format-connected-battery": " {device_battery_percentage}%",
+    "on-click": "kitty -1 --class bluetoothmgr --title Bluetooth\\ Manager fish -c bluetuith"
+  },
   "battery": {
     "tooltip": false,
-    "interval": 10,
+    "interval": 1,
     "bat": "BAT0",
     "states": {
       "warning": 30,
