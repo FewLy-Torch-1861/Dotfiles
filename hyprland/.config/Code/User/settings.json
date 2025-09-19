@@ -47,5 +47,8 @@
     "editor.defaultFormatter": "bmalehorn.vscode-fish"
   },
   "git.autofetch": true,
-  "git.confirmSync": false
+  "git.confirmSync": false,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
