@@ -15,7 +15,7 @@ window#waybar {
 
 box.module,
 label.module {
-  background: alpha(@base, 0.9);
+  background: alpha(@base, 0.5);
   color: @text;
   border-radius: 10px;
   border: 1px solid @surface2;
