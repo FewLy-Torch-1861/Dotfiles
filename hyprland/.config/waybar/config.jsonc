@@ -1,25 +1,15 @@
 // -*- mode: jsonc -*-
 {
   "reload_style_on_change": true,
-  "layer": "top", // Waybar at top layer
+  "layer": "bottom", // Waybar under the window
   "position": "top", // Waybar position (top|bottom|left|right)
   "height": 30, // Waybar height (to be removed for auto height)
-  // "width": 1280, // Waybar width
   "spacing": 0, // Gaps between modules (0px)
+  "margin": "6, 6, 0, 6",
   // Choose the order of the modules
-  "modules-left": [
-    "hyprland/workspaces",
-    "hyprland/window"
-  ],
-  "modules-center": [
-    "clock"
-  ],
-  "modules-right": [
-    "mpris",
-    "pulseaudio",
-    "battery",
-    "hyprland/language"
-  ],
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right": ["mpris", "pulseaudio", "battery", "hyprland/language"],
   // Modules configuration
   "hyprland/workspaces": {
     "tooltip": false,
@@ -31,26 +21,24 @@
   "hyprland/window": {
     "tooltip": false,
     "max-length": 45,
-    "format": "{title}",
-    "rewrite": {
-      "": ""
-    }
+    "format": "{title}"
   },
   "clock": {
     "tooltip": false,
     "interval": 60,
-    "format": "{:%R}",
-    "format-alt": "󰃭{:%A, %B %d, %Y (%R)}"
+    "format": " {:%R}",
+    "format-alt": "󰃭 {:%A, %B %d, %Y (%R)}"
   },
   "mpris": {
     "tooltip": false,
+    "max-length": 45,
     "interval": 1,
-    "format": "{artist} - {title}"
+    "format": "󰝚 {artist} - {title}"
   },
   "pulseaudio": {
     "tooltip": false,
-    "format": "{icon}{volume}%",
-    "format-bluetooth": "{icon}{volume}%",
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
     "format-muted": "",
     "format-icons": {
       "headphone": "",
@@ -60,10 +48,7 @@
       "phone-muted": "",
       "portable": "",
       "car": "",
-      "default": [
-        "",
-        ""
-      ]
+      "default": ["", ""]
     },
     "scroll-step": 5,
     "on-click": "pavucontrol-qt"
@@ -76,20 +61,14 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon}{capacity}%",
-    "format-charging": "󱐋{icon}{capacity}%",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ]
+    "format": "{icon} {capacity}%",
+    "format-charging": "󱐋{icon} {capacity}%",
+    "format-icons": ["", "", "", "", ""]
   },
   "hyprland/language": {
     "tooltip": false,
     "format": "{}",
-    "format-en": "US",
-    "format-th": "TH"
+    "format-en": " US",
+    "format-th": " TH"
   }
 }

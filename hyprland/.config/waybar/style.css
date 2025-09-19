@@ -2,14 +2,52 @@
 
 * {
   all: unset;
-  font-family: JetBrainsMono Nerd Font Propo, sans-serif;
+  font-family:
+    JetBrainsMono Nerd Font Propo,
+    sans-serif;
   font-size: 14px;
+  font-weight: bold;
 }
 
 window#waybar {
-  background: alpha(@base, 0.75);
+  background: transparent;
 }
 
-/* module { */
-/*   background: alpha(@base, 0.5); */
-/* } */
+box.module,
+label.module {
+  background: alpha(@base, 0.9);
+  color: @text;
+  border-radius: 10px;
+  border: 1px solid @surface2;
+  padding: 0 7px;
+  margin: 0 3px;
+}
+
+#workspaces {
+  margin: 0 3px 0 0;
+}
+
+#workspaces button {
+  padding: 0 4px;
+}
+
+#workspaces button.active {
+  color: @mauve;
+}
+
+#workspaces button:hover {
+  background: @surface2;
+}
+
+#workspaces button.urgent {
+  color: @red;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+  border: transparent;
+}
+
+#language {
+  margin: 0 0 0 3px;
+}
