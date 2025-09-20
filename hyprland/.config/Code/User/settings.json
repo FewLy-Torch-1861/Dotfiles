@@ -50,5 +50,11 @@
   "git.confirmSync": false,
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
   }
 }
