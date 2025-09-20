@@ -60,7 +60,7 @@
   },
   "bluetooth": {
     "tooltip": true,
-    "format": "",
+    "format": "",
     "format-disabled": "󰂲",
     "format-connected": "",
     "format-connected-battery": " {device_battery_percentage}%",
