@@ -4,7 +4,7 @@
     "type": "small"
   },
   "display": {
-    "separator": " ",
+    "separator": " "
   },
   "modules": [
     {
