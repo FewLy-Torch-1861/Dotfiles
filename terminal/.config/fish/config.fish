@@ -154,7 +154,7 @@ if status is-interactive
         end
 
         clear
-        fastfetch
+        hyfetch
     end
 end
 
