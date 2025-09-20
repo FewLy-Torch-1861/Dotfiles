@@ -9,7 +9,6 @@ if status is-interactive
     ## ── Aliases & Abbr ─────────────────────
     # Core shortcuts
     alias reload 'exec fish'
-    alias cls 'clear && fastfetch'
     alias ff fastfetch
     alias vi nvim
     alias c code
@@ -137,6 +136,7 @@ if status is-interactive
     ## ── Env Specific ───────────────────────
     if set -q TERMUX_VERSION
         ### ── TERMUX ONLY ─────────────────────
+        alias cls 'clear && fastfetch'
         abbr --add listpkg 'pkg list-installed | fzf -e --no-preview'
 
         clear
@@ -144,6 +144,7 @@ if status is-interactive
     else
         ### ── LINUX ONLY ──────────────────────
         ## ── Aliases & Abbr ───────────────────
+        alias cls 'clear && hyfetch'
         alias cdp 'pwd | wl-copy'
 
         abbr --add cleanlog 'sudo journalctl --vacuum-time=7d'
