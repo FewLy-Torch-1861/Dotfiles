@@ -138,6 +138,9 @@ if status is-interactive
     if set -q TERMUX_VERSION
         ### ── TERMUX ONLY ─────────────────────
         abbr --add listpkg 'pkg list-installed | fzf -e --no-preview'
+
+        clear
+        fastfetch
     else
         ### ── LINUX ONLY ──────────────────────
         ## ── Aliases & Abbr ───────────────────
