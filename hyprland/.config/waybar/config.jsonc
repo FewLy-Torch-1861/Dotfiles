@@ -25,7 +25,7 @@
   },
   "hyprland/window": {
     "tooltip": false,
-    "max-length": 45,
+    "max-length": 100,
     "format": "{title}"
   },
   "clock": {
@@ -36,7 +36,7 @@
   },
   "mpris": {
     "tooltip": false,
-    "max-length": 45,
+    "max-length": 100,
     "interval": 1,
     "format": "󰝚 {artist} - {title}"
   },
