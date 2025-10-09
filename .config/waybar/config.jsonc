@@ -1,0 +1,124 @@
+// -*- mode: jsonc -*-
+{
+  "reload_style_on_change": true,
+  "height": 30,
+  "spacing": 0,
+  "modules-left": [
+    "sway/workspaces",
+    "sway/window",
+    "sway/mode",
+    "sway/scratchpad"
+  ],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "mpris",
+    "tray",
+    // "network",
+    "bluetooth",
+    // "backlight",
+    "pulseaudio",
+    "battery",
+    "sway/language"
+  ],
+  "sway/workspaces": {
+    "tooltip": false
+  },
+  "sway/window": {
+    "tooltip": false,
+    "max-length": 100,
+    "rewrite": {
+      "": "sway"
+    }
+  },
+  "sway/mode": {
+    "tooltip": false,
+    "format": " <span style=\"italic\">{}</span>"
+  },
+  "sway/scratchpad": {
+    "tooltip": false,
+    "show-empty": false,
+    "format": "{icon} {count}",
+    "format-icons": ["", ""]
+  },
+  "clock": {
+    "tooltip": false,
+    "interval": 1,
+    "format": " {:%H:%M}",
+    "format-alt": " {:%Y-%m-%d %H:%M:%S}"
+  },
+  "mpris": {
+    "max-length": 100,
+    "tooltip": false,
+    "interval": 1,
+    "format": " {artist} - {title}"
+  },
+  "tray": {
+    "tooltip": false,
+    "show-passive-items": true,
+    "icon-size": 18,
+    "spacing": 10
+  },
+  "network": {
+    "tooltip": false,
+    "format-wifi": " ",
+    "format-disconnected": "⚠ "
+  },
+  "bluetooth": {
+    "tooltip": false,
+    "format": "",
+    "format-disabled": "",
+    "format-connected": "",
+    "format-connected-battery": "{device_battery_percentage}%",
+    "on-click": "kitty -1 fish -c bluetui"
+  },
+  "backlight": {
+    "tooltip": false,
+    "scroll-step": 5,
+    "device": "intel_backlight",
+    "format": "{icon}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "pulseaudio": {
+    "tooltip": false,
+    "scroll-step": 5,
+    "format": "{icon}{volume}%",
+    "format-bluetooth": "{icon}{volume}%",
+    "format-muted": " ",
+    "format-icons": {
+      "headphone": " ",
+      "hands-free": " ",
+      "headset": " ",
+      "default": [" ", " ", " "]
+    },
+    "on-click": "pavucontrol"
+  },
+  "battery": {
+    "tooltip": false,
+    "interval": 1,
+    "format": "{icon} {capacity}%",
+    "format-charging": "󱐋{icon} {capacity}%",
+    "format-full": "",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "sway/language": {
+    "tooltip": false,
+    "format": "{}",
+    "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
+  }
+}
