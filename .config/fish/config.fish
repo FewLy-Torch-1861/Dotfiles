@@ -9,6 +9,8 @@ set -Ux FZF_DEFAULT_OPTS "\
 --border \
 --no-preview"
 
+set -Ux GOPATH $HOME/.go
+
 set -Ux QT_AUTO_SCREEN_SCALE_FACTOR 1
 set -Ux QT_QPA_PLATFORM wayland
 set -Ux QT_QPA_PLATFORM "wayland;xcb"
