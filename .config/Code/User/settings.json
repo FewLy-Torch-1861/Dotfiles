@@ -1,0 +1,69 @@
+{
+  "editor.fontFamily": "'JetBrainsMono Nerd Font', monospace",
+  "editor.tabSize": 2,
+  "editor.aiStats.enabled": true,
+  "editor.cursorBlinking": "phase",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.activityBar.location": "bottom",
+  "workbench.preferredDarkColorTheme": "Gruvbox Dark Medium",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.navigationControl.enabled": false,
+  "window.commandCenter": false,
+  "workbench.tips.enabled": false,
+  "editor.renderWhitespace": "all",
+  "editor.minimap.enabled": false,
+  "vim.useSystemClipboard": true,
+  "vim.highlightedyank.enable": true,
+  "vim.leader": " ",
+  "vim.shell": "/usr/bin/fish",
+  "vim.smartRelativeLine": true,
+  "editor.smoothScrolling": true,
+  "terminal.integrated.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
+  "window.dialogStyle": "custom",
+  "workbench.startupEditor": "none",
+  "shellformat.effectLanguages": [
+    "shellscript",
+    "dockerfile",
+    "dotenv",
+    "hosts",
+    "jvmoptions",
+    "ignore",
+    "gitignore",
+    "properties",
+    "spring-boot-properties",
+    "azcli",
+    "bats"
+  ],
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode"
+  },
+  "[fish]": {
+    "editor.defaultFormatter": "bmalehorn.vscode-fish"
+  },
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "workbench.layoutControl.enabled": false,
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-containers"
+  },
+  "window.autoDetectColorScheme": true,
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.preferredLightColorTheme": "Gruvbox Light Hard",
+  "workbench.sideBar.location": "right",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

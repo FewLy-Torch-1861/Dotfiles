@@ -59,6 +59,7 @@ input type:pointer {
 
 # Basics:
 bindsym $mod+Return exec $term
+bindsym $mod+T      exec $term
 bindsym $mod+E      exec $files
 bindsym Alt+space   exec $menu
 bindsym Ctrl+Shift+Escape exec kitty -1 fish -c btop
