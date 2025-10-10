@@ -36,6 +36,7 @@ if status is-interactive
     alias reload 'exec fish'
     alias ts tailscale
     alias ff fastfetch
+    alias hf hyfetch
 
     abbr --add chafa 'chafa -f symbols'
 
@@ -155,4 +156,6 @@ if status is-interactive
         # Copy file/dir path
         readlink -f "$argv[1]" | wl-copy
     end
+
+    kotofetch
 end
