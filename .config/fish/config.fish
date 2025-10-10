@@ -2,22 +2,22 @@ set TTY1 (tty)
 [ "$TTY1" = /dev/tty1 ] && exec sway
 
 ## ── Global ENVs ──────────────────────────
-set -Ux EDITOR nvim
-set -Ux TERM kitty
-set -Ux FZF_DEFAULT_OPTS "\
+set -x EDITOR nvim
+set -x TERM kitty
+set -x FZF_DEFAULT_OPTS "\
 --layout=reverse \
 --border \
 --no-preview"
 
-set -Ux GOPATH $HOME/.go
+set -x GOPATH $HOME/.go
 
-set -Ux QT_AUTO_SCREEN_SCALE_FACTOR 1
-set -Ux QT_QPA_PLATFORM wayland
-set -Ux QT_QPA_PLATFORM "wayland;xcb"
+set -x QT_AUTO_SCREEN_SCALE_FACTOR 1
+set -x QT_QPA_PLATFORM wayland
+set -x QT_QPA_PLATFORM "wayland;xcb"
 
-set -Ux XDG_CURRENT_DESKTOP Sway
-set -Ux XDG_SESSION_TYPE wayland
-set -Ux XDG_SESSION_DESKTOP Sway
+set -x XDG_CURRENT_DESKTOP Sway
+set -x XDG_SESSION_TYPE wayland
+set -x XDG_SESSION_DESKTOP Sway
 
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.spicetify
