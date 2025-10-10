@@ -35,7 +35,7 @@ if status is-interactive
     alias c clear
     alias reload 'exec fish'
     alias ts tailscale
-    alias cdp 'pwd | wl-copy'
+    alias ff fastfetch
 
     abbr --add chafa 'chafa -f symbols'
 
@@ -63,7 +63,6 @@ if status is-interactive
     # LS family (using eza)
     alias ls 'eza --icons'
     alias l 'ls -lAh'
-    alias 'ls -lh'
     alias la 'ls -Ah'
     abbr --add te 'ls -T --level=2'
     abbr --add tea 'ls -AhT --level=2'
@@ -71,7 +70,7 @@ if status is-interactive
     # Safety
     alias r 'gio trash'
 
-    # System maintenanc
+    # System maintenance
     alias clnt 'gio trash --empty'
     abbr --add updmirror 'sudo reflector --country Thailand,Singapore,Japan --latest 10 --sort rate --save /etc/pacman.d/mirrorlist && yay -Syy'
     abbr --add clnlog 'sudo journalctl --vacuum-time=7d'
@@ -100,10 +99,6 @@ if status is-interactive
 
     function ext
         # auto detect file and extract it
-        if test -z "$argv[1]"
-            echo "Usage: extract <path/to/file>"
-            return 1
-        end
         switch $argv[1]
             case '*.tar.gz' '*.tgz'
                 tar -xvzf $argv[1]
@@ -124,10 +119,6 @@ if status is-interactive
 
     function md
         # mkdir + cd
-        if test -z "$argv[1]"
-            echo "Usage: md <path/to/dir>"
-            return 1
-        end
         mkdir -pv "$argv[1]"
         cd "$argv[1]"
     end
@@ -135,10 +126,6 @@ if status is-interactive
     function tf
         # touch file with auto create dirs
         # if not dirs exsit
-        if test -z "$argv[1]"
-            echo "Usage: tf <path/to/file>"
-            return 1
-        end
         mkdir -pv (dirname "$argv[1]")
         touch "$argv[1]"
         echo "touch: created file '$argv[1]'"
@@ -146,10 +133,6 @@ if status is-interactive
 
     function tfc
         # same as tf but cd into it
-        if test -z "$argv[1]"
-            echo "Usage: tf <path/to/file>"
-            return 1
-        end
         mkdir -pv (dirname "$argv[1]")
         touch "$argv[1]"
         echo "touch: created file '$argv[1]'"
@@ -158,11 +141,6 @@ if status is-interactive
 
     function gc
         # clone + cd
-        if test (count $argv) -lt 1
-            echo "Usage: gc <repo-url> [target-dir]"
-            return 1
-        end
-
         if test (count $argv) -ge 2
             set repo $argv[2]
         else
@@ -174,9 +152,7 @@ if status is-interactive
     end
 
     function cfp
-        # copy file path
+        # Copy file/dir path
         readlink -f "$argv[1]" | wl-copy
     end
-
-    clear
 end
