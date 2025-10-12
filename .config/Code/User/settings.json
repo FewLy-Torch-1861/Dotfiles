@@ -1,27 +1,43 @@
 {
-  "editor.fontFamily": "'JetBrainsMono Nerd Font', monospace",
-  "editor.tabSize": 2,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-containers"
+  },
+  "[fish]": {
+    "editor.defaultFormatter": "bmalehorn.vscode-fish"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode"
+  },
   "editor.aiStats.enabled": true,
   "editor.cursorBlinking": "phase",
   "editor.cursorSmoothCaretAnimation": "on",
-  "workbench.activityBar.location": "bottom",
-  "workbench.preferredDarkColorTheme": "Gruvbox Dark Medium",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.navigationControl.enabled": false,
-  "window.commandCenter": false,
-  "workbench.tips.enabled": false,
-  "editor.renderWhitespace": "all",
+  "editor.fontFamily": "'JetBrainsMono Nerd Font', 'JetBrains Mono', 'Fira Code', monospace",
+  "editor.lineNumbers": "relative",
   "editor.minimap.enabled": false,
-  "vim.useSystemClipboard": true,
-  "vim.highlightedyank.enable": true,
-  "vim.leader": " ",
-  "vim.shell": "/usr/bin/fish",
-  "vim.smartRelativeLine": true,
+  "editor.mouseWheelZoom": true,
+  "editor.renderWhitespace": "all",
   "editor.smoothScrolling": true,
-  "terminal.integrated.smoothScrolling": true,
-  "workbench.list.smoothScrolling": true,
-  "window.dialogStyle": "custom",
-  "workbench.startupEditor": "none",
+  "editor.tabSize": 2,
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "github.copilot.enable": {
+    "*": true,
+    "markdown": true,
+    "plaintext": false,
+    "scminput": false
+  },
   "shellformat.effectLanguages": [
     "shellscript",
     "dockerfile",
@@ -35,35 +51,30 @@
     "azcli",
     "bats"
   ],
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[shellscript]": {
-    "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode"
-  },
-  "[fish]": {
-    "editor.defaultFormatter": "bmalehorn.vscode-fish"
-  },
-  "git.autofetch": true,
-  "git.confirmSync": false,
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "github.copilot.enable": {
-    "*": true,
-    "plaintext": false,
-    "markdown": true,
-    "scminput": false
-  },
-  "workbench.layoutControl.enabled": false,
-  "[dockercompose]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-containers"
-  },
+  "terminal.integrated.enableImages": true,
+  "terminal.integrated.smoothScrolling": true,
+  "vim.easymotion": true,
+  "vim.highlightedyank.enable": true,
+  "vim.hlsearch": true,
+  "vim.incsearch": true,
+  "vim.leader": "<space>",
+  "vim.shell": "/usr/bin/fish",
+  "vim.smartRelativeLine": true,
+  "vim.useSystemClipboard": true,
   "window.autoDetectColorScheme": true,
+  "window.commandCenter": false,
+  "window.controlsStyle": "hidden",
+  "window.dialogStyle": "custom",
+  "workbench.activityBar.location": "bottom",
   "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.layoutControl.enabled": false,
+  "workbench.list.smoothScrolling": true,
+  "workbench.navigationControl.enabled": false,
+  "workbench.preferredDarkColorTheme": "Gruvbox Dark Medium",
   "workbench.preferredLightColorTheme": "Gruvbox Light Hard",
   "workbench.sideBar.location": "right",
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false,
+  "workbench.tree.enableStickyScroll": false
 }
