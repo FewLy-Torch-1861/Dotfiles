@@ -1,6 +1,3 @@
-set TTY1 (tty)
-[ "$TTY1" = /dev/tty1 ] && exec niri-session
-
 ## ── Global ENVs ──────────────────────────
 set -x EDITOR nvim
 set -x TERM kitty
