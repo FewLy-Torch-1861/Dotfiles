@@ -187,7 +187,7 @@
         "alwaysOnTop": false,
         "criticalUrgencyDuration": 15,
         "doNotDisturb": false,
-        "lastSeenTs": 1760261628000,
+        "lastSeenTs": 1760270294000,
         "location": "top_right",
         "lowUrgencyDuration": 3,
         "monitors": [
@@ -252,20 +252,20 @@
         "directory": "/home/nutt/Pictures/Wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
-        "fillColor": "#c0c1ff",
+        "fillColor": "#000000",
         "fillMode": "crop",
         "monitors": [
             {
                 "directory": "/home/nutt/Pictures/Wallpapers",
                 "name": "eDP-1",
-                "wallpaper": "/home/nutt/Pictures/Wallpapers/halloween.jpg"
+                "wallpaper": "/home/nutt/Pictures/Wallpapers/mizuki.png"
             }
         ],
         "randomEnabled": false,
         "randomIntervalSec": 300,
         "setWallpaperOnAllMonitors": true,
-        "transitionDuration": 500,
-        "transitionEdgeSmoothness": 0,
-        "transitionType": "fade"
+        "transitionDuration": 1500,
+        "transitionEdgeSmoothness": 0.5,
+        "transitionType": "disc"
     }
 }

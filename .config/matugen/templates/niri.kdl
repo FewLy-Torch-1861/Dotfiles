@@ -63,9 +63,9 @@ layout {
   border {
     // off
     width 1
-    active-color "#abc8fa"
-    inactive-color "#121316"
-    urgent-color "#ffb4ab"
+    active-color "{{colors.primary.default.hex}}"
+    inactive-color "{{colors.surface_dim.default.hex}}"
+    urgent-color "{{colors.error.default.hex}}"
   }
   shadow {
     on
