@@ -9,14 +9,11 @@ input {
     natural-scroll
   }
   mouse { accel-profile "flat"; }
-
-  // -- Input Behavior --
-  focus-follows-mouse max-scroll-amount="0%"
 }
 
 // ┌─┤ Output & Display ├────────────────────────────────────────────────────────┐
 output "eDP-1" {
-  scale 1
+  scale 1.0
   transform "normal"
   position x=0 y=0
 }
@@ -28,14 +25,13 @@ layout {
 
   // -- Column & Window Presets --
   preset-column-widths {
-    proportion 0.33333
+    proportion 0.333333
     proportion 0.5
-    proportion 0.66667
+    proportion 0.75
   }
   preset-window-heights {
-    proportion 0.33333
     proportion 0.5
-    proportion 0.66667
+    proportion 0.75
     proportion 1.0
   }
   default-column-width { proportion 0.5; }
@@ -89,15 +85,18 @@ debug {
 binds {
   // --- Application Launchers ---
   Mod+Return { spawn "kitty"; }
+  Mod+E      { spawn "nautilus"; }
   Alt+Space  { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
   Mod+V      { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard";}
 
   // --- Shell Controls ---
-  Mod+A       { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
-  Mod+Slash   { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
-  Mod+N       { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
-  Mod+Alt+J   { spawn-sh "qs -c noctalia-shell ipc call bar toggle"; }
-  Mod+Alt+L   { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
+  Mod+A           { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
+  Mod+N           { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
+  Mod+Alt+W       { spawn-sh "qs -c noctalia-shell ipc call wallpaper toggle"; }
+  Mod+Alt+R       { spawn-sh "qs -c noctalia-shell ipc call screenRecorder toggle"; }
+  Mod+Alt+L       { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
+  Mod+Slash       { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
+  Mod+Shift+Alt+R { spawn-sh "sh -c $HOME/.config/niri/scripts/reload.sh"; }
   Ctrl+Alt+Delete { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 
   // --- Hardware Keys ---
@@ -111,7 +110,7 @@ binds {
   // --- Window Management ---
   Mod+Q repeat=false { close-window; }
   Mod+W repeat=false { toggle-overview; }
-  Mod+G              { toggle-column-tabbed-display; }
+  Mod+G repeat=false { toggle-column-tabbed-display; }
 
   // --- Focus Navigation (Windows & Columns) ---
   Mod+H    { focus-column-left; }
@@ -177,29 +176,26 @@ binds {
   Mod+Ctrl+9 { move-window-to-workspace 9; }
 
   // --- Mouse Wheel Binds ---
-  Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
-  Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
-  Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-window-to-workspace-down; }
-  Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { move-window-to-workspace-up; }
-  Mod+Shift+WheelScrollDown                { focus-column-right; }
-  Mod+Shift+WheelScrollUp                  { focus-column-left; }
-  Mod+Ctrl+Shift+WheelScrollDown           { move-column-right; }
-  Mod+Ctrl+Shift+WheelScrollUp             { move-column-left; }
+  Mod+WheelScrollDown            cooldown-ms=150 { focus-workspace-down; }
+  Mod+WheelScrollUp              cooldown-ms=150 { focus-workspace-up; }
+  Mod+Ctrl+Shift+WheelScrollDown cooldown-ms=150 { move-window-to-workspace-down; }
+  Mod+Ctrl+Shift+WheelScrollUp   cooldown-ms=150 { move-window-to-workspace-up; }
+
+  Mod+Shift+WheelScrollDown                      { focus-column-right; }
+  Mod+Shift+WheelScrollUp                        { focus-column-left; }
+  Mod+Ctrl+WheelScrollDown                       { move-column-right; }
+  Mod+Ctrl+WheelScrollUp                         { move-column-left; }
 
   // --- Layout Management ---
-  Mod+Space        { switch-layout "next"; }
-  Mod+Shift+Space  { switch-layout "prev"; }
+  Mod+C            { center-column; }
 
   Mod+R            { switch-preset-column-width; }
   Mod+Shift+R      { switch-preset-window-height; }
-  Mod+Ctrl+R       { reset-window-height; }
 
   Mod+F            { maximize-column; }
   Mod+Ctrl+F       { expand-column-to-available-width; }
   Mod+Shift+F      { fullscreen-window; }
 
-  Mod+C            { center-column; }
-  Mod+Ctrl+C       { center-visible-columns; }
 
   Mod+Minus        { set-column-width "-10%"; }
   Mod+Equal        { set-column-width "+10%"; }
@@ -215,10 +211,11 @@ binds {
   Mod+Period       { expel-window-from-column; }
 
   // --- Screenshots ---
-  Print      { screenshot; }
-  Ctrl+Print { screenshot-screen; }
-  Alt+Print  { screenshot-window; }
+  Print       { screenshot; }
+  Shift+Print { screenshot-screen; }
+  Alt+Print   { screenshot-window; }
 
   // --- Misc ---
+  Mod+Space                         { switch-layout "next"; }
   Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 }

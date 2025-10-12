@@ -30,6 +30,11 @@
         "showCapsule": true,
         "widgets": {
             "center": [
+                {
+                    "hideUnoccupied": false,
+                    "id": "Workspace",
+                    "labelMode": "none"
+                }
             ],
             "left": [
                 {
@@ -39,29 +44,34 @@
                     "useDistroLogo": false
                 },
                 {
-                    "blacklist": [
-                    ],
-                    "id": "Tray"
+                    "hideWhenZero": true,
+                    "id": "NotificationHistory",
+                    "showUnreadBadge": true
                 },
                 {
-                    "hideUnoccupied": false,
-                    "id": "Workspace",
-                    "labelMode": "index"
+                    "autoHide": false,
+                    "id": "ActiveWindow",
+                    "scrollingMode": "hover",
+                    "showIcon": true,
+                    "width": 145
                 },
                 {
                     "autoHide": false,
                     "id": "MediaMini",
                     "scrollingMode": "hover",
-                    "showAlbumArt": false,
+                    "showAlbumArt": true,
                     "showVisualizer": true,
                     "visualizerType": "mirrored"
+                },
+                {
+                    "blacklist": [
+                    ],
+                    "id": "Tray"
                 }
             ],
             "right": [
                 {
-                    "hideWhenZero": true,
-                    "id": "NotificationHistory",
-                    "showUnreadBadge": true
+                    "id": "ScreenRecorder"
                 },
                 {
                     "id": "WiFi"
@@ -89,10 +99,6 @@
                     "id": "Clock",
                     "useCustomFont": false,
                     "usePrimaryColor": true
-                },
-                {
-                    "displayMode": "forceOpen",
-                    "id": "KeyboardLayout"
                 }
             ]
         }
@@ -181,7 +187,7 @@
         "alwaysOnTop": false,
         "criticalUrgencyDuration": 15,
         "doNotDisturb": false,
-        "lastSeenTs": 1760251910000,
+        "lastSeenTs": 1760261628000,
         "location": "top_right",
         "lowUrgencyDuration": 3,
         "monitors": [
@@ -206,7 +212,7 @@
         "quality": "very_high",
         "showCursor": true,
         "videoCodec": "h264",
-        "videoSource": "portal"
+        "videoSource": "screen"
     },
     "settingsVersion": 15,
     "templates": {
@@ -246,13 +252,13 @@
         "directory": "/home/nutt/Pictures/Wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
-        "fillColor": "#000000",
+        "fillColor": "#c0c1ff",
         "fillMode": "crop",
         "monitors": [
             {
                 "directory": "/home/nutt/Pictures/Wallpapers",
                 "name": "eDP-1",
-                "wallpaper": "/home/nutt/Pictures/Wallpapers/girl-chiling.png"
+                "wallpaper": "/home/nutt/Pictures/Wallpapers/halloween.jpg"
             }
         ],
         "randomEnabled": false,
