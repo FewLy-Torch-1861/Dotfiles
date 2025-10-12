@@ -15,10 +15,6 @@ set -x QT_AUTO_SCREEN_SCALE_FACTOR 1
 set -x QT_QPA_PLATFORM wayland
 set -x QT_QPA_PLATFORM "wayland;xcb"
 
-set -x XDG_CURRENT_DESKTOP Sway
-set -x XDG_SESSION_TYPE wayland
-set -x XDG_SESSION_DESKTOP Sway
-
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.spicetify
 
@@ -45,6 +41,7 @@ if status is-interactive
     alias cg cargo
     alias py python
     alias dk docker
+    alias ldk lazydocker
     alias dkc 'docker compose'
     alias dkps 'docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Status}}"'
 
