@@ -66,15 +66,14 @@
   "window.controlsStyle": "hidden",
   "window.dialogStyle": "custom",
   "workbench.activityBar.location": "bottom",
-  "workbench.colorTheme": "Gruvbox Dark Hard",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.layoutControl.enabled": false,
   "workbench.list.smoothScrolling": true,
   "workbench.navigationControl.enabled": false,
-  "workbench.preferredDarkColorTheme": "Gruvbox Dark Medium",
-  "workbench.preferredLightColorTheme": "Gruvbox Light Hard",
+  "workbench.preferredLightColorTheme": "Rosé Pine Dawn",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.tips.enabled": false,
-  "workbench.tree.enableStickyScroll": false
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.preferredDarkColorTheme": "Rosé Pine"
 }

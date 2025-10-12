@@ -1,0 +1,265 @@
+{
+    "appLauncher": {
+        "backgroundOpacity": 1,
+        "enableClipboardHistory": true,
+        "pinnedExecs": [
+        ],
+        "position": "center",
+        "sortByMostUsed": true,
+        "terminalCommand": "kitty -e",
+        "useApp2Unit": false
+    },
+    "audio": {
+        "cavaFrameRate": 60,
+        "mprisBlacklist": [
+        ],
+        "preferredPlayer": "",
+        "visualizerType": "mirrored",
+        "volumeOverdrive": false,
+        "volumeStep": 5
+    },
+    "bar": {
+        "backgroundOpacity": 1,
+        "density": "comfortable",
+        "floating": false,
+        "marginHorizontal": 0.3,
+        "marginVertical": 0.3,
+        "monitors": [
+        ],
+        "position": "left",
+        "showCapsule": true,
+        "widgets": {
+            "center": [
+            ],
+            "left": [
+                {
+                    "customIconPath": "",
+                    "icon": "smart-home",
+                    "id": "ControlCenter",
+                    "useDistroLogo": false
+                },
+                {
+                    "blacklist": [
+                    ],
+                    "id": "Tray"
+                },
+                {
+                    "hideUnoccupied": false,
+                    "id": "Workspace",
+                    "labelMode": "index"
+                },
+                {
+                    "autoHide": false,
+                    "id": "MediaMini",
+                    "scrollingMode": "hover",
+                    "showAlbumArt": false,
+                    "showVisualizer": true,
+                    "visualizerType": "mirrored"
+                }
+            ],
+            "right": [
+                {
+                    "hideWhenZero": true,
+                    "id": "NotificationHistory",
+                    "showUnreadBadge": true
+                },
+                {
+                    "id": "WiFi"
+                },
+                {
+                    "id": "Bluetooth"
+                },
+                {
+                    "displayMode": "onhover",
+                    "id": "Volume"
+                },
+                {
+                    "displayMode": "onhover",
+                    "id": "Brightness"
+                },
+                {
+                    "displayMode": "onhover",
+                    "id": "Battery",
+                    "warningThreshold": 30
+                },
+                {
+                    "customFont": "",
+                    "formatHorizontal": "HH:mm",
+                    "formatVertical": "HH mm - dd MM",
+                    "id": "Clock",
+                    "useCustomFont": false,
+                    "usePrimaryColor": true
+                },
+                {
+                    "displayMode": "forceOpen",
+                    "id": "KeyboardLayout"
+                }
+            ]
+        }
+    },
+    "brightness": {
+        "brightnessStep": 5
+    },
+    "colorSchemes": {
+        "darkMode": true,
+        "generateTemplatesForPredefined": true,
+        "matugenSchemeType": "scheme-content",
+        "predefinedScheme": "Rosepine",
+        "useWallpaperColors": true
+    },
+    "controlCenter": {
+        "position": "close_to_bar_button",
+        "quickSettingsStyle": "compact",
+        "widgets": {
+            "quickSettings": [
+                {
+                    "id": "WiFi"
+                },
+                {
+                    "id": "Bluetooth"
+                },
+                {
+                    "id": "Notifications"
+                },
+                {
+                    "id": "ScreenRecorder"
+                },
+                {
+                    "id": "PowerProfile"
+                },
+                {
+                    "id": "WallpaperSelector"
+                }
+            ]
+        }
+    },
+    "dock": {
+        "backgroundOpacity": 1,
+        "displayMode": "auto_hide",
+        "floatingRatio": 1,
+        "monitors": [
+            "eDP-1"
+        ],
+        "onlySameOutput": true,
+        "pinnedApps": [
+        ]
+    },
+    "general": {
+        "animationDisabled": false,
+        "animationSpeed": 1,
+        "avatarImage": "/home/nutt/Pictures/Icons/Mizuki.jpg",
+        "dimDesktop": false,
+        "forceBlackScreenCorners": false,
+        "radiusRatio": 1,
+        "screenRadiusRatio": 1,
+        "showScreenCorners": true
+    },
+    "hooks": {
+        "darkModeChange": "",
+        "enabled": false,
+        "wallpaperChange": ""
+    },
+    "location": {
+        "name": "Nakhon Pathom",
+        "showWeekNumberInCalendar": false,
+        "use12hourFormat": false,
+        "useFahrenheit": false
+    },
+    "network": {
+        "wifiEnabled": true
+    },
+    "nightLight": {
+        "autoSchedule": true,
+        "dayTemp": "6500",
+        "enabled": true,
+        "forced": false,
+        "manualSunrise": "06:30",
+        "manualSunset": "18:30",
+        "nightTemp": "5000"
+    },
+    "notifications": {
+        "alwaysOnTop": false,
+        "criticalUrgencyDuration": 15,
+        "doNotDisturb": false,
+        "lastSeenTs": 1760251910000,
+        "location": "top_right",
+        "lowUrgencyDuration": 3,
+        "monitors": [
+        ],
+        "normalUrgencyDuration": 8,
+        "respectExpireTimeout": false
+    },
+    "osd": {
+        "alwaysOnTop": true,
+        "autoHideMs": 2000,
+        "enabled": true,
+        "location": "top_right",
+        "monitors": [
+        ]
+    },
+    "screenRecorder": {
+        "audioCodec": "opus",
+        "audioSource": "default_output",
+        "colorRange": "limited",
+        "directory": "/home/nutt/Videos/Record",
+        "frameRate": 60,
+        "quality": "very_high",
+        "showCursor": true,
+        "videoCodec": "h264",
+        "videoSource": "portal"
+    },
+    "settingsVersion": 15,
+    "templates": {
+        "discord": false,
+        "discord_armcord": false,
+        "discord_dorion": false,
+        "discord_equibop": false,
+        "discord_lightcord": false,
+        "discord_vesktop": true,
+        "discord_webcord": false,
+        "enableUserTemplates": true,
+        "foot": false,
+        "fuzzel": false,
+        "ghostty": false,
+        "gtk": true,
+        "kcolorscheme": true,
+        "kitty": true,
+        "pywalfox": false,
+        "qt": true
+    },
+    "ui": {
+        "fontDefault": "Inter",
+        "fontDefaultScale": 1,
+        "fontFixed": "JetBrainsMono Nerd Font Propo",
+        "fontFixedScale": 1,
+        "idleInhibitorEnabled": false,
+        "monitorsScaling": [
+            {
+                "name": "eDP-1",
+                "scale": 0.8999999999999999
+            }
+        ],
+        "tooltipsEnabled": true
+    },
+    "wallpaper": {
+        "defaultWallpaper": "/etc/xdg/quickshell/noctalia-shell/Assets/Wallpaper/noctalia.png",
+        "directory": "/home/nutt/Pictures/Wallpapers",
+        "enableMultiMonitorDirectories": false,
+        "enabled": true,
+        "fillColor": "#000000",
+        "fillMode": "crop",
+        "monitors": [
+            {
+                "directory": "/home/nutt/Pictures/Wallpapers",
+                "name": "eDP-1",
+                "wallpaper": "/home/nutt/Pictures/Wallpapers/halloween.jpg"
+            }
+        ],
+        "randomEnabled": false,
+        "randomIntervalSec": 300,
+        "setWallpaperOnAllMonitors": true,
+        "transitionDuration": 500,
+        "transitionEdgeSmoothness": 0,
+        "transitionType": "fade"
+    }
+}

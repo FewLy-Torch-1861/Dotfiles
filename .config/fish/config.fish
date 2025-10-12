@@ -1,5 +1,5 @@
 set TTY1 (tty)
-[ "$TTY1" = /dev/tty1 ] && exec niri --session
+[ "$TTY1" = /dev/tty1 ] && exec niri-session
 
 ## ── Global ENVs ──────────────────────────
 set -x EDITOR nvim
@@ -12,8 +12,8 @@ set -x FZF_DEFAULT_OPTS "\
 set -x GOPATH $HOME/.go
 
 set -x QT_AUTO_SCREEN_SCALE_FACTOR 1
-set -x QT_QPA_PLATFORM wayland
 set -x QT_QPA_PLATFORM "wayland;xcb"
+set -x QT_QPA_PLATFORMTHEME qt6ct
 
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.spicetify
