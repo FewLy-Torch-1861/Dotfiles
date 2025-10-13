@@ -187,7 +187,7 @@
         "alwaysOnTop": false,
         "criticalUrgencyDuration": 15,
         "doNotDisturb": false,
-        "lastSeenTs": 1760332234000,
+        "lastSeenTs": 1760366913000,
         "location": "top_right",
         "lowUrgencyDuration": 3,
         "monitors": [
@@ -258,7 +258,7 @@
             {
                 "directory": "/home/nutt/Pictures/Wallpapers",
                 "name": "eDP-1",
-                "wallpaper": "/home/nutt/Pictures/Wallpapers/halloween.jpg"
+                "wallpaper": "/home/nutt/Pictures/Wallpapers/girl-chiling.jpeg"
             }
         ],
         "randomEnabled": false,

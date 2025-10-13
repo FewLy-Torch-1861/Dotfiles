@@ -63,8 +63,8 @@ layout {
   border {
     // off
     width 1
-    active-color "#ffb787"
-    inactive-color "#19120d"
+    active-color "#c0c1ff"
+    inactive-color "#131317"
     urgent-color "#ffb4ab"
   }
   shadow {
