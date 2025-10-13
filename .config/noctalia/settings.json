@@ -39,7 +39,7 @@
             "left": [
                 {
                     "customIconPath": "",
-                    "icon": "smart-home",
+                    "icon": "noctalia",
                     "id": "ControlCenter",
                     "useDistroLogo": false
                 },
@@ -187,7 +187,7 @@
         "alwaysOnTop": false,
         "criticalUrgencyDuration": 15,
         "doNotDisturb": false,
-        "lastSeenTs": 1760270294000,
+        "lastSeenTs": 1760332234000,
         "location": "top_right",
         "lowUrgencyDuration": 3,
         "monitors": [
@@ -258,14 +258,14 @@
             {
                 "directory": "/home/nutt/Pictures/Wallpapers",
                 "name": "eDP-1",
-                "wallpaper": "/home/nutt/Pictures/Wallpapers/mizuki.png"
+                "wallpaper": "/home/nutt/Pictures/Wallpapers/halloween.jpg"
             }
         ],
         "randomEnabled": false,
         "randomIntervalSec": 300,
         "setWallpaperOnAllMonitors": true,
-        "transitionDuration": 1500,
-        "transitionEdgeSmoothness": 0.5,
-        "transitionType": "disc"
+        "transitionDuration": 500,
+        "transitionEdgeSmoothness": 0,
+        "transitionType": "none"
     }
 }

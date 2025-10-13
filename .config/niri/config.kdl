@@ -63,8 +63,8 @@ layout {
   border {
     // off
     width 1
-    active-color "#abc8fa"
-    inactive-color "#121316"
+    active-color "#ffb787"
+    inactive-color "#19120d"
     urgent-color "#ffb4ab"
   }
   shadow {
@@ -96,19 +96,12 @@ binds {
   Mod+A           { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
   Mod+N           { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
   Mod+Alt+W       { spawn-sh "qs -c noctalia-shell ipc call wallpaper toggle"; }
+  Mod+Alt+Shift+W { spawn-sh "qs -c noctalia-shell ipc call wallpaper random"; }
   Mod+Alt+R       { spawn-sh "qs -c noctalia-shell ipc call screenRecorder toggle"; }
   Mod+Alt+L       { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
   Mod+Slash       { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
   Mod+Shift+Alt+R { spawn-sh "sh -c $HOME/.config/niri/scripts/reload.sh"; }
   Ctrl+Alt+Delete { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
-
-  // --- Hardware Keys ---
-  XF86AudioRaiseVolume  allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
-  XF86AudioLowerVolume  allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
-  XF86AudioMute         allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
-  XF86AudioMicMute      allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
-  XF86MonBrightnessUp   allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
-  XF86MonBrightnessDown allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
 
   // --- Window Management ---
   Mod+Q repeat=false { close-window; }
@@ -212,12 +205,21 @@ binds {
   Mod+Comma        { consume-window-into-column; }
   Mod+Period       { expel-window-from-column; }
 
+  // --- Hardware Keys ---
+  XF86AudioRaiseVolume  allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
+  XF86AudioLowerVolume  allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
+  XF86AudioMute         allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
+  XF86AudioMicMute      allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
+  XF86MonBrightnessUp   allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
+  XF86MonBrightnessDown allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
+
   // --- Screenshots ---
   Print       { screenshot; }
   Shift+Print { screenshot-screen; }
   Alt+Print   { screenshot-window; }
 
   // --- Misc ---
+  Mod+Alt+C                         { spawn-sh "niri msg pick-color | grep -oP '(#[a-f|A-F|0-9]{3,6})' | pastel format hex | wl-copy"; }
   Mod+Space                         { switch-layout "next"; }
   Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 }
