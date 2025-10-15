@@ -63,8 +63,8 @@ layout {
   border {
     // off
     width 1
-    active-color "#c0c1ff"
-    inactive-color "#131317"
+    active-color "#ffb3af"
+    inactive-color "#200f0e"
     urgent-color "#ffb4ab"
   }
   shadow {
@@ -104,9 +104,9 @@ binds {
   Ctrl+Alt+Delete { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 
   // --- Window Management ---
-  Mod+Q repeat=false { close-window; }
-  Mod+W repeat=false { toggle-overview; }
-  Mod+G repeat=false { toggle-column-tabbed-display; }
+  Mod+Q { close-window; }
+  Mod+W { toggle-overview; }
+  Mod+G { toggle-column-tabbed-display; }
 
   // --- Focus Navigation (Windows & Columns) ---
   Mod+H    { focus-column-left; }
@@ -219,7 +219,7 @@ binds {
   Alt+Print   { screenshot-window; }
 
   // --- Misc ---
-  Mod+Alt+C                         { spawn-sh "niri msg pick-color | grep -oP '(#[a-f|A-F|0-9]{3,6})' | pastel format hex | wl-copy"; }
+  Mod+Alt+C  allow-when-locked=true { spawn-sh "niri msg pick-color | grep -oP '(#[a-f|A-F|0-9]{3,6})' | pastel format hex | wl-copy"; }
   Mod+Space                         { switch-layout "next"; }
   Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 }

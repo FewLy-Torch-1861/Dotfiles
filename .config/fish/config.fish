@@ -1,6 +1,3 @@
-set TTY1 (tty)
-[ "$TTY1" = /dev/tty1 ] && exec fastfetch && niri --session
-
 ## ── Global ENVs ──────────────────────────
 set -x EDITOR nvim
 set -x TERM kitty
@@ -17,6 +14,21 @@ set -x QT_QPA_PLATFORMTHEME qt6ct
 
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.spicetify
+
+## ── Niri ───────────────────────────
+if tty | string match --entire /dev/tty1
+    fastfetch
+
+    if not set -q XDG_RUNTIME_DIR
+        set timestamp (date +%s)
+        set -gx XDG_RUNTIME_DIR /tmp/$UID/$timestamp
+
+        mkdir -p $XDG_RUNTIME_DIR
+        chmod 0700 $XDG_RUNTIME_DIR
+    end
+
+    exec niri --session
+end
 
 if status is-interactive
     ## ── Greeting ───────────────────────────
@@ -54,7 +66,7 @@ if status is-interactive
     # Search & Files
     abbr --add ffind 'fd --type f'
     alias f fzf
-    alias cat 'bat -Pp'
+    alias ct 'bat -Pp'
     alias rg 'rg --color=always'
     alias grep 'grep --color=auto'
 

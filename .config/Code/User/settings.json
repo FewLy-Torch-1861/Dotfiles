@@ -75,5 +75,8 @@
   "workbench.startupEditor": "none",
   "workbench.tips.enabled": false,
   "workbench.tree.enableStickyScroll": false,
-  "workbench.preferredDarkColorTheme": "Rosé Pine"
+  "workbench.preferredDarkColorTheme": "Rosé Pine",
+  "[rust]": {
+    "editor.defaultFormatter": "jinxdash.prettier-rust"
+  }
 }
