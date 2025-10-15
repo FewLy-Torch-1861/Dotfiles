@@ -187,7 +187,7 @@
         "alwaysOnTop": false,
         "criticalUrgencyDuration": 15,
         "doNotDisturb": false,
-        "lastSeenTs": 1760503331000,
+        "lastSeenTs": 1760545599000,
         "location": "top_right",
         "lowUrgencyDuration": 3,
         "monitors": [
@@ -258,7 +258,7 @@
             {
                 "directory": "/home/nutt/Pictures/Wallpapers",
                 "name": "eDP-1",
-                "wallpaper": "/home/nutt/Pictures/Wallpapers/anime girl skull.png"
+                "wallpaper": "/home/nutt/Pictures/Wallpapers/Windows_Wallpaper Expeditions_IG_ Justin Chochuette_1x1.jpg"
             }
         ],
         "randomEnabled": false,
