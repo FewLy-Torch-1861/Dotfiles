@@ -49,14 +49,15 @@
                     "showUnreadBadge": true
                 },
                 {
-                    "autoHide": false,
+                    "colorizeIcons": false,
+                    "hideMode": "hidden",
                     "id": "ActiveWindow",
                     "scrollingMode": "hover",
                     "showIcon": true,
                     "width": 145
                 },
                 {
-                    "autoHide": false,
+                    "hideMode": "hidden",
                     "id": "MediaMini",
                     "scrollingMode": "hover",
                     "showAlbumArt": true,
@@ -66,19 +67,11 @@
                 {
                     "blacklist": [
                     ],
+                    "colorizeIcons": false,
                     "id": "Tray"
                 }
             ],
             "right": [
-                {
-                    "id": "ScreenRecorder"
-                },
-                {
-                    "id": "WiFi"
-                },
-                {
-                    "id": "Bluetooth"
-                },
                 {
                     "displayMode": "onhover",
                     "id": "Volume"
@@ -99,6 +92,9 @@
                     "id": "Clock",
                     "useCustomFont": false,
                     "usePrimaryColor": true
+                },
+                {
+                    "id": "SessionMenu"
                 }
             ]
         }
@@ -114,10 +110,31 @@
         "useWallpaperColors": true
     },
     "controlCenter": {
+        "cards": [
+            {
+                "enabled": true,
+                "id": "profile-card"
+            },
+            {
+                "enabled": true,
+                "id": "shortcuts-card"
+            },
+            {
+                "enabled": true,
+                "id": "audio-card"
+            },
+            {
+                "enabled": true,
+                "id": "weather-card"
+            },
+            {
+                "enabled": true,
+                "id": "media-sysmon-card"
+            }
+        ],
         "position": "close_to_bar_button",
-        "quickSettingsStyle": "compact",
-        "widgets": {
-            "quickSettings": [
+        "shortcuts": {
+            "left": [
                 {
                     "id": "WiFi"
                 },
@@ -125,22 +142,31 @@
                     "id": "Bluetooth"
                 },
                 {
-                    "id": "Notifications"
+                    "id": "ScreenRecorder"
                 },
                 {
-                    "id": "ScreenRecorder"
+                    "id": "WallpaperSelector"
+                }
+            ],
+            "right": [
+                {
+                    "id": "Notifications"
                 },
                 {
                     "id": "PowerProfile"
                 },
                 {
-                    "id": "WallpaperSelector"
+                    "id": "KeepAwake"
+                },
+                {
+                    "id": "NightLight"
                 }
             ]
         }
     },
     "dock": {
         "backgroundOpacity": 1,
+        "colorizeIcons": false,
         "displayMode": "auto_hide",
         "floatingRatio": 1,
         "monitors": [
@@ -153,10 +179,12 @@
     "general": {
         "animationDisabled": false,
         "animationSpeed": 1,
-        "avatarImage": "/home/nutt/Pictures/Icons/Mizuki.jpg",
+        "avatarImage": "/home/nutt/Pictures/Minecraft/2025-10-15_23.04.25 (Crop).png",
+        "compactLockScreen": false,
         "dimDesktop": false,
         "forceBlackScreenCorners": false,
         "radiusRatio": 1,
+        "scaleRatio": 0.9,
         "screenRadiusRatio": 1,
         "showScreenCorners": true
     },
@@ -187,7 +215,7 @@
         "alwaysOnTop": false,
         "criticalUrgencyDuration": 15,
         "doNotDisturb": false,
-        "lastSeenTs": 1760545599000,
+        "lastSeenTs": 1760602480000,
         "location": "top_right",
         "lowUrgencyDuration": 3,
         "monitors": [
@@ -239,12 +267,6 @@
         "fontFixed": "JetBrainsMono Nerd Font Propo",
         "fontFixedScale": 1,
         "idleInhibitorEnabled": false,
-        "monitorsScaling": [
-            {
-                "name": "eDP-1",
-                "scale": 0.8999999999999999
-            }
-        ],
         "tooltipsEnabled": true
     },
     "wallpaper": {
@@ -258,7 +280,7 @@
             {
                 "directory": "/home/nutt/Pictures/Wallpapers",
                 "name": "eDP-1",
-                "wallpaper": "/home/nutt/Pictures/Wallpapers/Windows_Wallpaper Expeditions_IG_ Justin Chochuette_1x1.jpg"
+                "wallpaper": "/home/nutt/Pictures/Wallpapers/kita.png"
             }
         ],
         "randomEnabled": false,
