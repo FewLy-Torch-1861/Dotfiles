@@ -1,4 +1,5 @@
 // ---- System & Startup ----
+spawn-at-startup "/usr/lib/xdg-desktop-portal-gnome"
 spawn-at-startup "qs" "-c" "noctalia-shell"
 
 hotkey-overlay { skip-at-startup; }
@@ -63,8 +64,8 @@ layout {
   border {
     // off
     width 1
-    active-color "#a0d662"
-    inactive-color "#11140d"
+    active-color "#f9bb95"
+    inactive-color "#171210"
     urgent-color "#ffb4ab"
   }
   shadow {
@@ -88,7 +89,7 @@ animations {
 binds {
   // --- Application Launchers ---
   Mod+Return { spawn "kitty"; }
-  Mod+E      { spawn "nautilus"; }
+  Mod+E      { spawn "nautilus" "-w"; }
   Alt+Space  { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
   Mod+V      { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard";}
 

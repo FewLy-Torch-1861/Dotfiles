@@ -1,0 +1,20 @@
+[input]
+method = pulse
+source = auto
+
+; method = pipewire
+; source = auto
+
+[color]
+background = default
+foreground = blue
+
+gradient = 1
+gradient_color_1 = '#87cfeb'
+gradient_color_2 = '#87cfeb'
+gradient_color_3 = '#ffc0ca'
+gradient_color_4 = '#ffc0ca'
+gradient_color_5 = '#fffafa'
+gradient_color_6 = '#fffafa'
+
+; theme = 'none'

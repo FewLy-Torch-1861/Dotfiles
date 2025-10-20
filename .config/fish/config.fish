@@ -13,6 +13,7 @@ set -x QT_QPA_PLATFORM "wayland;xcb"
 set -x QT_QPA_PLATFORMTHEME qt6ct
 
 fish_add_path $HOME/.local/bin
+fish_add_path $HOME/.cargo/bin
 fish_add_path $HOME/.spicetify
 
 ## ── Niri ───────────────────────────
@@ -51,6 +52,7 @@ if status is-interactive
     # Dev
     alias v nvim
     alias cg cargo
+    alias cgr 'cargo run --'
     alias py python
     alias dk docker
     alias ldk lazydocker
@@ -87,6 +89,7 @@ if status is-interactive
     abbr --add lpkg 'yay -Q | fzf -e'
     abbr --add lupkg 'yay -Qet | fzf -e'
     abbr --add clnpkg 'yay -Rns (yay -Qtdq)'
+    abbr --add rmpkg 'yay -Rns (yay -Qetq | fzf -e)'
 
     ## ── Functions ──────────────────────────
     function y

@@ -14,8 +14,17 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
   "[shellscript]": {
     "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "code-runner.executorMap": {
+    "rust": "cargo run"
   },
   "editor.aiStats.enabled": true,
   "editor.cursorBlinking": "phase",
@@ -32,12 +41,7 @@
   },
   "git.autofetch": true,
   "git.confirmSync": false,
-  "github.copilot.enable": {
-    "*": true,
-    "markdown": true,
-    "plaintext": false,
-    "scminput": false
-  },
+  "redhat.telemetry.enabled": true,
   "shellformat.effectLanguages": [
     "shellscript",
     "dockerfile",
@@ -61,7 +65,6 @@
   "vim.shell": "/usr/bin/fish",
   "vim.smartRelativeLine": true,
   "vim.useSystemClipboard": true,
-  "window.autoDetectColorScheme": true,
   "window.commandCenter": false,
   "window.controlsStyle": "hidden",
   "window.dialogStyle": "custom",
@@ -70,13 +73,9 @@
   "workbench.layoutControl.enabled": false,
   "workbench.list.smoothScrolling": true,
   "workbench.navigationControl.enabled": false,
-  "workbench.preferredLightColorTheme": "Rosé Pine Dawn",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.tips.enabled": false,
   "workbench.tree.enableStickyScroll": false,
-  "workbench.preferredDarkColorTheme": "Rosé Pine",
-  "[rust]": {
-    "editor.defaultFormatter": "jinxdash.prettier-rust"
-  }
+  "workbench.colorTheme": "Gruvbox Material Dark"
 }
