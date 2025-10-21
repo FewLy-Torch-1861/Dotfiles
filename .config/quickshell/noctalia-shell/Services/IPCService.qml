@@ -184,6 +184,28 @@ Item {
   }
 
   IpcHandler {
+    target: "batteryManager"
+
+    function cycle() {
+      BatteryService.cycleModes()
+    }
+
+    function set(mode: string) {
+      switch (mode) {
+      case "full":
+        BatteryService.setChargingMode(BatteryService.ChargingMode.Full)
+        break
+      case "balanced":
+        BatteryService.setChargingMode(BatteryService.ChargingMode.Balanced)
+        break
+      case "lifespan":
+        BatteryService.setChargingMode(BatteryService.ChargingMode.Lifespan)
+        break
+      }
+    }
+  }
+
+  IpcHandler {
     target: "media"
     function playPause() {
       MediaService.playPause()
@@ -191,6 +213,10 @@ Item {
 
     function play() {
       MediaService.play()
+    }
+
+    function stop() {
+      MediaService.stop()
     }
 
     function pause() {
@@ -208,7 +234,7 @@ Item {
     function seekRelative(offset: string) {
       var offsetVal = parseFloat(position)
       if (Number.isNaN(offsetVal)) {
-        Logger.warn("Media", "Argument to ipc call 'media seekRelative' must be a number")
+        Logger.w("Media", "Argument to ipc call 'media seekRelative' must be a number")
         return
       }
       MediaService.seekRelative(offsetVal)
@@ -217,7 +243,7 @@ Item {
     function seekByRatio(position: string) {
       var positionVal = parseFloat(position)
       if (Number.isNaN(positionVal)) {
-        Logger.warn("Media", "Argument to ipc call 'media seekByRatio' must be a number")
+        Logger.w("Media", "Argument to ipc call 'media seekByRatio' must be a number")
         return
       }
       MediaService.seekByRatio(positionVal)

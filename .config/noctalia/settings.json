@@ -22,8 +22,8 @@
         "backgroundOpacity": 1,
         "density": "comfortable",
         "floating": false,
-        "marginHorizontal": 0.3,
-        "marginVertical": 0.3,
+        "marginHorizontal": 0.62,
+        "marginVertical": 0.61,
         "monitors": [
         ],
         "position": "left",
@@ -99,6 +99,9 @@
             ]
         }
     },
+    "battery": {
+        "chargingMode": 1
+    },
     "brightness": {
         "brightnessStep": 5
     },
@@ -166,7 +169,7 @@
     },
     "dock": {
         "backgroundOpacity": 1,
-        "colorizeIcons": false,
+        "colorizeIcons": true,
         "displayMode": "auto_hide",
         "floatingRatio": 1,
         "monitors": [
@@ -197,7 +200,8 @@
         "name": "Nakhon Pathom",
         "showWeekNumberInCalendar": false,
         "use12hourFormat": false,
-        "useFahrenheit": false
+        "useFahrenheit": false,
+        "weatherEnabled": true
     },
     "network": {
         "wifiEnabled": true
@@ -215,7 +219,7 @@
         "alwaysOnTop": false,
         "criticalUrgencyDuration": 15,
         "doNotDisturb": false,
-        "lastSeenTs": 1760952689000,
+        "lastSeenTs": 1761047818000,
         "location": "top_right",
         "lowUrgencyDuration": 3,
         "monitors": [
@@ -242,7 +246,8 @@
         "videoCodec": "h264",
         "videoSource": "screen"
     },
-    "settingsVersion": 15,
+    "settingsVersion": 16,
+    "setupCompleted": true,
     "templates": {
         "discord": false,
         "discord_armcord": false,
@@ -266,7 +271,6 @@
         "fontDefaultScale": 1,
         "fontFixed": "JetBrainsMono Nerd Font Propo",
         "fontFixedScale": 1,
-        "idleInhibitorEnabled": false,
         "tooltipsEnabled": true
     },
     "wallpaper": {
@@ -280,7 +284,7 @@
             {
                 "directory": "/home/nutt/Pictures/Wallpapers",
                 "name": "eDP-1",
-                "wallpaper": "/home/nutt/Pictures/Wallpapers/Windows_Wallpaper Expeditions_IG_ Frauke Hameister_1x1.jpg"
+                "wallpaper": "/home/nutt/Pictures/Wallpapers/Teto.png"
             }
         ],
         "randomEnabled": false,

@@ -2,4 +2,4 @@
 
 - WM: Niri
 - Shell: Noctalia <sup>quickshell</sup>
-- Colorscheme: Material You
+- Colorscheme: Auto generate by matugen

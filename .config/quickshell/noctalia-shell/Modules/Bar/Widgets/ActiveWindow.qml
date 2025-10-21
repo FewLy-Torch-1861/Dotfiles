@@ -18,6 +18,7 @@ Item {
   property string section: ""
   property int sectionWidgetIndex: -1
   property int sectionWidgetsCount: 0
+  property real scaling: 1.0
 
   property var widgetMetadata: BarWidgetRegistry.widgetMetadata[widgetId]
   property var widgetSettings: {
@@ -55,8 +56,7 @@ Item {
   }
 
   function calculatedVerticalDimension() {
-    const ratio = (Settings.data.bar.density === "mini") ? 0.67 : 0.8
-    return Math.round(Style.baseWidgetSize * ratio)
+    return Math.round((Style.baseWidgetSize - 5) * scaling)
   }
 
   function getAppIcon() {
@@ -72,7 +72,7 @@ Item {
             return iconResult
           }
         } catch (iconError) {
-          Logger.warn("ActiveWindow", "Error getting icon from CompositorService:", iconError)
+          Logger.w("ActiveWindow", "Error getting icon from CompositorService:", iconError)
         }
       }
 
@@ -90,14 +90,14 @@ Item {
               }
             }
           } catch (fallbackError) {
-            Logger.warn("ActiveWindow", "Error getting icon from ToplevelManager:", fallbackError)
+            Logger.w("ActiveWindow", "Error getting icon from ToplevelManager:", fallbackError)
           }
         }
       }
 
       return ThemeIcons.iconFromName(fallbackIcon)
     } catch (e) {
-      Logger.warn("ActiveWindow", "Error in getAppIcon:", e)
+      Logger.w("ActiveWindow", "Error in getAppIcon:", e)
       return ThemeIcons.iconFromName(fallbackIcon)
     }
   }
@@ -107,7 +107,7 @@ Item {
     id: fullTitleMetrics
     visible: false
     text: windowTitle
-    pointSize: Style.fontSizeS
+    pointSize: Style.fontSizeS * scaling
     applyUiScale: false
     font.weight: Style.fontWeightMedium
   }
@@ -125,21 +125,21 @@ Item {
     Item {
       id: mainContainer
       anchors.fill: parent
-      anchors.leftMargin: isVerticalBar ? 0 : Style.marginS
-      anchors.rightMargin: isVerticalBar ? 0 : Style.marginS
+      anchors.leftMargin: isVerticalBar ? 0 : Style.marginS * scaling
+      anchors.rightMargin: isVerticalBar ? 0 : Style.marginS * scaling
 
       // Horizontal layout for top/bottom bars
       RowLayout {
         id: rowLayout
         anchors.verticalCenter: parent.verticalCenter
-        spacing: Style.marginS
+        spacing: Style.marginS * scaling
         visible: !isVerticalBar
         z: 1
 
         // Window icon
         Item {
-          Layout.preferredWidth: 18
-          Layout.preferredHeight: 18
+          Layout.preferredWidth: 18 * scaling
+          Layout.preferredHeight: 18 * scaling
           Layout.alignment: Qt.AlignVCenter
           visible: showIcon
 
@@ -254,7 +254,7 @@ Item {
               NText {
                 id: titleText
                 text: windowTitle
-                pointSize: Style.fontSizeS
+                pointSize: Style.fontSizeS * scaling
                 applyUiScale: false
                 font.weight: Style.fontWeightMedium
                 verticalAlignment: Text.AlignVCenter
@@ -265,7 +265,7 @@ Item {
               NText {
                 text: windowTitle
                 font: titleText.font
-                pointSize: Style.fontSizeS
+                pointSize: Style.fontSizeS * scaling
                 applyUiScale: false
                 verticalAlignment: Text.AlignVCenter
                 color: Color.mOnSurface
@@ -316,7 +316,7 @@ Item {
 
         // Window icon
         Item {
-          width: Style.baseWidgetSize * 0.5
+          width: Style.baseWidgetSize * 0.5 * scaling
           height: width
           anchors.centerIn: parent
           visible: windowTitle !== ""
@@ -367,7 +367,7 @@ Item {
         windowIcon.source = Qt.binding(getAppIcon)
         windowIconVertical.source = Qt.binding(getAppIcon)
       } catch (e) {
-        Logger.warn("ActiveWindow", "Error in onActiveWindowChanged:", e)
+        Logger.w("ActiveWindow", "Error in onActiveWindowChanged:", e)
       }
     }
     function onWindowListChanged() {
@@ -375,7 +375,7 @@ Item {
         windowIcon.source = Qt.binding(getAppIcon)
         windowIconVertical.source = Qt.binding(getAppIcon)
       } catch (e) {
-        Logger.warn("ActiveWindow", "Error in onWindowListChanged:", e)
+        Logger.w("ActiveWindow", "Error in onWindowListChanged:", e)
       }
     }
   }

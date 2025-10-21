@@ -121,7 +121,7 @@ ColumnLayout {
               var jsonData = JSON.parse(text())
               root.schemeLoaded(schemeName, jsonData)
             } catch (e) {
-              Logger.warn("ColorSchemeTab", "Failed to parse JSON for scheme:", schemeName, e)
+              Logger.w("ColorSchemeTab", "Failed to parse JSON for scheme:", schemeName, e)
               root.schemeLoaded(schemeName, null)
             }
           }
@@ -312,7 +312,7 @@ ColumnLayout {
             cursorShape: Qt.PointingHandCursor
             onClicked: {
               Settings.data.colorSchemes.useWallpaperColors = false
-              Logger.log("ColorSchemeTab", "Disabled wallpaper colors")
+              Logger.i("ColorSchemeTab", "Disabled wallpaper colors")
 
               Settings.data.colorSchemes.predefinedScheme = schemeItem.schemeName
               ColorSchemeService.applyScheme(Settings.data.colorSchemes.predefinedScheme)
@@ -336,7 +336,6 @@ ColumnLayout {
             NIcon {
               icon: "check"
               pointSize: Style.fontSizeXS
-              font.weight: Style.fontWeightBold
               color: Color.mOnSecondary
               anchors.centerIn: parent
             }
@@ -514,29 +513,49 @@ ColumnLayout {
                    }
       }
 
-      // Show individual checkboxes for each detected Discord client
-      Repeater {
-        model: ProgramCheckerService.availableDiscordClients
-        delegate: NCheckbox {
-          label: modelData.name.charAt(0).toUpperCase() + modelData.name.slice(1)
-          description: I18n.tr("settings.color-scheme.templates.programs.discord.description", {
-                                 "client": modelData.name.charAt(0).toUpperCase() + modelData.name.slice(1),
-                                 "filepath": modelData.themePath
-                               })
-          checked: Settings.data.templates["discord_" + modelData.name] || false
-          onToggled: checked => {
-                       Settings.data.templates["discord_" + modelData.name] = checked
+      // Discord clients - single toggle with dynamic description
+      NCheckbox {
+        id: discordToggle
+        label: "Discord"
+        description: {
+          if (ProgramCheckerService.availableDiscordClients.length === 0) {
+            return I18n.tr("settings.color-scheme.templates.programs.discord.description-missing")
+          } else {
+            // Show detected clients
+            var clientInfo = []
+            for (var i = 0; i < ProgramCheckerService.availableDiscordClients.length; i++) {
+              var client = ProgramCheckerService.availableDiscordClients[i]
+              clientInfo.push(client.name.charAt(0).toUpperCase() + client.name.slice(1))
+            }
+            return "Detected: " + clientInfo.join(", ")
+          }
+        }
+        Layout.fillWidth: true
+        Layout.preferredWidth: -1
+        checked: {
+          // Check if any Discord client template is enabled
+          var anyEnabled = false
+          for (var i = 0; i < ProgramCheckerService.availableDiscordClients.length; i++) {
+            var client = ProgramCheckerService.availableDiscordClients[i]
+            if (Settings.data.templates["discord_" + client.name]) {
+              anyEnabled = true
+              break
+            }
+          }
+          return anyEnabled
+        }
+        enabled: ProgramCheckerService.availableDiscordClients.length > 0
+        opacity: ProgramCheckerService.availableDiscordClients.length > 0 ? 1.0 : 0.6
+        onToggled: checked => {
+                     // Enable/disable all detected Discord clients
+                     for (var i = 0; i < ProgramCheckerService.availableDiscordClients.length; i++) {
+                       var client = ProgramCheckerService.availableDiscordClients[i]
+                       Settings.data.templates["discord_" + client.name] = checked
+                     }
+                     if (ProgramCheckerService.availableDiscordClients.length > 0) {
                        AppThemeService.generate()
                      }
-        }
-      }
-
-      // Show message if no Discord clients detected
-      NText {
-        visible: ProgramCheckerService.availableDiscordClients.length === 0
-        text: I18n.tr("settings.color-scheme.templates.programs.discord.description-missing")
-        color: Color.mOnSurfaceVariant
-        pointSize: Style.fontSizeS
+                   }
       }
 
       NCheckbox {

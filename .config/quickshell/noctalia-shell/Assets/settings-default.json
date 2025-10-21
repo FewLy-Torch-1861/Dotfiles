@@ -1,5 +1,6 @@
 {
-  "settingsVersion": 15,
+  "settingsVersion": 16,
+  "setupCompleted": false,
   "bar": {
     "position": "top",
     "backgroundOpacity": 1,
@@ -68,6 +69,7 @@
   },
   "location": {
     "name": "Tokyo",
+    "weatherEnabled": true,
     "useFahrenheit": false,
     "use12hourFormat": false,
     "showWeekNumberInCalendar": false
@@ -205,7 +207,6 @@
     "fontFixed": "DejaVu Sans Mono",
     "fontDefaultScale": 1,
     "fontFixedScale": 1,
-    "idleInhibitorEnabled": false,
     "tooltipsEnabled": true
   },
   "brightness": {
@@ -249,5 +250,8 @@
     "enabled": false,
     "wallpaperChange": "",
     "darkModeChange": ""
+  },
+  "battery": {
+    "chargingMode": 0
   }
 }
