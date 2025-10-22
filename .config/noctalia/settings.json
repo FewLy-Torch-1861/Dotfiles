@@ -120,7 +120,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "matugenSchemeType": "scheme-content",
-        "predefinedScheme": "Rosepine",
+        "predefinedScheme": "Gruvbox",
         "schedulingMode": "off",
         "useWallpaperColors": true
     },
@@ -301,7 +301,7 @@
             {
                 "directory": "/home/nutt/Pictures/Wallpapers",
                 "name": "eDP-1",
-                "wallpaper": "/home/nutt/Pictures/Wallpapers/kita.png"
+                "wallpaper": "/home/nutt/Pictures/Wallpapers/Miku Teto.jpg"
             }
         ],
         "randomEnabled": false,
