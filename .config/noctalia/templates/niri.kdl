@@ -80,6 +80,10 @@ layout {
   struts {}
 }
 
+overview {
+  zoom 0.37
+}
+
 animations {
   // off
   slowdown 1.25

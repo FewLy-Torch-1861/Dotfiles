@@ -65,8 +65,8 @@ layout {
   border {
     // off
     width 1
-    active-color "#ffb3b5"
-    inactive-color "#1d1010"
+    active-color "#ffb0c9"
+    inactive-color "#191113"
     urgent-color "#ffb4ab"
   }
   shadow {
@@ -78,6 +78,10 @@ layout {
     color "#0007"
   }
   struts {}
+}
+
+overview {
+  zoom 0.37
 }
 
 animations {
