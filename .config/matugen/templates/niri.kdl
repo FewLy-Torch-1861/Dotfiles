@@ -100,7 +100,7 @@ binds {
   Mod+Alt+W       { spawn-sh "qs -c noctalia-shell ipc call wallpaper toggle"; }
   Mod+Alt+Shift+W { spawn-sh "qs -c noctalia-shell ipc call wallpaper random"; }
   Mod+Alt+R       { spawn-sh "qs -c noctalia-shell ipc call screenRecorder toggle"; }
-  Mod+Alt+L       { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
+  Mod+Alt+L       { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
   Mod+Slash       { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
   Mod+Shift+Alt+R { spawn-sh "sh -c $HOME/.config/niri/scripts/reload.sh"; }
   Ctrl+Alt+Delete { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }

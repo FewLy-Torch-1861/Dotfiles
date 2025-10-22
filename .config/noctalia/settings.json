@@ -20,7 +20,7 @@
     },
     "bar": {
         "backgroundOpacity": 1,
-        "density": "comfortable",
+        "density": "default",
         "floating": false,
         "marginHorizontal": 0.62,
         "marginVertical": 0.61,
@@ -96,7 +96,7 @@
                 },
                 {
                     "customFont": "",
-                    "formatHorizontal": "HH:mm",
+                    "formatHorizontal": "ddd MMM dd, HH:mm",
                     "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
                     "useCustomFont": false,
@@ -139,11 +139,11 @@
                 "id": "audio-card"
             },
             {
-                "enabled": false,
+                "enabled": true,
                 "id": "weather-card"
             },
             {
-                "enabled": false,
+                "enabled": true,
                 "id": "media-sysmon-card"
             }
         ],
@@ -190,12 +190,12 @@
         "onlySameOutput": true,
         "pinnedApps": [
         ],
-        "size": 1.25
+        "size": 1
     },
     "general": {
         "animationDisabled": false,
         "animationSpeed": 1,
-        "avatarImage": "/home/nutt/Pictures/Minecraft/2025-10-15_23.04.25 (Crop).png",
+        "avatarImage": "/home/nutt/Pictures/Assets/ena n mizuki.gif",
         "compactLockScreen": false,
         "dimDesktop": false,
         "forceBlackScreenCorners": false,
@@ -301,7 +301,7 @@
             {
                 "directory": "/home/nutt/Pictures/Wallpapers",
                 "name": "eDP-1",
-                "wallpaper": "/home/nutt/Pictures/Wallpapers/Teto.png"
+                "wallpaper": "/home/nutt/Pictures/Wallpapers/In A Quiet Library.png"
             }
         ],
         "randomEnabled": false,
