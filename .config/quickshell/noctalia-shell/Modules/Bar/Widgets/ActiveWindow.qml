@@ -35,19 +35,22 @@ Item {
   readonly property bool showIcon: (widgetSettings.showIcon !== undefined) ? widgetSettings.showIcon : widgetMetadata.showIcon
   readonly property string hideMode: (widgetSettings.hideMode !== undefined) ? widgetSettings.hideMode : widgetMetadata.hideMode
   readonly property string scrollingMode: (widgetSettings.scrollingMode !== undefined) ? widgetSettings.scrollingMode : (widgetMetadata.scrollingMode !== undefined ? widgetMetadata.scrollingMode : "hover")
-  readonly property int widgetWidth: (widgetSettings.width !== undefined) ? widgetSettings.width : Math.max(widgetMetadata.width, screen.width * 0.06)
+
+  // Maximum widget width with user settings support
+  readonly property real maxWidth: (widgetSettings.maxWidth !== undefined) ? widgetSettings.maxWidth : Math.max(widgetMetadata.maxWidth, screen ? screen.width * 0.06 : 0)
+  readonly property bool useFixedWidth: (widgetSettings.useFixedWidth !== undefined) ? widgetSettings.useFixedWidth : widgetMetadata.useFixedWidth
 
   readonly property bool isVerticalBar: (Settings.data.bar.position === "left" || Settings.data.bar.position === "right")
   readonly property bool hasFocusedWindow: CompositorService.getFocusedWindow() !== null
   readonly property string windowTitle: CompositorService.getFocusedWindowTitle() || "No active window"
   readonly property string fallbackIcon: "user-desktop"
 
-  implicitHeight: visible ? (isVerticalBar ? calculatedVerticalDimension() : Style.barHeight) : 0
-  implicitWidth: visible ? (isVerticalBar ? calculatedVerticalDimension() : widgetWidth) : 0
+  implicitHeight: visible ? (isVerticalBar ? (((!hasFocusedWindow) && hideMode === "hidden") ? 0 : calculatedVerticalDimension()) : Style.capsuleHeight) : 0
+  implicitWidth: visible ? (isVerticalBar ? (((!hasFocusedWindow) && hideMode === "hidden") ? 0 : calculatedVerticalDimension()) : (((!hasFocusedWindow) && hideMode === "hidden") ? 0 : dynamicWidth)) : 0
 
   // "visible": Always Visible, "hidden": Hide When Empty, "transparent": Transparent When Empty
-  visible: hideMode !== "hidden" || hasFocusedWindow
-  opacity: hideMode !== "transparent" || hasFocusedWindow ? 1.0 : 0
+  visible: (hideMode !== "hidden" || hasFocusedWindow) || opacity > 0
+  opacity: ((hideMode !== "hidden" || hasFocusedWindow) && (hideMode !== "transparent" || hasFocusedWindow)) ? 1.0 : 0.0
   Behavior on opacity {
     NumberAnimation {
       duration: Style.animationNormal
@@ -55,8 +58,59 @@ Item {
     }
   }
 
+  Behavior on implicitWidth {
+    NumberAnimation {
+      duration: Style.animationNormal
+      easing.type: Easing.InOutCubic
+    }
+  }
+
+  Behavior on implicitHeight {
+    NumberAnimation {
+      duration: Style.animationNormal
+      easing.type: Easing.InOutCubic
+    }
+  }
+
   function calculatedVerticalDimension() {
     return Math.round((Style.baseWidgetSize - 5) * scaling)
+  }
+
+  function calculateContentWidth() {
+    // Calculate the actual content width based on visible elements
+    var contentWidth = 0
+    var margins = Style.marginS * scaling * 2 // Left and right margins
+
+    // Icon width (if visible)
+    if (showIcon) {
+      contentWidth += 18 * scaling
+      contentWidth += Style.marginS * scaling // Spacing after icon
+    }
+
+    // Text width (use the measured width)
+    contentWidth += fullTitleMetrics.contentWidth
+
+    // Additional small margin for text
+    contentWidth += Style.marginXXS * 2
+
+    // Add container margins
+    contentWidth += margins
+
+    return Math.ceil(contentWidth)
+  }
+
+  // Dynamic width: adapt to content but respect maximum width setting
+  readonly property real dynamicWidth: {
+    // If using fixed width mode, always use maxWidth
+    if (useFixedWidth) {
+      return maxWidth
+    }
+    // Otherwise, adapt to content
+    if (!hasFocusedWindow) {
+      return Math.min(calculateContentWidth(), maxWidth)
+    }
+    // Use content width but don't exceed user-set maximum width
+    return Math.min(calculateContentWidth(), maxWidth)
   }
 
   function getAppIcon() {
@@ -115,12 +169,19 @@ Item {
   Rectangle {
     id: windowActiveRect
     visible: root.visible
-    anchors.left: parent.left
     anchors.verticalCenter: parent.verticalCenter
-    width: isVerticalBar ? root.width : widgetWidth
-    height: isVerticalBar ? width : Style.capsuleHeight
+    width: isVerticalBar ? ((!hasFocusedWindow) && hideMode === "hidden" ? 0 : calculatedVerticalDimension()) : ((!hasFocusedWindow) && (hideMode === "hidden") ? 0 : dynamicWidth)
+    height: isVerticalBar ? ((!hasFocusedWindow) && hideMode === "hidden" ? 0 : calculatedVerticalDimension()) : Style.capsuleHeight
     radius: isVerticalBar ? width / 2 : Style.radiusM
     color: Settings.data.bar.showCapsule ? Color.mSurfaceVariant : Color.transparent
+
+    // Smooth width transition
+    Behavior on width {
+      NumberAnimation {
+        duration: Style.animationNormal
+        easing.type: Easing.InOutCubic
+      }
+    }
 
     Item {
       id: mainContainer
@@ -259,6 +320,14 @@ Item {
                 font.weight: Style.fontWeightMedium
                 verticalAlignment: Text.AlignVCenter
                 color: Color.mOnSurface
+                onTextChanged: {
+                  if (root.scrollingMode === "always") {
+                    titleContainer.isScrolling = false
+                    titleContainer.isResetting = false
+                    scrollContainer.scrollX = 0
+                    scrollStartTimer.restart()
+                  }
+                }
               }
 
               // Second copy for seamless scrolling
@@ -293,13 +362,6 @@ Item {
               duration: Math.max(4000, windowTitle.length * 100)
               loops: Animation.Infinite
               easing.type: Easing.Linear
-            }
-          }
-
-          Behavior on Layout.preferredWidth {
-            NumberAnimation {
-              duration: Style.animationSlow
-              easing.type: Easing.InOutCubic
             }
           }
         }

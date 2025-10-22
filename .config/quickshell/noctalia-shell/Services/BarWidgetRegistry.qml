@@ -30,6 +30,7 @@ Singleton {
                            "Spacer": spacerComponent,
                            "SystemMonitor": systemMonitorComponent,
                            "Taskbar": taskbarComponent,
+                           "TaskbarGrouped": taskbarGroupedComponent,
                            "Tray": trayComponent,
                            "Volume": volumeComponent,
                            "WiFi": wiFiComponent,
@@ -44,13 +45,18 @@ Singleton {
                                     "hideMode": "hidden",
                                     "scrollingMode"// "visible", "hidden", "transparent"
                                     : "hover",
-                                    "width": 145,
+                                    "maxWidth": 145,
+                                    "useFixedWidth": false,
                                     "colorizeIcons": false
                                   },
                                   "Battery": {
                                     "allowUserSettings": true,
                                     "displayMode": "onhover",
                                     "warningThreshold": 30
+                                  },
+                                  "Bluetooth": {
+                                    "allowUserSettings": true,
+                                    "displayMode": "onhover"
                                   },
                                   "Brightness": {
                                     "allowUserSettings": true,
@@ -88,6 +94,8 @@ Singleton {
                                     "hideMode": "hidden",
                                     "scrollingMode"// "visible", "hidden", "transparent"
                                     : "hover",
+                                    "maxWidth": 145,
+                                    "useFixedWidth": false,
                                     "showAlbumArt": false,
                                     "showVisualizer": false,
                                     "visualizerType": "linear"
@@ -121,10 +129,17 @@ Singleton {
                                     "hideMode": "hidden",
                                     "colorizeIcons": false
                                   },
+                                  "TaskbarGrouped": {
+                                    "allowUserSettings": true
+                                  },
                                   "Tray": {
                                     "allowUserSettings": true,
                                     "blacklist": [],
                                     "colorizeIcons": false
+                                  },
+                                  "WiFi": {
+                                    "allowUserSettings": true,
+                                    "displayMode": "onhover"
                                   },
                                   "Workspace": {
                                     "allowUserSettings": true,
@@ -212,6 +227,9 @@ Singleton {
   }
   property Component taskbarComponent: Component {
     Taskbar {}
+  }
+  property Component taskbarGroupedComponent: Component {
+    TaskbarGrouped {}
   }
 
   function init() {

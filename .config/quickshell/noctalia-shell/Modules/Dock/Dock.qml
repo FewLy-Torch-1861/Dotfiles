@@ -63,7 +63,7 @@ Variants {
     readonly property int hideAnimationDuration: Style.animationFast
     readonly property int showAnimationDuration: Style.animationFast
     readonly property int peekHeight: 1
-    readonly property int iconSize: 36
+    readonly property int iconSize: Math.round(12 + 24 * (Settings.data.dock.size ?? 1))
     readonly property int floatingMargin: Settings.data.dock.floatingRatio * Style.marginL
 
     // Bar detection and positioning properties
@@ -199,14 +199,8 @@ Variants {
         color: Color.transparent
 
         WlrLayershell.namespace: "noctalia-dock-peek"
-        WlrLayershell.exclusionMode: ExclusionMode.Auto // Always exclusive
-
+        WlrLayershell.exclusionMode: ExclusionMode.Ignore
         implicitHeight: peekHeight
-
-        Rectangle {
-          anchors.fill: parent
-          color: barAtBottom ? Qt.alpha(Color.mSurface, Settings.data.bar.backgroundOpacity) : Color.transparent
-        }
 
         MouseArea {
           id: peekArea
@@ -261,12 +255,6 @@ Variants {
           }
         }
 
-        // Rectangle {
-        //   anchors.fill: parent
-        //   color: "#000FF0"
-        //   z: -1
-        // }
-
         // Wrapper item for scale/opacity animations
         Item {
           id: dockContainerWrapper
@@ -301,7 +289,7 @@ Variants {
             color: Qt.alpha(Color.mSurface, Settings.data.dock.backgroundOpacity)
             anchors.centerIn: parent
             radius: Style.radiusL
-            border.width: Math.max(1, Style.borderS)
+            border.width: Style.borderS
             border.color: Qt.alpha(Color.mOutline, Settings.data.dock.backgroundOpacity)
 
             MouseArea {

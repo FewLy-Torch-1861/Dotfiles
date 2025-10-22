@@ -191,6 +191,8 @@ Singleton {
       property real animationSpeed: 1.0
       property bool animationDisabled: false
       property bool compactLockScreen: false
+      property bool lockOnSuspend: true
+      property string language: ""
     }
 
     // location
@@ -200,6 +202,7 @@ Singleton {
       property bool useFahrenheit: false
       property bool use12hourFormat: false
       property bool showWeekNumberInCalendar: false
+      property bool showCalendarEvents: true
     }
 
     // screen recorder
@@ -292,6 +295,7 @@ Singleton {
       property string displayMode: "always_visible" // "always_visible", "auto_hide", "exclusive"
       property real backgroundOpacity: 1.0
       property real floatingRatio: 1.0
+      property real size: 1
       property bool onlySameOutput: true
       property list<string> monitors: []
       // Desktop entry IDs pinned to the dock (e.g., "org.kde.konsole", "firefox.desktop")
@@ -309,8 +313,7 @@ Singleton {
       property bool doNotDisturb: false
       property list<string> monitors: []
       property string location: "top_right"
-      property bool alwaysOnTop: false
-      property real lastSeenTs: 0
+      property bool overlayLayer: true
       property bool respectExpireTimeout: false
       property int lowUrgencyDuration: 3
       property int normalUrgencyDuration: 8
@@ -323,7 +326,7 @@ Singleton {
       property string location: "top_right"
       property list<string> monitors: []
       property int autoHideMs: 2000
-      property bool alwaysOnTop: false
+      property bool overlayLayer: true
     }
 
     // audio
@@ -343,6 +346,7 @@ Singleton {
       property real fontDefaultScale: 1.0
       property real fontFixedScale: 1.0
       property bool tooltipsEnabled: true
+      property bool panelsOverlayLayer: true
     }
 
     // brightness
@@ -354,6 +358,9 @@ Singleton {
       property bool useWallpaperColors: false
       property string predefinedScheme: "Noctalia (default)"
       property bool darkMode: true
+      property string schedulingMode: "off"
+      property string manualSunrise: "06:30"
+      property string manualSunset: "18:30"
       property string matugenSchemeType: "scheme-fruit-salad"
       property bool generateTemplatesForPredefined: true
     }
@@ -375,6 +382,7 @@ Singleton {
       property bool discord_lightcord: false
       property bool discord_dorion: false
       property bool pywalfox: false
+      property bool vicinae: false
       property bool enableUserTemplates: false
     }
 

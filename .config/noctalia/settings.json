@@ -4,7 +4,7 @@
         "enableClipboardHistory": true,
         "pinnedExecs": [
         ],
-        "position": "center",
+        "position": "bottom_center",
         "sortByMostUsed": true,
         "terminalCommand": "kitty -e",
         "useApp2Unit": false
@@ -26,14 +26,12 @@
         "marginVertical": 0.61,
         "monitors": [
         ],
-        "position": "left",
+        "position": "bottom",
         "showCapsule": true,
         "widgets": {
             "center": [
                 {
-                    "hideUnoccupied": false,
-                    "id": "Workspace",
-                    "labelMode": "none"
+                    "id": "TaskbarGrouped"
                 }
             ],
             "left": [
@@ -52,16 +50,19 @@
                     "colorizeIcons": false,
                     "hideMode": "hidden",
                     "id": "ActiveWindow",
+                    "maxWidth": 145,
                     "scrollingMode": "hover",
                     "showIcon": true,
-                    "width": 145
+                    "useFixedWidth": false
                 },
                 {
                     "hideMode": "hidden",
                     "id": "MediaMini",
+                    "maxWidth": 145,
                     "scrollingMode": "hover",
                     "showAlbumArt": true,
                     "showVisualizer": true,
+                    "useFixedWidth": false,
                     "visualizerType": "mirrored"
                 },
                 {
@@ -72,6 +73,14 @@
                 }
             ],
             "right": [
+                {
+                    "displayMode": "onhover",
+                    "id": "WiFi"
+                },
+                {
+                    "displayMode": "onhover",
+                    "id": "Bluetooth"
+                },
                 {
                     "displayMode": "onhover",
                     "id": "Volume"
@@ -108,8 +117,11 @@
     "colorSchemes": {
         "darkMode": true,
         "generateTemplatesForPredefined": true,
+        "manualSunrise": "06:30",
+        "manualSunset": "18:30",
         "matugenSchemeType": "scheme-content",
         "predefinedScheme": "Rosepine",
+        "schedulingMode": "off",
         "useWallpaperColors": true
     },
     "controlCenter": {
@@ -127,15 +139,15 @@
                 "id": "audio-card"
             },
             {
-                "enabled": true,
+                "enabled": false,
                 "id": "weather-card"
             },
             {
-                "enabled": true,
+                "enabled": false,
                 "id": "media-sysmon-card"
             }
         ],
-        "position": "close_to_bar_button",
+        "position": "bottom_left",
         "shortcuts": {
             "left": [
                 {
@@ -177,7 +189,8 @@
         ],
         "onlySameOutput": true,
         "pinnedApps": [
-        ]
+        ],
+        "size": 1.25
     },
     "general": {
         "animationDisabled": false,
@@ -186,8 +199,10 @@
         "compactLockScreen": false,
         "dimDesktop": false,
         "forceBlackScreenCorners": false,
+        "language": "",
+        "lockOnSuspend": true,
         "radiusRatio": 1,
-        "scaleRatio": 0.9,
+        "scaleRatio": 0.8,
         "screenRadiusRatio": 1,
         "showScreenCorners": true
     },
@@ -198,6 +213,7 @@
     },
     "location": {
         "name": "Nakhon Pathom",
+        "showCalendarEvents": true,
         "showWeekNumberInCalendar": false,
         "use12hourFormat": false,
         "useFahrenheit": false,
@@ -216,24 +232,23 @@
         "nightTemp": "5000"
     },
     "notifications": {
-        "alwaysOnTop": false,
         "criticalUrgencyDuration": 15,
         "doNotDisturb": false,
-        "lastSeenTs": 1761047818000,
-        "location": "top_right",
+        "location": "bottom_right",
         "lowUrgencyDuration": 3,
         "monitors": [
         ],
         "normalUrgencyDuration": 8,
+        "overlayLayer": true,
         "respectExpireTimeout": false
     },
     "osd": {
-        "alwaysOnTop": true,
         "autoHideMs": 2000,
         "enabled": true,
-        "location": "top_right",
+        "location": "bottom",
         "monitors": [
-        ]
+        ],
+        "overlayLayer": true
     },
     "screenRecorder": {
         "audioCodec": "opus",
@@ -264,13 +279,15 @@
         "kcolorscheme": true,
         "kitty": true,
         "pywalfox": false,
-        "qt": true
+        "qt": true,
+        "vicinae": false
     },
     "ui": {
         "fontDefault": "Inter",
         "fontDefaultScale": 1,
         "fontFixed": "JetBrainsMono Nerd Font Propo",
         "fontFixedScale": 1,
+        "panelsOverlayLayer": true,
         "tooltipsEnabled": true
     },
     "wallpaper": {
