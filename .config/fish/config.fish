@@ -27,6 +27,7 @@ if status is-interactive
     # Core shortcuts
     alias c clear
     alias reload 'exec fish'
+    alias t tmux
     alias ts tailscale
     alias ff fastfetch
     alias hf hyfetch

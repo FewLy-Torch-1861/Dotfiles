@@ -79,5 +79,7 @@
   "workbench.tree.enableStickyScroll": false,
   "window.autoDetectColorScheme": true,
   "workbench.preferredDarkColorTheme": "Gruvbox Dark Medium",
-  "workbench.preferredLightColorTheme": "Gruvbox Light Hard"
+  "workbench.preferredLightColorTheme": "Gruvbox Light Hard",
+  "explorer.confirmDragAndDrop": false,
+  "python.analysis.typeCheckingMode": "standard"
 }
