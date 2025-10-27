@@ -29,6 +29,7 @@ if status is-interactive
     alias reload 'exec fish'
     alias t tmux
     alias ts tailscale
+    alias tk taskify
     alias ff fastfetch
     alias hf hyfetch
 
