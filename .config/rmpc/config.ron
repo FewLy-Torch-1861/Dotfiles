@@ -183,13 +183,6 @@
             ),
         ),
         (
-            name: "Artists",
-            pane: Split(
-                direction: Horizontal,
-                panes: [(size: "100%", borders: "ALL", pane: Pane(Artists))],
-            ),
-        ),
-        (
             name: "Album Artists",
             pane: Split(
                 direction: Horizontal,
@@ -215,20 +208,6 @@
             pane: Split(
                 direction: Horizontal,
                 panes: [(size: "100%", borders: "ALL", pane: Pane(Search))],
-            ),
-        ),
-        (
-            name: "Browser",
-            pane: Split(
-                direction: Horizontal,
-                panes: [(size: "100%", borders: "ALL", pane: Pane(Browser(root_tag: "Artist")))],
-            ),
-        ),
-        (
-            name: "Lyrics",
-            pane: Split(
-                direction: Horizontal,
-                panes: [(size: "100%", borders: "ALL", pane: Pane(Lyrics))],
             ),
         ),
     ],
