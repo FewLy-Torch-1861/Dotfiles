@@ -38,9 +38,12 @@ if status is-interactive
 
     # Dev
     alias v nvim
+
     alias cg cargo
     alias cgr 'cargo run --'
+
     alias py python
+
     alias dk docker
     alias ldk lazydocker
     alias dkc 'docker compose'
@@ -58,6 +61,7 @@ if status is-interactive
     alias ct 'bat -Pp'
     alias rg 'rg --color=always'
     alias grep 'grep --color=auto'
+    alias op 'xdg-open (yc)'
 
     # LS family (using eza)
     alias ls 'eza --icons'
