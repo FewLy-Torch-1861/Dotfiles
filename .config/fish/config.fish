@@ -76,6 +76,9 @@ if status is-interactive
     abbr --add lupkg 'yay -Qet | fzf -e'
     abbr --add clnpkg 'yay -Rns (yay -Qtdq)'
     abbr --add rmpkg 'yay -Rns (yay -Qetq | fzf -e)'
+    alias ded 'find . -type d -empty -delete'
+    alias def 'find . -type f -empty -delete'
+    alias dbl 'find . -xtype l -delete'
 
     ## ── Functions ──────────────────────────
     function y
