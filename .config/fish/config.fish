@@ -11,9 +11,10 @@ set -x QT_AUTO_SCREEN_SCALE_FACTOR 1
 set -x QT_QPA_PLATFORM "wayland;xcb"
 set -x QT_QPA_PLATFORMTHEME qt6ct
 
-fish_add_path $HOME/.local/bin
-fish_add_path $HOME/.cargo/bin
-fish_add_path $HOME/.spicetify
+fish_add_path \
+    $HOME/.local/bin \
+    $HOME/.cargo/bin \
+    $HOME/.spicetify
 
 if status is-interactive
     ## ── Greeting ───────────────────────────
@@ -125,20 +126,10 @@ if status is-interactive
         cd "$argv[1]"
     end
 
-    function tf
+    function mf
         # touch file with auto create dirs
-        # if not dirs exsit
         mkdir -pv (dirname "$argv[1]")
         touch "$argv[1]"
-        echo "touch: created file '$argv[1]'"
-    end
-
-    function tfc
-        # same as tf but cd into it
-        mkdir -pv (dirname "$argv[1]")
-        touch "$argv[1]"
-        echo "touch: created file '$argv[1]'"
-        cd (dirname "$argv[1]")
     end
 
     function gc
