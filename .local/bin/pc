@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+INPUT_FILE="$1"
+
+if [ ! -f "$INPUT_FILE" ]; then
+    exit 1
+fi
+
+OUTPUT_FILE="${INPUT_FILE/%.m3u8/.m3u}"
+
+grep -v '^#' "$INPUT_FILE" > "$OUTPUT_FILE"
+
+rm "$INPUT_FILE"
