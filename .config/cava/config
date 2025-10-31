@@ -7,7 +7,7 @@ source = auto
 
 [color]
 background = default
-foreground = blue
+foreground = magenta
 
 ; gradient = 1
 gradient_color_1 = '#87cfeb'
