@@ -38,6 +38,7 @@ if status is-interactive
 
     # Dev
     alias v nvim
+    alias gem gemini
 
     alias cg cargo
     alias cgr 'cargo run --'
