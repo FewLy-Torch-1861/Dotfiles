@@ -153,4 +153,10 @@ if status is-interactive
         # Copy file/dir path
         readlink -f "$argv[1]" | wl-copy
     end
+
+    function dotstat
+        dot config status.showUntrackedFiles yes
+        dot status
+        dot config status.showUntrackedFiles no
+    end
 end
