@@ -81,5 +81,11 @@
   "workbench.preferredDarkColorTheme": "Gruvbox Dark Medium",
   "workbench.preferredLightColorTheme": "Gruvbox Light Hard",
   "explorer.confirmDragAndDrop": false,
-  "python.analysis.typeCheckingMode": "standard"
+  "python.analysis.typeCheckingMode": "standard",
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  }
 }
